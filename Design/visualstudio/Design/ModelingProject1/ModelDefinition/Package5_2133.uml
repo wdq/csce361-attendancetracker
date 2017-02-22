@@ -1,0 +1,3527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d8dca43a-dd07-4b20-a549-5f99868c284d"
+  name="Controllers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="94d28832-cf57-434d-80b0-6f435c879bf6"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDesign.Controllers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7dc604b5-982c-458c-925a-e529346cdc4b"
+        name="AuthenticationController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f9c6da3d-184f-4975-9100-cb2b939a6824"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DAuthenticationController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f7e0fb48-285b-4abe-8de2-c7aa1fe13337"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ea2b82d8-7792-4556-84ab-7d68d7c8c26f">
+                <propertyInstance
+                  Id="ec63a9c7-a0cb-4124-aa30-065c7bef5962"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0c694ef-0216-48de-a006-c11b407de025">
+                <propertyInstance
+                  Id="74fc3804-cbd0-47d0-922b-2a618d1be4fd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="275e16bd-43e0-4bc8-b67b-f3f0e3f78d86">
+                <propertyInstance
+                  Id="a232e4eb-8f02-40db-9e88-f7035755a0ac"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="93e53a5e-89b2-4ba8-ad2c-cfe085061579">
+                <propertyInstance
+                  Id="f0ee1436-78a7-4c39-a076-6bd0d686b12a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2a3bfc61-9fba-48a1-9004-c38d720f86cf">
+                <propertyInstance
+                  Id="e5252172-0671-4a20-8749-490c0f548e80"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="73ae936d-05db-401c-bd81-68b096026758"
+            isSubstitutable="false">
+            <classMoniker
+              Id="79fd8a42-4c2a-47b7-a41b-9c92ed031a2d"
+              LastKnownName="Controller"
+              LastKnownLocation="Package7_2133.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ad4c1ac4-0161-4234-97d7-f4052cad909a"
+            name="signUp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2486fa86-f68c-4cc0-a77e-26f2d927ba91"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DAuthenticationController Member%3D(Name%3DsignUp OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="32148206-7121-412e-90da-4a99ad198ec4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11f2952d-f397-495a-8aa8-25367f863e3f">
+                    <propertyInstance
+                      Id="3f07e1fb-25a1-42c9-bd0d-db279375466d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52c0553e-f8d6-41ed-95dd-4b544c177618">
+                    <propertyInstance
+                      Id="bd9c748c-edb0-4913-af05-41238ea6d866"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09f0b1d8-f901-4696-9c27-27499dbead90">
+                    <propertyInstance
+                      Id="ac728ff5-e679-4521-b6fc-cbe1e7eee4d3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14736db1-addd-40b2-aacb-50f21a28e768">
+                    <propertyInstance
+                      Id="9f235afd-6be7-445d-a736-80a0278fa70b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac5be516-0e3f-4b27-a913-b694c5ae9183">
+                    <propertyInstance
+                      Id="1cd3e7c6-009b-44a8-9f9d-91385c82e2de"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a04dacf9-05f1-4ebe-85f8-c7dee15f5092">
+                    <propertyInstance
+                      Id="13dd25ff-d6b6-4ce2-a36a-1679147a2b52"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f39fd68c-1c75-41ad-a2f6-d57c22ae35a0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9aca0d78-131a-47d2-9802-6283e7cd3ae6"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a5e71782-8118-4ed1-9897-8225644d550e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DAuthenticationController Member%3D(Name%3DsignUp OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0a44e6e8-4fb4-4b98-ae7e-81ee9c543c9d"
+            name="signIn"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5bf28cf8-63cf-4027-9d4b-4a08eb578111"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DAuthenticationController Member%3D(Name%3DsignIn OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8626bb39-9141-4cef-a5c7-f79305cac08b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a88652d-4197-48f1-bf53-b2ae4102ec08">
+                    <propertyInstance
+                      Id="a8ec912a-f6c0-413c-877b-e3e13cec91bd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d2e283e-f1c7-445a-beb3-e7470573733c">
+                    <propertyInstance
+                      Id="12001117-67b8-47cd-9707-bfb1e185e3bf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41fe1493-e141-4c48-b7b1-cb471969f7c1">
+                    <propertyInstance
+                      Id="73a39f3f-f776-4b52-a98c-e0938a1af038"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dfd81da-5d4c-4bb8-93e1-20f6b6210d2c">
+                    <propertyInstance
+                      Id="60579bb7-c15d-4523-8757-0574d37b1af6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c7afafe-93fd-43ec-bf90-505965e78e78">
+                    <propertyInstance
+                      Id="f95d3e13-38f6-4150-964e-5e4af0c5e821"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3dcc02e-768e-4867-99fc-1475cf14650c">
+                    <propertyInstance
+                      Id="bdc9ebed-c234-4b2e-b186-fef983ecbcda"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7ee8f88b-63bc-43c9-b3d4-5aed9fcbef94"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30553fbd-022b-43d6-91ed-b6c5fb355881"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cba5b5e8-9d80-4966-adf2-4ef709264213"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DAuthenticationController Member%3D(Name%3DsignIn OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ec0f10cf-c587-4edc-b5eb-a054e7b66a0f"
+            name="signOut"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ba4845cb-e35e-48c0-a936-6c3f586bee80"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DAuthenticationController Member%3DsignOut"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6799473b-accc-481f-b6e1-a0c40633b964"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a9200b3-bc5a-4461-96d0-4712762fe12e">
+                    <propertyInstance
+                      Id="9cbff179-c7dc-4990-8efb-cf1f71452ec6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76f96861-2c3f-4642-8b9a-90442e6605a2">
+                    <propertyInstance
+                      Id="ab0b3fd8-b969-4118-8f24-959cb2286c14"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dea6c8a0-57c0-4a8c-9f43-e509355db48f">
+                    <propertyInstance
+                      Id="191a766d-edd0-4fa7-a13a-180ef4825700"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4f102a8-fc8c-4115-8db6-84325ee313dc">
+                    <propertyInstance
+                      Id="e9005958-476c-4732-8ac0-bf24f9eb8d1c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d9e656d-d521-449d-b70d-e0a80e0926e6">
+                    <propertyInstance
+                      Id="1cf7d063-1ebb-46d4-a8df-a95c18a904cc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4fa008d-d35a-4b2b-8c35-ecfc5b1379d9">
+                    <propertyInstance
+                      Id="0ca4ef48-a940-4614-bbc7-ce037d252bb3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="93871ea4-7d2e-4330-a77e-49e402bf052b"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0ef881d9-4ce0-4451-97b3-d596ef17e36b"
+            name="AuthenticationController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="eb6c45ca-7f06-4681-9dec-564dc89cbb8c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DAuthenticationController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a276a641-77aa-423c-a178-cca358130f39"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="235b7a78-fd27-4f08-afd7-94970ac29342">
+                    <propertyInstance
+                      Id="2e157664-f5c6-43e9-96f6-0ee238a1523f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17c70796-8d30-4d3f-822b-3788cc362922">
+                    <propertyInstance
+                      Id="4a3ecf24-1189-4cd9-91bc-d5d8dcfb78ac"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f14dcfd-39d1-4528-9e41-909727dba418">
+                    <propertyInstance
+                      Id="122a961d-76d6-45ab-b994-53f35a236128"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bf298e0-c317-4c44-8781-638b31a7d43d">
+                    <propertyInstance
+                      Id="31e2a4f5-8f57-441a-b116-fa78610c4aaf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da21cd6a-2f67-4be6-8bd8-2131ecf2eaef">
+                    <propertyInstance
+                      Id="2eaf4772-80d0-4346-b97a-4d52d3776370"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29667ec0-c74d-425d-a56a-7a7f63287d37">
+                    <propertyInstance
+                      Id="62c08839-a014-4310-ba9d-608d2d769197"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ac733115-1d25-4a87-bda1-a84cebfa4830"
+        name="CourseController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="95129538-e88c-4531-89f6-8ece7c99af0b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c8b00943-ecc6-4d95-b89f-02688ac918b7"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e261011-3b20-4573-853d-9b9e38c54490">
+                <propertyInstance
+                  Id="5aa37995-c166-410e-9f99-fe0778803894"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1ad49163-0392-45f2-a547-48e02bc430c0">
+                <propertyInstance
+                  Id="8ba90a3c-7716-4295-848f-e5421583e3cf"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45086bc3-e630-4539-bf2e-d39c58b19323">
+                <propertyInstance
+                  Id="61419d8f-c92b-4a51-963f-49896f760794"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6fb7b0c3-9df2-4e5b-8871-5f64d5d8abb5">
+                <propertyInstance
+                  Id="9a67481d-8a31-4b43-b2aa-8d1692739e5d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c9a06830-85e2-4356-b819-fc6e270ff401">
+                <propertyInstance
+                  Id="73e9ef55-e185-4988-b1b0-80548c1b143c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="737517dc-5b5e-4f5b-92fc-abd32b9bec81"
+            isSubstitutable="false">
+            <classMoniker
+              Id="79fd8a42-4c2a-47b7-a41b-9c92ed031a2d"
+              LastKnownName="Controller"
+              LastKnownLocation="Package7_2133.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2a1d0e22-aa7e-4da1-b08e-7bd728c19235"
+            name="addCourse"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0caffeaa-4580-4810-a16b-ddf0ae7dec66"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddCourse OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourse)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="660b3014-e929-4177-b78c-5051064c898d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78bf7a31-5311-44ff-9997-5a7aaef6e055">
+                    <propertyInstance
+                      Id="62253c5b-9d4a-4c12-ab10-04265bcc6dec"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05b4c058-7dbe-42a0-be67-3cbf1b0328f0">
+                    <propertyInstance
+                      Id="b296eb1b-edae-47ae-b8fd-5c1ba58a7a12"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="056561ad-d989-4e5e-8ee7-4d60ac152180">
+                    <propertyInstance
+                      Id="c7125b4a-ee1a-4688-9422-ae70879489e7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bcd304a-2a7c-4a14-9dd4-cf706f31606c">
+                    <propertyInstance
+                      Id="9db44fe7-6bf2-441c-966d-db27f319c7ff"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66b327ff-f247-4698-8cca-aa783b810a8c">
+                    <propertyInstance
+                      Id="ca892199-3fa1-44f7-a35c-01326af6c57e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e125c4d-1f10-4f46-92fb-f5943ea28a11">
+                    <propertyInstance
+                      Id="53601669-ce81-434b-b424-d16954657715"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bdea0f48-f73f-46bb-ac32-75e45bdf0dbd"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15ef8a2a-26c6-4912-b3cc-73976b6efb08"
+                  name="course"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="32bdcc9c-be7c-4ac0-836d-6d52592fd496"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddCourse OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourse)]) ParameterIdentifier%3Dcourse"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4da6672d-2186-4df1-a7e7-8ee44c6a1e45"
+                      LastKnownName="Course"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fd035efb-180e-4378-a4a1-a06edce13dc1"
+            name="updateCourse"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9e90ef1b-87ce-4190-95f6-ea17f123a174"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DupdateCourse OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourse)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1502e736-8d80-498a-b894-54d44bb06ae7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2b74a1b-33ca-4ee7-9e6f-bbc9a30a8112">
+                    <propertyInstance
+                      Id="42c8d979-7c43-4dd6-a13c-a63270556230"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53117b25-9d77-42a0-94e1-7c17d880dda6">
+                    <propertyInstance
+                      Id="9e5ef794-03fa-491a-a7fb-393f25dbfc39"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76cfe4b7-ab62-483f-836d-197bf42fe779">
+                    <propertyInstance
+                      Id="5c6fa0e4-2950-4151-b0ed-b7c70e45b3f6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="527f074d-5230-44f7-92b8-59d8e59553c4">
+                    <propertyInstance
+                      Id="1c88cd57-1dd4-40de-ae29-cd877c4f539f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92e66425-9f00-4744-8fe5-6af303866436">
+                    <propertyInstance
+                      Id="89a4b742-ebb4-48fe-8815-585839ec7fac"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5096f5e-1698-4c63-9cbe-0a560d73b0ed">
+                    <propertyInstance
+                      Id="0ff37391-a6d0-4cbd-9289-efaedb4bdd54"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dbf9fddb-059c-46d4-8b3f-b190830285fd"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="953fc8ab-6f1f-4ab2-b33d-899ef707532e"
+                  name="course"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="de7c9678-2fa4-41fa-b8f5-b8532aec017c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DupdateCourse OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourse)]) ParameterIdentifier%3Dcourse"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4da6672d-2186-4df1-a7e7-8ee44c6a1e45"
+                      LastKnownName="Course"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1c6b59d9-f30a-4e64-b883-2ae3ead4037d"
+            name="deleteCourse"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1ef0c733-4473-4a0e-b5b1-e209224811eb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DdeleteCourse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="227f8771-76a7-450d-a270-2d89c667a596"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51fb5271-27dc-4328-8704-38c984b6b70d">
+                    <propertyInstance
+                      Id="d33fa2b1-6251-4993-b42d-e69b730f890f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd2ec845-328e-4c4f-96ef-3e52258eb019">
+                    <propertyInstance
+                      Id="2ebc05df-2a6a-4f30-a1c2-2b1403572f9d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba64703b-1b92-4e22-b68a-7d077c3f1c16">
+                    <propertyInstance
+                      Id="70b4665c-1342-48d8-a9ee-e0292c9ce509"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="adefaba0-b7ac-42dc-b887-fea4455fae41">
+                    <propertyInstance
+                      Id="9d4c049b-329e-435a-9805-e3c2db7fdcd0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6dd4922-2072-45a9-93ca-438484ab8681">
+                    <propertyInstance
+                      Id="d799df3e-067a-4c83-aab1-f5b96439e266"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6931543-bdca-4ecc-8d5e-a824cfa2ce4b">
+                    <propertyInstance
+                      Id="729fd3f0-ad3b-47cb-8a89-1bf6e8b822a1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4cd3cc5b-863b-466b-8bc0-ef1ff1068a12"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="97002191-e60b-4ece-bbb7-9356934657e8"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e49134f5-f76a-44fc-9175-fd55a8d6841e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DdeleteCourse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="07090bb2-3ac8-4215-b91b-fa0d57cf7ff7"
+            name="getCourse"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d479ff4c-480b-4cb8-bb38-ed1dea2163ca"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetCourse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5ea3a4a8-5d4c-45fe-8549-4a3ad8ba15b7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b72ee3d-e511-4b9b-9910-9b9eed997b3d">
+                    <propertyInstance
+                      Id="f620e27a-ec79-4567-b23a-89a72021af55"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d4ec1a8-7397-4ead-bcae-2cc8380d0499">
+                    <propertyInstance
+                      Id="e6d00d61-448d-4885-bae5-11ae994d95a8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0dd0ad2-1932-48a8-932f-7f63b65dd812">
+                    <propertyInstance
+                      Id="ca3612ea-5a7c-4402-8e7f-d050efff23de"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="007775be-965c-4ed8-a388-5765ca79002a">
+                    <propertyInstance
+                      Id="6f943152-7068-45f4-bdfe-809c18722ee9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fedc5fc6-712c-46b1-93f4-c76d3457d37c">
+                    <propertyInstance
+                      Id="9c699c92-3881-4ba8-b76b-3e3fdb16a799"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e2c9b61-20cd-460b-9b0c-8f7157c5f1c8">
+                    <propertyInstance
+                      Id="753e1cb2-4bab-49dc-9f39-933be2eab654"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f211ab9-a194-43f6-aab3-c8f6d342fc1f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4da6672d-2186-4df1-a7e7-8ee44c6a1e45"
+                      LastKnownName="Course"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9fa7bcc6-1dab-4586-9a5c-69ffa647cbac"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bf8007b1-2409-4ac6-b478-bf9837366c78"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetCourse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="56d247b5-0a69-45f4-a28e-855fe995cd64"
+            name="searchCourses"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="705ddc9e-cc8e-42a8-8626-bb16d3dfce8b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsearchCourses OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bc94dc66-0ea9-4268-b46b-38f2f8f8c353"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e951d983-87cc-4092-be60-927809622d58">
+                    <propertyInstance
+                      Id="70a3bb1d-87f2-4b98-b34f-c9db91f55168"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75986a4f-3e5e-454d-84ce-74f6b137dca6">
+                    <propertyInstance
+                      Id="2c82318d-af95-42ba-9555-06dc055d6798"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9497cf15-e16c-4ab2-a69a-37ba76ad40e8">
+                    <propertyInstance
+                      Id="fb2a3917-0fe9-4d66-a5a2-515e66c22b58"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e2a0f3a-c19c-458f-8ed7-3688abe3d532">
+                    <propertyInstance
+                      Id="a0a833a5-ee34-483a-97b5-f65d8a4523ad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="388343e0-b475-4469-a0c7-9d0c42c098bc">
+                    <propertyInstance
+                      Id="1e352ffb-981c-4b78-9185-01adcd266f32"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="212fad2c-efbd-49bb-9314-3822f526075f">
+                    <propertyInstance
+                      Id="45727e2f-8b70-4846-b102-387807d1a032"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ea13453a-1963-496a-b5a7-213a2dfe96ed"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="17bbee3f-1eb0-4d6e-879b-bd47aea47db7"
+                      LastKnownName="List&lt;Course‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cff866e4-2d0f-4475-9e34-0a3ca09bf17f"
+                  name="filter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="949a2e40-07ff-4945-8f59-9ef97f3c87b7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsearchCourses OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dfilter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="19395e2e-130a-4297-bdac-bf2c9280e31f"
+            name="getAttendanceCode"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5a5effc5-7e96-4a66-95a9-3b0c146e5234"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetAttendanceCode OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b50fdef1-b5d1-45b7-9d6d-a040ef5fbede"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82eafe78-e54f-4a53-a974-96be2337edf3">
+                    <propertyInstance
+                      Id="637584e0-9046-46b1-9059-dc0e163f3eea"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b78e15e3-3459-4a46-8c85-4277699d6ad8">
+                    <propertyInstance
+                      Id="2b55b050-d8c6-4966-814c-20bab1135ba1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f0a3f0b-7735-491b-8dd6-6f4452610604">
+                    <propertyInstance
+                      Id="b7d6942b-6b35-4a71-9dc5-34d97d3161cc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f77055cf-8e34-4493-a6a1-25c86c738e1e">
+                    <propertyInstance
+                      Id="cbf38868-7dba-4ca3-9f00-0e55d336d5e1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="127b72ca-b450-47a0-ba48-2e0a521655f4">
+                    <propertyInstance
+                      Id="feab1ada-c399-4d16-bcd9-d7df56cafbd6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73d7f162-87dd-4915-b546-0539914fa944">
+                    <propertyInstance
+                      Id="29b621a6-4a78-4c5c-9e41-62e955292701"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3c2916a3-0713-4bf7-b75f-cd6b4b855fee"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="98762144-7287-4fba-8b92-98c890e02a7e"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5dd84834-1074-4473-81af-f33bdc30eb49"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetAttendanceCode OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="612c8a98-4d50-43fd-adfd-5fb56c17a3b7"
+            name="submitAttendanceCode"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6431c82f-74b8-4905-8ae8-788f47666d25"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsubmitAttendanceCode OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="def9e6e1-9207-45a4-9f5f-13d1e0d41132"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4884e10a-9344-4279-bed4-4658732d18f6">
+                    <propertyInstance
+                      Id="b47ab40f-70e8-4cb5-95ea-a19c45ddb45c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bd76bff-dede-4834-8ebb-bce1bf918fe0">
+                    <propertyInstance
+                      Id="ff6013e8-4c1d-45cc-b8aa-1247f22482a7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab8f2c39-10a2-488e-8f16-54a0a247ef63">
+                    <propertyInstance
+                      Id="b4a90632-08d0-4b1e-8901-68b7f2833061"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b1e44a5-2683-4d00-900f-a707914082c5">
+                    <propertyInstance
+                      Id="b0c99521-8cbc-416f-bc5f-cd7dcde2563c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f072cb32-6d64-475a-bb72-f01f6071bb4a">
+                    <propertyInstance
+                      Id="84b68c8f-91ce-4216-bfbd-b60857aa494c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45b027c1-835e-4ef1-aac7-bffaa6febbbf">
+                    <propertyInstance
+                      Id="5a4a8629-897d-45b7-a44d-47923d05efd1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a320cd5a-c029-4e94-957d-342560081f7e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="285d4624-83e7-4597-afb6-78a3f14d0112"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b3f42d37-c153-4e90-a7b7-ee133ce337c4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsubmitAttendanceCode OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d5474679-5ae5-499c-a0ba-63bdc3d9e0fd"
+                  name="code"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8546d951-d180-46a7-8e7b-f6a773326220"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsubmitAttendanceCode OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dcode"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="aeb96e93-6200-4d5c-bf77-f2d6df36af96"
+            name="addOwner"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="851395ab-2315-492a-8826-546cbd751396"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddOwner OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d95afb85-b2c3-4185-ad29-df45807d4578"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e79a6b30-613d-46fb-8781-3f0f33a41527">
+                    <propertyInstance
+                      Id="db002fb1-f317-4e06-af46-4d89e0e48307"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3878790b-1747-46d0-8ef7-a0e038a70dc0">
+                    <propertyInstance
+                      Id="0ebe2700-3a54-42a8-8adf-ffa159e37b06"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b398130-abc1-43a8-b849-76dda453f0d3">
+                    <propertyInstance
+                      Id="e8a08245-a685-4ca4-9f8a-c68c4e195333"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42b8b6e1-4de6-493a-940f-3190a3b344eb">
+                    <propertyInstance
+                      Id="1448fd2c-a5fe-448a-9735-0efe119ea4a1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3198a639-a313-4a1e-97d5-cc98f6f98cf0">
+                    <propertyInstance
+                      Id="c1481dc4-8d19-440f-bca0-62c855290ae6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d8663b3-29ee-4750-aff3-93505e935720">
+                    <propertyInstance
+                      Id="eda55732-005a-49df-b165-e40d45ba32f5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="498afcc3-bc8a-4a31-9f3a-60382907e33f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f94e329-caa2-43d1-8da2-606bf4eb314a"
+                  name="courseId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f198e409-c75a-4d06-935d-792ae15ea8ce"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddOwner OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DcourseId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a063dfc-fdd5-45cf-80c2-dcef16b09926"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="baa01d8b-9283-4dcf-b074-8c1b570b4e23"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddOwner OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="376c2318-4ca0-4e78-9d26-2c840207b8db"
+            name="removeOwner"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8353b5dc-5abb-4562-9779-6abeaa8b1a3c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DremoveOwner OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c1b0a222-8c38-496a-9d6a-a3b08d81d292"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a303e26f-85a0-44ee-8177-3aba50ff01c5">
+                    <propertyInstance
+                      Id="d4e1eca3-e0e0-49fc-9088-0c9bb8a5fc9a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2910b05-9561-4f94-9168-4626fddf2ecf">
+                    <propertyInstance
+                      Id="a69a335c-c26d-471e-8878-caa13acf3284"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e5900c4-a25a-44a0-aa16-d1fdc40ddd9c">
+                    <propertyInstance
+                      Id="e69b688d-0975-409f-af28-5a9a8199cff8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5d04f71-e4b6-42b9-8087-a30cbf00f6d0">
+                    <propertyInstance
+                      Id="1b8eeca7-bea0-4a46-9154-af4e978e8761"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4dde66d9-8169-44a8-85a9-b840fc723c5e">
+                    <propertyInstance
+                      Id="a5312fb8-8312-41b6-a2fc-203b86a84635"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="339fedbb-3c46-4df8-944e-7692bf4e90d9">
+                    <propertyInstance
+                      Id="ec0c2d9b-1ceb-4cad-9a2a-d420cdc3c1ba"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="734b5066-9825-4135-bae7-5ba620174327"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0be1982e-05a1-443a-8b26-6848c995c3ec"
+                  name="courseId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="50319f7a-5dba-4b8a-9762-1e5e1109cf78"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DremoveOwner OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DcourseId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="826974bd-3827-4dea-b77b-ddf12478aaf6"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1f7dfdaf-16a8-457e-a742-0ea03eca8a8b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DremoveOwner OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f35e7a40-736b-45cc-973d-04406b30419f"
+            name="addStudent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a067d4d6-e246-44ae-91d7-4043f2f40483"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddStudent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="311f4b06-7956-47e4-b1ef-e29583dee4f8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80dc4843-b274-4bbf-8770-beba08ee2c6e">
+                    <propertyInstance
+                      Id="5caecb3a-551f-43b4-80ba-db53230d05bc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa82a74b-a330-43fe-bd0d-e32706535b1a">
+                    <propertyInstance
+                      Id="e0263b48-b5f9-4b17-88ca-bc6077bc9d1d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aee5d26d-3b74-404c-aa30-ef0ba855b48a">
+                    <propertyInstance
+                      Id="7eda7da6-55af-4e0b-a4b0-9c5e2390e75b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cce6fd90-256d-4aa0-9401-096c5541bb45">
+                    <propertyInstance
+                      Id="b0429aa2-066d-4ada-a910-cba85dd1dce5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="350b7075-1a75-455f-9a04-44516f985032">
+                    <propertyInstance
+                      Id="2a52fdb8-dd7c-401a-b18f-4e1b6ada8720"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea42f52f-c0bd-4613-a2cd-b32b6fe7655d">
+                    <propertyInstance
+                      Id="22967902-b21c-47b4-b1cc-e5772d011738"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="024cd91c-df40-44a5-96eb-9f82223eca57"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="25735744-24c4-457b-90a4-44d050c6fc50"
+                  name="courseId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9c68d659-076d-42ad-89bc-72f2b980dabf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddStudent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DcourseId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ff28c1d9-27d5-4d52-b54e-6be1a8194ad8"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bb91faa0-15ed-4e65-9d4b-b39f6fc4dd32"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DaddStudent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0a169a62-b9f0-4d34-9394-0c6b0d3ce189"
+            name="removeStudent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9aa15255-e601-42a1-8577-b4c0f4a836f0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DremoveStudent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fe724b7b-2a13-4ad1-9b6b-b8eae5fd57c9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7a1202e-3b67-4ffb-9746-17fe4e106852">
+                    <propertyInstance
+                      Id="9a95b1af-cf84-4737-9e08-0f5f410355da"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07ca74db-8097-471c-9da2-843500ab3039">
+                    <propertyInstance
+                      Id="14498dd6-0a35-4b2b-806e-5c7c05dd17ff"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22284950-bd89-48a7-ae88-92f61554927d">
+                    <propertyInstance
+                      Id="7b96c25e-6218-44da-91e4-1ae4641122ab"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52a05159-5ac4-4b96-9fc6-d1a88d5bd5a5">
+                    <propertyInstance
+                      Id="75d58b7f-6bce-4707-9b49-2f38e59cf492"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d05b85e0-41ab-42ff-be26-925b6f2c496a">
+                    <propertyInstance
+                      Id="f6c3f7e3-1308-4f8b-a9b7-163246626a70"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7747e966-e410-4e61-a39c-335cb55df02f">
+                    <propertyInstance
+                      Id="646cf05a-1a4f-4fc0-8a36-3dbb4cab98d3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9a920874-fb38-46f0-9f44-d30fc1e21da8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c54bb44b-021d-4707-ad06-18c433c40483"
+                  name="courseId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b077e1c2-b7c6-4906-bb26-af5f3c036ac5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DremoveStudent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DcourseId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6f34019-b903-4355-b015-4b95c740ce8a"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="055beabd-ae69-4e80-9b50-d9f74cebabbe"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DremoveStudent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3a348384-b0b6-4636-9ce3-4555396a7277"
+            name="getOwnedCourses"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a1c2dcd3-84ae-4f59-810b-ce8bfbd76f94"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetOwnedCourses OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9af1837c-f566-4e01-8ed2-e3703455b06a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01ee2ccb-fed1-4ca5-be75-5014f7df830a">
+                    <propertyInstance
+                      Id="f1639d98-6f1c-4a1a-8b63-784c6af220f8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd595131-7208-4075-a3fd-45a7d6ce1030">
+                    <propertyInstance
+                      Id="f5dfeea6-f6f9-4a40-bc1b-52b57a8da4db"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cff36dd-737a-4b8d-b2f5-1dc27e65c92b">
+                    <propertyInstance
+                      Id="d0049992-e7a5-471c-82ce-226af2f2e333"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6db0a0c8-b957-4949-8be7-e1019c35452e">
+                    <propertyInstance
+                      Id="afad0979-55da-4b2a-af98-440afee8a434"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b9481ea-4f80-445f-a80f-ed0950ca2171">
+                    <propertyInstance
+                      Id="007b29bd-9d4e-4e7a-9a99-ce3ed4d2dbef"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24270893-1eaa-4954-b26c-da7b7596000a">
+                    <propertyInstance
+                      Id="1fd02db2-d16f-4031-9d01-409059687522"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e9dd5453-0bb0-40af-909a-69ac3fbc9af0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="17bbee3f-1eb0-4d6e-879b-bd47aea47db7"
+                      LastKnownName="List&lt;Course‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="df8a1b1e-f188-4127-9baf-e99be6b0f3e7"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9b38e721-8fd3-4e6a-a7b9-df6c0812571c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetOwnedCourses OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c09b6589-b843-4e33-aa20-b429f5912c42"
+            name="getMemberCourses"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="82dd3d5f-a4c4-4f03-9ab4-a81ea0652aab"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetMemberCourses OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ef887bb7-abd0-458b-8303-37fd2b74d70d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e00273e3-11ba-4cde-b255-e048afe1c4be">
+                    <propertyInstance
+                      Id="d79c7cfc-da0e-4914-9fc6-6ddf0df504f9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7004e9b-c71a-4088-afec-58bfa154170f">
+                    <propertyInstance
+                      Id="7d932ac8-5d43-48ae-8d87-fdd30e46b5b3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="011d579f-4029-4d33-a0cf-7dff00e96154">
+                    <propertyInstance
+                      Id="c6243acd-e403-499e-b43a-1dd633476e9a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ffd8efdc-a495-4dbb-895d-1d41d81a9723">
+                    <propertyInstance
+                      Id="1c9f3f81-3d82-4602-9411-ba2714169fc3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59e12bb0-211b-4438-adc9-fbd07b61bf9f">
+                    <propertyInstance
+                      Id="ba3901c7-13de-4b5e-94ee-0abdc8f26b7d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab099378-050c-4a02-af69-904368ce0cb6">
+                    <propertyInstance
+                      Id="3d51b392-eb1b-4f3b-a42c-d8c10cfd42c5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab2e2b6c-09ad-452a-a9ec-f55a31965928"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="17bbee3f-1eb0-4d6e-879b-bd47aea47db7"
+                      LastKnownName="List&lt;Course‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ba63b9a-17b9-481d-8873-c33f9f0d2c7a"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5734d47d-1d97-49b5-a5e3-86e895b2ba7c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetMemberCourses OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="05a78f06-b43e-4cfa-9c5d-3c891ee83d04"
+            name="exportAttendance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e4e54568-777a-4e30-9702-06f90e9a9e0d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DexportAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="42a1aa54-eb07-459f-ac73-ebddea68fb16"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a454c7f-78e3-44b2-b5de-a2e566b1de20">
+                    <propertyInstance
+                      Id="78420eb2-f216-44e3-977b-596c80a0a2b3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33f500d9-2ac6-4831-ad39-5da4070f077f">
+                    <propertyInstance
+                      Id="39ae3fdc-24fa-47ab-a652-f724041a6438"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03fdeea9-f006-43e1-beb3-3f9092cac957">
+                    <propertyInstance
+                      Id="cae88b9f-8376-4a30-89df-fac53d319001"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="796be5c2-d8e9-4ed8-bb60-ef72558850e9">
+                    <propertyInstance
+                      Id="92448879-ac29-49e9-a5ac-4770e55d1ebb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5739c493-f67f-4321-b074-eb9349928ce4">
+                    <propertyInstance
+                      Id="93dfa64b-f5b8-4de3-99e5-a3049cfbc25a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="259cda0d-038d-4b50-b217-077bea4513e1">
+                    <propertyInstance
+                      Id="b079d9b7-8110-48a8-84c4-e3b524c57acf"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7df4c191-f7ac-4ced-885f-c2363ca76b3e"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8b4150fb-beb6-4628-96c1-cebe8d7d4d3b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b5d27fd7-be30-4e90-bf33-5c1ab42e4429"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="64ca9818-d477-44f3-81ad-71589c321350"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cf2228b9-0ef6-4927-978a-e7b29730970f"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="27debad6-e083-494e-935b-96a49fd1d42b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DexportAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="59236883-e8f8-46c5-9a17-a1916f2ec5eb"
+            name="getOwners"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ea4b66be-056e-4a06-ad0e-53d7ac97c38a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetOwners OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f42aeef2-faf6-4af9-9188-0245e67f02a8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e14eff3f-d4d3-4b71-bb7b-d4b63add4ece">
+                    <propertyInstance
+                      Id="6b7ecc60-5c5d-4ca1-a93b-04c75d4e6a5b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd60e43c-a47c-4eec-a52a-11bd48e031df">
+                    <propertyInstance
+                      Id="bd525ea0-afc2-4140-9527-a4e639db44ea"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d107148-1902-4992-b3f8-aff9ec5bdcf6">
+                    <propertyInstance
+                      Id="83805cb0-9789-43c4-9a03-e0875834bd06"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0d8b061-faad-48e2-b9fb-222252eba5d3">
+                    <propertyInstance
+                      Id="22b26229-ca3d-43f4-8af6-4a2df01edad6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2e11613-4aeb-4de5-bc89-c4a5a4d03160">
+                    <propertyInstance
+                      Id="e09e19d0-38a0-4bbf-bffd-d1bdce5f961f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ac3f961-d8ec-4415-8dd7-bda25672e52a">
+                    <propertyInstance
+                      Id="da502fee-fc4c-4e0b-913e-34fedcafd382"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0b24dc0e-002e-47fd-aab4-e267385270b6"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dd20e1e2-399d-4158-9ad4-7840b0ae20f3"
+                      LastKnownName="List&lt;User‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b91b0226-0001-4e95-b8ae-218bff3198ba"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0c6431ed-3c36-4880-9882-84fe1c661ae5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetOwners OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ff06d626-136a-4620-b823-cef13549f2f4"
+            name="getStudents"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="46e99296-3d76-4032-b00f-e24aa786637f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetStudents OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cb971472-934c-48c3-ab10-36bf133219fc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15f66e2d-e945-48e0-a282-d39f7443786f">
+                    <propertyInstance
+                      Id="6f24b046-5efa-4959-b85b-d7360826ab31"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1271471-d771-493c-980f-b66605223cf1">
+                    <propertyInstance
+                      Id="c1f779ba-0395-4b60-974e-c5dc520a549b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa5c87ca-62f4-453a-a19c-c7e9d810479e">
+                    <propertyInstance
+                      Id="70ff927e-8eb7-4b62-a036-aa408229f636"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50de87cf-a69f-49f4-9483-016024d3a4b7">
+                    <propertyInstance
+                      Id="0471ae18-4352-4413-8bf2-49100a1874d6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9de8b307-fc8d-4035-9eea-5ce6cb535105">
+                    <propertyInstance
+                      Id="acf2c36e-5fc0-4075-a5a1-353c4fda7e08"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="167bf47f-7304-42e3-9cd1-22cd23ad2690">
+                    <propertyInstance
+                      Id="dba5c306-fb48-4883-b66c-c2bf39820e8b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f7e86f2-47ca-4bc9-9049-a38f61a74991"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dd20e1e2-399d-4158-9ad4-7840b0ae20f3"
+                      LastKnownName="List&lt;User‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e47538d-bcb9-48f1-af9f-a7e34458130a"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="12587149-6dbe-456b-b3a3-d5583190ce57"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetStudents OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="679ab37a-f9bf-4740-b8d8-c36959f1fca9"
+            name="getAttendance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e15b45bd-cb5d-46fe-8e7c-e1bcadf3f88a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="75db287b-9b83-4833-a823-db61c69a8256"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="779dcc46-63ee-4af2-a7c6-4b5c5c29ee7f">
+                    <propertyInstance
+                      Id="c506446b-747d-4b51-aeb3-ada9b0771f53"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ebb54ef-e266-4c22-b460-a958ea01c73a">
+                    <propertyInstance
+                      Id="1fde08fd-d5c3-40d5-ab45-94dea1165827"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e55b085-c6fc-4f64-98d1-f24ba023b5a9">
+                    <propertyInstance
+                      Id="fc06d27f-44be-4b6d-853b-be5fa326f10f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12f419f8-4a89-4dda-8760-b14e4ee25427">
+                    <propertyInstance
+                      Id="878a3be1-7b72-4dd7-b6b8-a7607b63e4a8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbe52b85-43ef-40ad-8103-5d903e8dac71">
+                    <propertyInstance
+                      Id="c4f77c9c-2540-4305-ad4b-71d4a69f58a4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da095482-74cb-4b0d-bb0f-48a60690d205">
+                    <propertyInstance
+                      Id="aa5d081e-6ffb-4a46-9f39-21106e695a15"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f20d638f-3e6c-4abe-afa6-58dc838784ef"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d31c3367-f3f9-482e-84f5-5f1efa8ec512"
+                      LastKnownName="List&lt;CourseAttendance‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2af652fa-fb2f-4c45-82a6-53c384991c19"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="26787a9e-9949-4813-9666-8eed92624d58"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DgetAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3af95386-9d2a-4eee-a165-99b978c23044"
+            name="requestAccess"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9c6b9ff8-9ae6-4a28-ae62-02f2061419cb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DrequestAccess OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aa50732e-c888-482b-856a-8df232ea6bef"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0ef7f08-64bb-4835-8276-4b146d6a0a50">
+                    <propertyInstance
+                      Id="0e31f465-5873-4697-aae7-4578f91e4857"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="076268cf-d48f-4281-9f37-9c07b0f1de62">
+                    <propertyInstance
+                      Id="8d44c5f9-6cb8-4787-885a-071d39c1c858"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1358696-a0f7-4a4d-8a0c-36fdd270fa69">
+                    <propertyInstance
+                      Id="4de24d23-b38c-43f9-868d-f29999b99817"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb4fa560-f5bb-4a5e-a4bd-d7e372f846e3">
+                    <propertyInstance
+                      Id="b707ea18-f605-4804-8d70-f1b99c2f4f13"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7211ddbe-f31c-4766-9f74-13ceba1374ce">
+                    <propertyInstance
+                      Id="31937f64-9b04-4ccf-9d2d-f789708bba58"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f438e762-3cd9-41c5-ba7d-9f41cdb14a76">
+                    <propertyInstance
+                      Id="74ca2b59-ec12-4ab5-a112-9e35619c67ef"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7518af26-9545-4d90-a3a2-627891e966a0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49e5f2e4-6660-4f4d-bef9-5218d9f8af38"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="11ad068d-b887-4d18-b069-4839c5135608"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DrequestAccess OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a2218ae8-f552-4ed3-858f-341efc8fef90"
+            name="saveAttendance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ec782821-4000-4721-8c3a-2b7007d6548e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsaveAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourseAttendance)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="39f2c85b-86fa-499d-9a0d-b6a8d4a95b40"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3bcaf954-8e8e-4d89-9833-8cb90ca0a3c6">
+                    <propertyInstance
+                      Id="5e2204c6-d331-4dea-838f-a4408bf767db"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74ccd08e-9506-4e61-aaae-2377ccbd06f1">
+                    <propertyInstance
+                      Id="923412b2-4ea9-4828-a82f-fdca5e71e2f4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c90f1cbf-c5d4-4137-a0c0-0107a134543e">
+                    <propertyInstance
+                      Id="edf1e588-1d10-4aaa-a788-2e0ff4d7360f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7b55673-ea8a-41a7-9ee5-58055e130619">
+                    <propertyInstance
+                      Id="132203fc-dac0-4c2d-99c6-93f6a3536fe3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b00bc07-8a84-4ae7-8309-9ea2182bf2be">
+                    <propertyInstance
+                      Id="51e89408-5a21-4e67-87c1-1dcc5457a19a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df6a4613-847b-46e7-9711-6c38a191a585">
+                    <propertyInstance
+                      Id="9842fab1-6ed3-48a2-9051-38925e2976d3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20ea651c-4bc2-490e-b6f5-cfcdc5b4d45d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e66dc577-f1e4-4d78-a63f-9b15710d06d3"
+                  name="attendance"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2eebc816-f7b2-4485-b0be-44508f4a07d1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsaveAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourseAttendance)]))]) ParameterIdentifier%3Dattendance"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d31c3367-f3f9-482e-84f5-5f1efa8ec512"
+                      LastKnownName="List&lt;CourseAttendance‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a79ac19f-8f92-4207-8c38-44997a7ed885"
+            name="CourseController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9dcaae8a-f7be-4d0c-979b-962eb64c6ab9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a7721366-0922-470b-ae07-715646d23299"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77124d0f-a1e3-4e2f-9983-3942d69c647b">
+                    <propertyInstance
+                      Id="f4c0064b-b701-4f6c-ae0e-bd93a08fd7b1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f776150-c30b-4619-b50c-f488fe17ad56">
+                    <propertyInstance
+                      Id="99ff2cea-040e-418e-879f-87b742ce8587"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20206dad-0148-466f-b418-265d8f6a7fa0">
+                    <propertyInstance
+                      Id="c73994dc-0ae0-421e-8a98-8003964fec49"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f225e4b9-d4d5-4d4e-a3fe-ff3d3732f727">
+                    <propertyInstance
+                      Id="1695a9e5-83e4-4025-97bb-f8ff17c0e51f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de61ba45-562e-446e-ac58-8c7d82d6efe4">
+                    <propertyInstance
+                      Id="568ba94d-0fda-40ae-b46a-ec6538c7a98a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e45c3a4-04c4-4050-8be5-32529588e863">
+                    <propertyInstance
+                      Id="d7512e43-a618-4011-a52c-6ca0c8ec4c2c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c73d3351-251e-4339-af65-9314ab284e8d"
+        name="HomeController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="799b05aa-2a13-4727-89ce-22be647bd35c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DHomeController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="03eddd0d-d7bf-4c05-b244-2c4b0050ef59"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="61f85427-3bc7-4011-af1d-b1d26b810566">
+                <propertyInstance
+                  Id="c9947572-b3ef-4959-ac8b-370e1c5869b9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b3c7a767-b815-451e-b62d-9bed7bdbeebb">
+                <propertyInstance
+                  Id="7e02768c-2bf6-495f-9031-dadc269790c4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="895a5672-cde4-4d42-bbdd-1c5eae29289f">
+                <propertyInstance
+                  Id="00b24432-f0e9-43f2-bf57-a3fbc6d4277e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="472d944a-03a9-4918-9253-95bcb0c57298">
+                <propertyInstance
+                  Id="43562269-824e-4b7f-9397-df8488fb1632"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ded362a-7799-4119-869d-555a0fad591a">
+                <propertyInstance
+                  Id="301ca76d-3941-4631-9310-aa69c6d82ec1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="e938ee98-a312-43e8-acc4-495250bae428"
+            isSubstitutable="false">
+            <classMoniker
+              Id="79fd8a42-4c2a-47b7-a41b-9c92ed031a2d"
+              LastKnownName="Controller"
+              LastKnownLocation="Package7_2133.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="921e14c4-c957-48e2-9d3e-fa36269f772d"
+            name="Index"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6adcf7b0-33cb-424a-8a41-4eca8318c4ac"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DHomeController Member%3DIndex"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="05d9070b-588a-45b9-b428-35a7f2238ef2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f6cb447-b1c8-4a42-8ae7-e830e93e4e07">
+                    <propertyInstance
+                      Id="9ffa5925-861c-4971-8c14-a6b5f9712d9c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c2ca20b-3c1e-4a6a-882e-023283d941b5">
+                    <propertyInstance
+                      Id="92005bc6-6c49-4f3e-b435-f3ca1e9ee446"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cffd463-480c-4613-8be5-e9719013f300">
+                    <propertyInstance
+                      Id="c21415d2-3b5d-424a-9fa6-122dbcdf2e6b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82df6dd6-2401-424e-96c5-e1442b9df07e">
+                    <propertyInstance
+                      Id="8f632bc7-24c9-4b40-963e-89ec62180857"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fad533bd-c58d-474e-9ebc-8b78d104ac46">
+                    <propertyInstance
+                      Id="0d1d2719-2f87-4914-8daf-40966938aeb0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82d59969-aeaa-4c50-abe2-01cd7c9af78c">
+                    <propertyInstance
+                      Id="b48b9a9b-96ce-48f0-a202-fc52038df2d8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15ab0f38-5edc-4479-859c-95e2608219b7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="edf8b467-1c4d-4896-b99d-c56573221698"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package7_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="961bc880-105a-4036-bac9-9274a5be8aec"
+            name="About"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0f14168b-8a8f-4eb9-b961-d9cf8b4d6d85"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DHomeController Member%3DAbout"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ba9619e0-ea6e-4558-8189-8070dec11fa1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e50092c-e197-4be3-b217-bb86630981d4">
+                    <propertyInstance
+                      Id="548d5e64-87ab-46df-a508-bcdc154d16a0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b63625b-7880-4d73-8809-44d7938df34f">
+                    <propertyInstance
+                      Id="ff62a66f-adb6-4a59-9a4b-705feffba059"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d098761c-67ce-4906-9076-ceb5e36417d2">
+                    <propertyInstance
+                      Id="6b37a539-364e-4cd1-a1e6-2c30d638c0f1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="739692af-0abb-4fb3-86e1-e2dad5e7f6ab">
+                    <propertyInstance
+                      Id="5559097a-470a-47d9-9230-a076b798f9b9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed187b2f-48c5-4929-9de3-7bf380c4509a">
+                    <propertyInstance
+                      Id="551520ce-87ea-486c-bdf5-9b853d78d7a4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20b961dd-e0b3-4129-a719-5a03965e1cdd">
+                    <propertyInstance
+                      Id="5daaae8d-28ed-4ccc-8a90-f184cca61326"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b42f5e78-6de3-400c-aad0-a76fe873ba57"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="edf8b467-1c4d-4896-b99d-c56573221698"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package7_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="55866a50-cf88-41be-a6eb-3a1ae321f2aa"
+            name="Contact"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d9f85d4d-8985-4cf3-b4f6-489e0546f490"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DHomeController Member%3DContact"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4751e038-d2dd-479e-b123-b9dbc15c9468"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="135f3650-d5e0-478e-9b7c-760809a6e92b">
+                    <propertyInstance
+                      Id="7b81d7d6-7c4b-4ffb-9ce6-267eca7d882e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0d20f0f-971e-4615-985b-17f7a8ae9b95">
+                    <propertyInstance
+                      Id="27899bd5-c73a-4f5c-a859-6b2908cf74fe"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57a0c4fb-70d7-4eb8-a7b4-4dbdac9224b6">
+                    <propertyInstance
+                      Id="eb869cb2-2789-4be1-9ad9-ab6068d9d2a6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e94773a7-e716-4b06-817b-d7e70bdcc525">
+                    <propertyInstance
+                      Id="756d7997-9533-41d8-9345-e256b335a04b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b88f198b-ceab-464a-93c6-c50d0b688114">
+                    <propertyInstance
+                      Id="023e01df-313c-4a19-a40e-91140248d7f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ed4c2fd-8eb4-4ed0-83d2-c79b14f71a30">
+                    <propertyInstance
+                      Id="1e294083-9a94-4035-ae1a-88e0d04336c6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="98f7b6c8-a2c6-4934-a41b-81c67478266d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="edf8b467-1c4d-4896-b99d-c56573221698"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package7_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8543ce82-970a-4cc9-8aef-f3db03412a38"
+            name="HomeController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e4e24ed1-7fe1-47b5-84ff-44b1c475aed7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DHomeController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="93088f15-8312-4725-a076-77826f967f70"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbb51165-a84c-42ff-83dd-451c85844b6f">
+                    <propertyInstance
+                      Id="cffb481e-9b43-47cb-b559-9c130b4d2955"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ac9c8d8-f98b-44e4-9a32-249b3c6e5f05">
+                    <propertyInstance
+                      Id="464e7819-d62a-4dad-bf69-8986e534f766"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61f70039-902a-41bb-84ba-8b61a7ffcf1e">
+                    <propertyInstance
+                      Id="f2182405-882e-4755-9ff7-04c7fbd3f219"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78c0c2b8-3cea-40d4-acc6-da8f895795e9">
+                    <propertyInstance
+                      Id="e4b6aa32-b911-4bba-a9ad-2ef776a90703"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1071c641-82f2-4d6a-a35d-cdb8bb34ba22">
+                    <propertyInstance
+                      Id="61a05c79-876a-41b5-9257-25474d15bdaa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42e53a39-f257-4ad2-a89d-01f634e2b079">
+                    <propertyInstance
+                      Id="a12b3b7c-9cdf-4a81-8a08-642f8e9e39d9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a293611e-895d-4d9e-a8ab-72ae87ae19e1"
+        name="UserController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6ca403c7-621b-44f4-965e-c6364142eb07"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="72ff22d4-1c7e-4995-8402-103238796eb4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="605e9e91-63fd-4deb-a0d7-d89224990643">
+                <propertyInstance
+                  Id="5780d831-51a2-436f-adc7-2428b719a170"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ed3aa1f-e5bd-4d21-ba53-2cbe581a0f07">
+                <propertyInstance
+                  Id="f42f3447-366b-48e8-aa1f-b8054e9b60d3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a57d8ed-7ff6-4f82-85dd-6a72808e62b9">
+                <propertyInstance
+                  Id="15d3aa7e-bcf4-4fb2-8301-c1809406146d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7d4dfc3f-008d-4a32-afbe-efd73f78be1c">
+                <propertyInstance
+                  Id="9f966fa6-7d6c-4e04-88be-f464ed30f124"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56b060ff-f501-4d68-9b53-2868f09db20b">
+                <propertyInstance
+                  Id="12a1cd0f-52fb-444e-add7-26636c742335"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="6140d734-ab3b-4e2f-89e8-529a2a7224dd"
+            isSubstitutable="false">
+            <classMoniker
+              Id="79fd8a42-4c2a-47b7-a41b-9c92ed031a2d"
+              LastKnownName="Controller"
+              LastKnownLocation="Package7_2133.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3cf8dadd-eead-4b45-bf99-daf6f83d26e5"
+            name="addUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0dc0b7ba-411a-4600-a2e5-2f97e081ce14"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DaddUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c5689e4f-c67d-4086-a3a3-748bd2882c85"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e805b356-4d69-4d1c-ab59-18c5c9ba6c17">
+                    <propertyInstance
+                      Id="285d9ef2-36f0-4c2b-be12-3b78a8d2109a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="050f3ab5-5a65-44d1-99f6-7a7a7bfe9206">
+                    <propertyInstance
+                      Id="a81f182f-30c1-4c69-a653-43e3cef1a247"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e61c3f0e-3394-4cfb-9adc-21289edbedab">
+                    <propertyInstance
+                      Id="6520826a-2a9f-42c9-ae3f-1ce6a58ace7e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31e4fada-75cf-45e2-bae2-1c849ed27050">
+                    <propertyInstance
+                      Id="2d7b25a4-8a82-4bc1-a6fd-0a27e2d1142e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87cf06aa-083b-4a74-b51b-0f9398aed643">
+                    <propertyInstance
+                      Id="58fa85ba-cda4-44eb-adfd-2b5526c19465"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1b4a78c-6db0-4eef-880a-03ea1106fecd">
+                    <propertyInstance
+                      Id="eadd7a70-bc58-42cf-a967-5945b21a82ca"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="19005704-261d-44f9-a82a-e22a4dc00280"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="45a52218-8b78-41ed-84fa-91723b1d4937"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c27a229d-e0ef-4a2e-a8a9-c40a56315993"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DaddUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dcc6d14c-a712-43ac-bcde-6ab70a26b4ab"
+            name="updateUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="036c651b-aeab-4364-afb6-b8e4c4bfb377"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DupdateUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5d2b090f-e8bf-4c66-a8d5-fac2b81919a0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dde4cca-a161-449c-a6fe-1703f7dd70dd">
+                    <propertyInstance
+                      Id="ed6ca8fc-52d0-4863-a6a6-a984075d3ce0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e7c5ce5-793e-4829-92b6-8546a30fd476">
+                    <propertyInstance
+                      Id="3ababc5a-8735-413e-895d-39e031eb87ba"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e62d93b-ab37-4e88-9e55-0d97f918f97e">
+                    <propertyInstance
+                      Id="45b3d619-6e5d-4a0e-ba2d-9e2abb0d1588"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c0e8d7b-ecfa-47f0-8fdc-4a07a4918dcd">
+                    <propertyInstance
+                      Id="106a3af5-3ec8-479f-a926-cf04eb4c9e04"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f54e9f1-ccbd-4877-bc88-95cf2a6dfb4d">
+                    <propertyInstance
+                      Id="ceecd353-0daf-4f36-a3ed-729cfa85a09c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ba4af10-4a2c-4e0c-8803-b84f5263417f">
+                    <propertyInstance
+                      Id="bf1993b5-efb8-4893-a379-319367ec16d1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="79e4d3a8-525d-4809-bae5-469db7b710de"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="77a025d7-b88f-4cde-994b-81449675c8f6"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="796c256c-6c37-4563-bb24-89fed1977a96"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DupdateUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9dc5ddde-879c-46fb-90da-32874357d768"
+            name="deleteUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a96d8bc3-6857-4ab8-be89-52c2fe044704"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DdeleteUser OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="01290e30-421b-4037-a22b-2e31a73f688d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17386292-1f3c-40a2-94fd-08447d461b7b">
+                    <propertyInstance
+                      Id="8afb81c4-563f-47cb-9131-2cf56fa2a38e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="adcbf3ea-7652-4084-a405-ebb8aeb5641f">
+                    <propertyInstance
+                      Id="c35ed0a2-06b3-402c-9f8b-1861b9899284"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="345a61bf-06ca-4053-8676-1002651b91b1">
+                    <propertyInstance
+                      Id="6f76779a-4a40-49e9-97b4-dcd2e5d5ba69"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d3c87d7-1d9d-4269-9035-7cc37947d95b">
+                    <propertyInstance
+                      Id="994a150b-a409-4799-85cb-9664461bb4f8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7c709d7-82d3-4603-a757-3448ed6c7783">
+                    <propertyInstance
+                      Id="6eefa44a-7a1c-4757-bb15-ef3c7c618958"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="392edc0a-f577-4ce8-97d6-03ab7a9bacb3">
+                    <propertyInstance
+                      Id="3cd4c785-36d2-46d1-a730-c9b8d90a5d78"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e4cd31b2-3eec-4679-880f-9438265a7758"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eff6044f-8348-4f24-896a-deb335eb90d2"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="544423fa-9444-4962-9247-f005a853b3d3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DdeleteUser OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="07fdfcb5-7f75-4e21-85f7-6e511cd111f5"
+            name="getUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ad902293-b4de-4a7e-8b75-a065560c3078"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DgetUser OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="de30e36a-c56d-4e9c-a18d-a9601569d19d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5fd4f31f-dc5a-4a9b-b569-3b69f45cb1d6">
+                    <propertyInstance
+                      Id="85366d85-118a-4622-b612-58cb97140dc0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="539fcd58-8077-40e7-a905-457db20519f6">
+                    <propertyInstance
+                      Id="80b3dc2c-9784-4be2-ad93-77a1d4d17a65"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fae48045-6a78-43b9-b997-41c1c7561c4d">
+                    <propertyInstance
+                      Id="259324c9-d6bc-4f1b-a32a-d1584558ec19"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a61ddb25-3e84-4f64-83b7-a89ff39e2a96">
+                    <propertyInstance
+                      Id="d5996dbf-2237-4ee0-9c88-e07ed4d33e24"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4de74b8-3dfb-4df3-8fad-35a8dee85e3d">
+                    <propertyInstance
+                      Id="965982e1-361b-4fde-990c-33bfa2393b2c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2701a92-0293-4256-b092-77c0f0d31622">
+                    <propertyInstance
+                      Id="2d8679b1-1b59-42f0-9f34-e16a180bf1a8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="427275e5-8fd1-4a19-bf12-f5eba0329bc8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="58e50bee-8847-4474-b9e7-1a8ba54041f2"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="61efb360-939a-4776-8580-da8fd0e9792e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DgetUser OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="455381b3-6737-42e5-953b-fccc7d560ae5"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7a9bd556-85a9-4baa-8df9-fd4ba7126735"
+            name="searchUsers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="663e7370-c307-4e1f-9669-f9abf838cc95"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DsearchUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e2c4c5d0-5cad-4f0b-8406-d8197d3f573f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b984076-5d0e-4dd6-b09c-4e3c6e9ae679">
+                    <propertyInstance
+                      Id="89ee1ece-3b74-4c85-857f-90efe547adf2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf503afa-ae33-49dd-b814-a1d7e30d4c6c">
+                    <propertyInstance
+                      Id="4954ef16-9e2f-4b17-b1c4-5a1bd9e0030f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa8a8e8a-89b3-4f33-9b80-482edfbf1c7b">
+                    <propertyInstance
+                      Id="716d13d8-7e0e-41b2-83bc-5bbc7d92616f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4875c49a-d79c-4cc5-b1ff-888d878765b0">
+                    <propertyInstance
+                      Id="2267e01f-ec8e-425b-ae5d-26d0532f08d0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3afd5977-731b-41e7-8e93-a53be23a2289">
+                    <propertyInstance
+                      Id="1d260706-01df-46b7-b612-47b6e20fb578"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="289bbef3-ace8-4ac0-86e3-28b3da169113">
+                    <propertyInstance
+                      Id="2409d7cf-2db4-4d7b-b252-3778845b8d80"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3f94440c-f502-4785-b797-5bd260c2b57a"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dd20e1e2-399d-4158-9ad4-7840b0ae20f3"
+                      LastKnownName="List&lt;User‎&gt;"
+                      LastKnownLocation="Package4_2133.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="75ed9f88-94bc-4e10-a8a0-fd8af14913bb"
+                  name="filter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c49f7ab9-e70e-4ecf-b67c-6718f9099734"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D(Name%3DsearchUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dfilter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="82c3a10b-ab14-4758-9936-b02cbc2ad837"
+            name="UserController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7c97c2a3-e3d9-4f7d-a3ac-d706fc29aaaa"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f36635ee-db9c-48c0-ae99-35476e0f0bb3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54f92dc5-7ca4-412a-a73b-aa6b4ac1f407">
+                    <propertyInstance
+                      Id="05065dcd-6a44-4b5c-aa8d-97aa9845d71f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0cbe323-9b44-4ef7-88cb-d64e55256ee6">
+                    <propertyInstance
+                      Id="5c1e8431-d5f2-43c7-8f85-43ea3e32279f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14f255b0-4d55-4dd5-b97c-85e8f32ba598">
+                    <propertyInstance
+                      Id="7851ea18-3c14-4512-9811-ce69ef25774f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d99c21c-57ff-48f4-a724-2cf229ccfcb2">
+                    <propertyInstance
+                      Id="a3706645-d808-45c7-9d87-02c79f3f62a3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d677fe7-658c-4346-9a6c-a150224ad98d">
+                    <propertyInstance
+                      Id="4c8bab73-3434-454a-864d-9b91784a8c75"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="282a9fed-0eae-4eb1-b7a5-ac8bdc284d02">
+                    <propertyInstance
+                      Id="b42c7305-ea53-4d49-b9e2-d5c42a1e92ce"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
