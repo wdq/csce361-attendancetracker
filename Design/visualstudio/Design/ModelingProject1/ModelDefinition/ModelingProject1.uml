@@ -2176,6 +2176,11 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="db64b827-905c-4c5f-bbba-e0260ed28d2e"
+        name="Guid" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

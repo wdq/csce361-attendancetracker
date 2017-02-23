@@ -6,34 +6,172 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2017-02-21T23:07:23" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design' -  (Package)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models' -  (Package)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance' -  (Class)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::addCourseAttendance' -  (Operation)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::addCourseAttendance::attendance' -  (Parameter)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::Attendance' -  (Property)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::CourseAttendance' -  (Operation)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::CourseId' -  (Property)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::Date' -  (Property)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::deleteCourseAttendance' -  (Operation)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::getCourse' -  (Operation)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::getUser' -  (Operation)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::Id' -  (Property)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::updateCourseAttendance' -  (Operation)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::updateCourseAttendance::attendance' -  (Parameter)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::UserId' -  (Property)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System' -  (Package)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::DateTime' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Guid' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::Guid (Association)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::Guid (Association)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::Guid (Association)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::DateTime (Association)" />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="High" Text="(1) type(s) fully reverse engineered." />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="High" Text="(4) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
-  <Message Timestamp="2017-02-21T23:07:24" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2017-02-23T16:05:03" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '71e0ca69-4460-43b7-ae80-1a7e9c5be464' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design' -  (Package)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models' -  (Package)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building::Building' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building::Code' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building::getCourses' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building::getDevices' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building::getRooms' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Building::Name' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::ActiveAttendanceCode' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::addCourse' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::addCourse::course' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::addOwner' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::addOwner::id' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::addStudent' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::addStudent::id' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::approveStudent' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::approveStudent::id' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::ClassNumber' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::ClassTitle' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::Course' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::CourseCode' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::CourseNumber' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::deleteCourse' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::getOwners' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::getRoom' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::getStudents' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsActive' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsClassOnFriday' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsClassOnMonday' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsClassOnSaturday' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsClassOnSunday' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsClassOnThursday' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsClassOnTuesday' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::IsClassOnWednesday' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::LocationRoomId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::removeOwner' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::removeOwner::id' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::removeStudent' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::removeStudent::id' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::SectionNumber' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::Semester' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::StartTime' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::StopTime' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::updateCourse' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::updateCourse::course' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Course::Year' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::addCourseAttendance' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::addCourseAttendance::attendance' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::Attendance' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::CourseAttendance' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::CourseId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::Date' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::deleteCourseAttendance' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::getCourse' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::getUser' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::updateCourseAttendance' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::updateCourseAttendance::attendance' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseAttendance::UserId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::addCourseOwner' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::addCourseOwner::owner' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::CourseId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::CourseOwner' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::deleteCourseOwner' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::getCourse' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::getUser' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::updateCourseOwner' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::updateCourseOwner::owner' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseOwner::UserId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::addCourseStudent' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::addCourseStudent::owner' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::CourseId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::CourseStudent' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::deleteCoursStudent' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::getCourse' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::getUser' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::updateCourseStudent' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::updateCourseStudent::owner' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::CourseStudent::UserId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Room' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Room::getBuilding' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Room::getCourses' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Room::getDevices' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Room::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Room::Name' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::Room::Room' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::RoomDevice' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::RoomDevice::getRoom' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::RoomDevice::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::RoomDevice::IpAddress' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::RoomDevice::RoomDevice' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::RoomDevice::RoomId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::addBluetooth' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::addBluetooth::bluetooth' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::addUser' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::addUser::user' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::deleteUser' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::EmailAddress' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::FirstName' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::getBluetooths' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::getCourses' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::LastName' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::NUID' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::removeBluetooth' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::removeBluetooth::id' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::Role' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::updateUser' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::updateUser::user' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::User::User' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth' -  (Class)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::Address' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::addUserBluetooth' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::addUserBluetooth::bluetooth' -  (Parameter)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::getUser' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::Id' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::Name' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::removeUserBluetooth' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::UserBluetooth' -  (Operation)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Design::Models::UserBluetooth::UserId' -  (Property)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System' -  (Package)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections' -  (Package)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;Course‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;Room‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;RoomDevice‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;User‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;UserBluetooth‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::DateTime' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Guid' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::Building to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::Course to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::Course to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseAttendance to ModelingProject1::System::DateTime (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseOwner to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseOwner to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseOwner to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseStudent to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseStudent to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::CourseStudent to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::Room to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::RoomDevice to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::RoomDevice to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::User to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::UserBluetooth to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Design::Models::UserBluetooth to ModelingProject1::System::Guid (Association)" />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="High" Text="(9) type(s) fully reverse engineered." />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="High" Text="(8) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2017-02-23T16:05:08" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>
