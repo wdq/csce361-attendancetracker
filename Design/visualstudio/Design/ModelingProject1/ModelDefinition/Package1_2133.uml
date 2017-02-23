@@ -247,10 +247,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -505,7 +505,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="efaaea1d-7ad0-4852-9b21-85f208dbcbfb"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a1e78fd3-d863-4d95-83ac-f5ea35e56dce"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -597,10 +610,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1797,10 +1810,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2295,7 +2308,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="395a0f4d-f28d-49ad-b475-f9b6c02d957e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ee36f358-8ff0-4202-8ba8-ffaa5707dafb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -2387,10 +2413,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2467,10 +2493,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2659,7 +2685,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4fffd294-a92d-4106-96dd-e3329f78cc94"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0f40661f-8f8d-437e-b43e-e369bf3bd9fb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -2671,7 +2710,20 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="af8e1551-2caf-4494-84f3-97bb9f42dda9"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="73d37b99-a8da-4ca1-a0eb-7a3303217408"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -2751,10 +2803,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2850,8 +2902,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="db64b827-905c-4c5f-bbba-e0260ed28d2e"
-                LastKnownName="Guid"
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
@@ -3014,10 +3066,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3724,7 +3776,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="132bbbc7-4159-4f56-9594-36e64b5e3c02"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="728b7413-23fb-4855-aa27-f8cb16fbc0e1"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -3763,7 +3828,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d6a0d711-994d-4671-bec4-1483880d0838"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="97c9a2bb-f59e-4d60-a9b7-e6c9d59b61f3"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -3855,10 +3933,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3935,10 +4013,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4015,10 +4093,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4353,7 +4431,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="496cf650-0653-4990-b86b-736142be6212"
+                      name="Lower"
+                      value="2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2917642c-4832-469a-b236-1d878d6f1a2a"
+                      name="Upper"
+                      value="2" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -4445,10 +4536,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4525,10 +4616,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4929,7 +5020,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="18d40c27-d33f-4aea-8565-050786033e74"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9e4e323c-32e2-4323-a25a-832854034740"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -4968,7 +5072,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="12ad485c-126f-476a-9d7c-6d223e902795"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="67983aac-04fe-4a93-b747-92935690c0ba"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -5060,10 +5177,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5140,10 +5257,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5220,10 +5337,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -5464,7 +5581,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="517a0e63-0f26-468c-9730-ad779e592336"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c942eda7-b2d0-4b92-a84b-f18413ee1884"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -5503,7 +5633,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="488857b4-a57a-4c75-bdd7-af1a0adad650"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b4e01776-a923-4c33-bc15-b3fdc5f2300b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -5595,10 +5738,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5675,10 +5818,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="c76b7296-f577-4896-a482-3e69d586a58b"
+                LastKnownName="Guid, Primary Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5755,10 +5898,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="455381b3-6737-42e5-953b-fccc7d560ae5"
-                LastKnownName="Guid"
-                LastKnownLocation="Package2_2133.uml" />
+              <undefinedTypeMoniker
+                Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+                LastKnownName="Guid, Foreign Key"
+                LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>

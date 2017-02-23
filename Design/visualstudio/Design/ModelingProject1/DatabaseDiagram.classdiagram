@@ -127,7 +127,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="eb716878-85bd-41de-9a2c-1fa74f3fcf7e" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="7da7ff4b-586d-4bb9-96ba-508cf982cda4" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="4e4a20db-5569-403e-9ad8-973ef8a93d45" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -198,11 +198,6 @@
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
       </referencedType>
     </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" name="Guid" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Guid">
-        <elementDefinition Id="455381b3-6737-42e5-953b-fccc7d560ae5" />
-      </referencedType>
-    </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
       <class Id="327a57c9-db55-45a6-96d0-c6a7735afed4" name="Course" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
@@ -217,6 +212,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="3a352aea-acb9-48ca-a1b1-f806a7d14366" name="Course" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="15da3531-b8b7-4752-a8ef-feaa5932ebc1" name="Lower" value="*">
+                      <elementDefinition Id="efaaea1d-7ad0-4852-9b21-85f208dbcbfb" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="41683702-0f48-4ba9-af10-9db5e1aff1b1" name="Upper" value="*">
+                      <elementDefinition Id="a1e78fd3-d863-4d95-83ac-f5ea35e56dce" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="c8da5827-6240-4626-b4dd-95cf47d15167" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -287,7 +292,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="340eede0-8e20-4fab-8cca-778440c53bf7" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="3bd29811-a767-4de7-a55e-dd12f23130e2" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="73756cc0-aa12-4a4f-93da-fcab27e752f2" name="CourseCode" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1187,7 +1192,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="8a9ac200-0d5d-42fe-ae89-2b9b4f79192d" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="f93d2195-164e-4f31-a15d-fd7a480907d2" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
           <property Id="1931d79d-1e9b-41b9-aa46-9efdb1d921cd" name="IsActive" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1457,6 +1462,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="c5cc8681-4c28-4ecc-a74d-19345af285c4" name="CourseId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="5b961a64-c546-4c58-b3a0-f23c2d95cd3e" name="Lower" value="*">
+                      <elementDefinition Id="132bbbc7-4159-4f56-9594-36e64b5e3c02" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8d23f782-f237-4d31-a58e-c0d5f9b62979" name="Upper" value="*">
+                      <elementDefinition Id="728b7413-23fb-4855-aa27-f8cb16fbc0e1" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="eea286c3-0c74-4850-b6db-6b931ea24473" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1473,6 +1488,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="7a27e5ec-fcb5-483f-91b9-0797b8a434fc" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="addae30b-430c-4ad9-91a4-d081b8d95d65" name="Lower" value="*">
+                      <elementDefinition Id="d6a0d711-994d-4671-bec4-1483880d0838" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b0869bac-be7f-4baf-90ec-b4ca9cb1cbf6" name="Upper" value="*">
+                      <elementDefinition Id="97c9a2bb-f59e-4d60-a9b7-e6c9d59b61f3" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="6d072d40-2442-4f85-8a20-a162eb589799" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1543,7 +1568,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="8fd5f61e-b2e3-4292-b96f-0fdfc1b6b09d" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="0d8d4ab9-ce32-4eb0-82b4-ba5b9bf5694d" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="029b08ef-ad1c-4fb8-95bd-67b121809dd3" name="CourseId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1603,7 +1628,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="aa07143e-068a-43e3-91cb-cbad839b3b18" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="d550b30e-149c-49a1-b3f1-5bc7dc6ef187" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
           <property Id="57767d9c-4495-4a18-9241-107616b9c712" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1663,7 +1688,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="020cbfe6-e348-46bc-80f6-c1078d50bffe" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="f70f4111-c714-4379-8a05-bdd6c45b6842" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
           <property Id="d4b09399-27b9-4d2d-90ef-77eacdc86858" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1808,6 +1833,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="15fc54d4-f4a6-44a3-b9e1-beb0ba602c07" name="CourseId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="7e6f2c0f-d320-4980-b2ae-59df1dd5a88c" name="Lower" value="*">
+                      <elementDefinition Id="18d40c27-d33f-4aea-8565-050786033e74" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b5537e07-57eb-4d5d-a321-b111722a8898" name="Upper" value="*">
+                      <elementDefinition Id="9e4e323c-32e2-4323-a25a-832854034740" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="6177b90c-862c-4f67-a0e1-4da6aa358edf" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1824,6 +1859,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="e38c0d71-b0f3-45ea-bf93-5caa36b2c6bb" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="a6d8585a-474c-44fa-a789-8f8c0092ec21" name="Lower" value="*">
+                      <elementDefinition Id="12ad485c-126f-476a-9d7c-6d223e902795" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="02691465-b73f-476b-80bc-e6434dd69a77" name="Upper" value="*">
+                      <elementDefinition Id="67983aac-04fe-4a93-b747-92935690c0ba" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="bfbfb4fe-5b98-4ed3-8f6e-d2bd019ba403" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1894,7 +1939,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="e9144701-7216-4ae7-807c-7059b700e41a" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="dff5715b-34db-48db-91b4-7a0d50fe106d" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
           <property Id="a9f1ab53-761a-477c-9176-bf90786b99bf" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1954,7 +1999,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="da8c8329-2650-47a4-a7c5-a7e134dcacc8" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="e3fa9c84-a6ba-4696-bd6f-edc233f34d44" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="828c7c78-be00-4677-8724-108de0656604" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2014,7 +2059,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="8f45a6f3-6789-4c7c-96a6-f5cb53929a3f" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="0a97088d-e10d-458f-af79-e9accbc93f2c" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -2034,6 +2079,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="b16bea73-13f4-4a55-a3b8-63f910d17619" name="CourseId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="b2406cca-2409-4caf-8c2c-6f818768b144" name="Lower" value="*">
+                      <elementDefinition Id="517a0e63-0f26-468c-9730-ad779e592336" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f1424cec-316c-48aa-b2fe-1b033d633074" name="Upper" value="*">
+                      <elementDefinition Id="c942eda7-b2d0-4b92-a84b-f18413ee1884" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="72a82525-f845-4ad2-abb5-184552734896" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -2050,6 +2105,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="b18e31be-4297-43e7-b2e5-fd8080fe3f3f" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="561a09ab-d8a3-430b-948e-5e5473d02672" name="Lower" value="*">
+                      <elementDefinition Id="488857b4-a57a-4c75-bdd7-af1a0adad650" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c70efa86-bf2b-4870-b262-9025b5bd8edc" name="Upper" value="*">
+                      <elementDefinition Id="b4e01776-a923-4c33-bc15-b3fdc5f2300b" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="df8f933c-d194-4f2a-aede-4f06ec7be053" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -2120,7 +2185,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="38cd21bf-2bdf-4708-91f1-8c70f19b5dbe" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="43486558-5cc8-4c97-aec0-a64ff19acdea" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
           <property Id="9fa5176f-7657-4ef8-aea0-40373efdcaf9" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2180,7 +2245,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="ed9b5054-09f6-4493-b458-b1f8f6cb4163" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="d00f80dd-f987-42b7-be93-f0b494b84012" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="c9293269-b54d-4610-be82-3043d4354519" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2240,7 +2305,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="9e57ec2f-9cd8-4e47-a267-0cd3313c8f45" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="ca8ff6ec-0041-436f-92c4-5778569d2ca1" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -2260,11 +2325,31 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="abcffb43-8f29-47e5-a00d-afe85ca3f6f9" name="BuildingId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="33085e99-db87-4316-be09-aea3a02049f7" name="Lower" value="*">
+                      <elementDefinition Id="4fffd294-a92d-4106-96dd-e3329f78cc94" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="9e7ac53c-7a3b-4cc6-a13f-edb6709eb11b" name="Upper" value="*">
+                      <elementDefinition Id="0f40661f-8f8d-437e-b43e-e369bf3bd9fb" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="fa07305c-bc7b-4512-947b-8434be4cd2f8" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd Id="bfb1fe8d-26e5-4004-8fc6-68410beaa8b7" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="e38a8deb-cc1a-4e4f-bcd7-abd32ed87673" name="Lower" value="1">
+                      <elementDefinition Id="af8e1551-2caf-4494-84f3-97bb9f42dda9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b0c6bd35-dcf5-4901-a2c2-f51880c8674c" name="Upper" value="1">
+                      <elementDefinition Id="73d37b99-a8da-4ca1-a0eb-7a3303217408" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="8548f9e1-85b0-4f04-96d8-3f0e7c153bb1" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -2330,7 +2415,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="6bc9ec92-5aa7-4135-9ad5-a1b464dac88f" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="1538095e-6fed-4e9c-ac1f-cc133ad34a60" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="63f6e8c6-2b14-49cf-8499-c1c228f1ca76" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2396,7 +2481,7 @@
           <property Id="aa527c50-7594-49fd-a636-a8dcb5a63e44" name="BuildingId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="6cd34f9f-aa94-406a-a725-9e0fe7b5b9c5" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="ed168c89-b501-41fc-b398-49a76d2b6a4f" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="6cdc1d55-be59-42c2-bee1-e95847c89dee" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -2416,6 +2501,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="9c19dc3e-cd9c-4492-9a6c-5fa6060a6dab" name="RoomId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e3f337a0-6b3d-45a1-b372-2782fba7d22d" name="Lower" value="*">
+                      <elementDefinition Id="395a0f4d-f28d-49ad-b475-f9b6c02d957e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a475c4f5-36c0-4705-8e94-8660c4149511" name="Upper" value="*">
+                      <elementDefinition Id="ee36f358-8ff0-4202-8ba8-ffaa5707dafb" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="a6308c1f-255d-4693-bf8a-475f3f1b81ee" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -2486,7 +2581,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="124d744e-2c3f-4279-a43b-d96fcce72b3d" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="01b53e2c-e537-423c-ae84-4755c79d4ef2" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="2f7eb1da-a98b-405a-a083-3f7e5fbbfe59" name="RoomId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2546,7 +2641,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="ca32cc09-e65f-4374-b2a1-b31f2064fa95" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="2192c54d-32ce-4854-989f-5b1fc6ef235f" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
           <property Id="9955b953-e9c8-43eb-ad42-b97d006b8028" name="IpAddress" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2678,7 +2773,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="4a8538d9-c9f5-4a84-ab15-53b631acff95" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="019cdd4f-90d1-416d-9178-6a796098430e" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="b6b2cab0-eead-4936-a841-796e4bf5d9fe" name="Role" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2998,6 +3093,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="8244aef3-c4ad-490f-b65a-4f89de985d4d" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e4354bc1-ef44-4531-afef-ec3ca530b8c8" name="Lower" value="2">
+                      <elementDefinition Id="496cf650-0653-4990-b86b-736142be6212" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ab67d646-b425-41d3-a8e6-edd16c214645" name="Upper" value="2">
+                      <elementDefinition Id="2917642c-4832-469a-b236-1d878d6f1a2a" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="f5dc0405-1b9a-4a93-9538-9b315729423e" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -3068,7 +3173,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="c4c83bb0-1a27-4e10-8329-682c43187fa6" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="351cb709-e87c-4bc9-a3c7-7c455e029f17" LastKnownName="Guid, Primary Key" />
             </type_NamedElement>
           </property>
           <property Id="f5979035-522d-4c5c-98ac-500cfd64ab19" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -3128,7 +3233,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="d49125f8-442e-473b-8b23-09efd458729a" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d729c4ff-bbc8-48c6-868a-a10141b25ba1" LastKnownName="Guid" />
+              <referencedTypeMoniker Id="80e40e3f-6dd2-4522-999a-7198c2e31a5e" LastKnownName="Guid, Foreign Key" />
             </type_NamedElement>
           </property>
           <property Id="f903d966-95f8-4e7b-afa1-f711c76fdc9c" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -3255,8 +3360,98 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
-      <referencedType Id="ed168c89-b501-41fc-b398-49a76d2b6a4f" name="Guid" isAbstract="false" isLeaf="false" cachedFullName="Guid">
-        <elementDefinition Id="db64b827-905c-4c5f-bbba-e0260ed28d2e" />
+      <referencedType Id="3bd29811-a767-4de7-a55e-dd12f23130e2" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1538095e-6fed-4e9c-ac1f-cc133ad34a60" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="01b53e2c-e537-423c-ae84-4755c79d4ef2" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7da7ff4b-586d-4bb9-96ba-508cf982cda4" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e3fa9c84-a6ba-4696-bd6f-edc233f34d44" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d00f80dd-f987-42b7-be93-f0b494b84012" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="351cb709-e87c-4bc9-a3c7-7c455e029f17" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0d8d4ab9-ce32-4eb0-82b4-ba5b9bf5694d" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="019cdd4f-90d1-416d-9178-6a796098430e" name="Guid, Primary Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Primary Key">
+        <elementDefinition Id="c76b7296-f577-4896-a482-3e69d586a58b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2192c54d-32ce-4854-989f-5b1fc6ef235f" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6cdc1d55-be59-42c2-bee1-e95847c89dee" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f93d2195-164e-4f31-a15d-fd7a480907d2" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d550b30e-149c-49a1-b3f1-5bc7dc6ef187" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0a97088d-e10d-458f-af79-e9accbc93f2c" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dff5715b-34db-48db-91b4-7a0d50fe106d" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="43486558-5cc8-4c97-aec0-a64ff19acdea" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ca8ff6ec-0041-436f-92c4-5778569d2ca1" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="80e40e3f-6dd2-4522-999a-7198c2e31a5e" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f70f4111-c714-4379-8a05-bdd6c45b6842" name="Guid, Foreign Key" isAbstract="false" isLeaf="false" cachedFullName="Guid, Foreign Key">
+        <elementDefinition Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

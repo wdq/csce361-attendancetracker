@@ -2181,6 +2181,21 @@
         Id="db64b827-905c-4c5f-bbba-e0260ed28d2e"
         name="Guid" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c76b7296-f577-4896-a482-3e69d586a58b"
+        name="Guid, Primary Key" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="67f080c5-4183-4e67-8183-63ff533484fd"
+        name="Guid, Foreign key" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="eb51320e-5c3b-4d99-a15b-8b99a89c4de3"
+        name="Guid, Foreign Key" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
