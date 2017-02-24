@@ -487,6 +487,563 @@
               LastKnownLocation="Package7_2133.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="604a3394-df46-4c70-a598-671b493947c2"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a7ac38dd-f531-4dd2-9c0e-fce8b19576db"
+              LastKnownName="Room"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="75fb0c36-cedd-4dee-baae-620870246252"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72bb2242-b5ce-4346-94fa-c19eb6870f08"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="91c4e1aa-bd86-4832-8d94-8e36fe350c09"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="41b71fe6-30aa-4243-ae47-0e2ffe4232d1"
+              LastKnownName="CourseStudent"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0c409c3-d489-46de-96dd-8d9350b417e0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="db717452-49bf-41bf-b71f-586e22fdf9cd"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2716a0c7-567f-4dfd-b87d-3085e316bfa2"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="64ded2ff-a9d7-4502-b6dc-ed849f2e8647"
+              LastKnownName="CourseOwner"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="00e18175-75b6-41ed-abca-6a83f8d12580"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="55ad271a-1c2f-4b69-b580-d6ab1279585f"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="711380ec-5739-4da6-a561-e25859de91d3"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+              LastKnownName="User"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc323b49-9f9a-45f9-94fc-5b189add3b55"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2eff40cd-5b52-4aa1-b12c-313a24bd2ef8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a7e8b33b-0442-4005-92c5-10618202470d"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4da6672d-2186-4df1-a7e7-8ee44c6a1e45"
+              LastKnownName="Course"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7a09a27-1667-478c-96d0-4ec0d7a086ea"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6cf86a76-34a4-4776-bc08-6bcedf5e2889"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d9d02a89-64d5-42a7-9c6b-7d7980ff7601"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0a7ca54a-3b71-4f27-8520-f38dc23a49dd"
+              LastKnownName="CourseAttendance"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fdafbce5-ca12-432e-aa34-2cecfa68be46"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f68cabc-1fe8-4829-85f2-44e5809f577e"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="97c827d7-1cf6-4033-8ea7-ac3cf5409566"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5dd5490b-f201-4ad4-b55f-c74a2ffb69e8"
+              LastKnownName="Design::Views::EditCourseOwners1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b848ddfb-17a8-4f16-9677-e5aca6e77517"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc894b36-e32b-4dd0-98b3-a5b37ed1c82a"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="38bb6822-98b8-4316-a01d-c77ad3c97bf2"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f5098818-527a-4fe3-9bd8-de7c9b81ed09"
+              LastKnownName="Design::Views::EditCourseStudents1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2312025f-56b0-46df-88a8-a95c8007e3c0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c723e32c-daab-4145-b215-b88fa1b5f400"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ed5fc073-44bd-443f-9229-f100876d9e11"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c6c19c8b-a216-475b-9d97-97e63cc264c3"
+              LastKnownName="Design::Views::CourseSearch1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="989a3079-26dd-4365-a31f-b650f7af671e"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f2f1985-4a97-4a99-a9c8-b4c0c0971cca"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b9b0b38e-a802-404f-b4c6-6be691e6d4a2"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9ca4c116-4b8c-459a-b0ff-e6cb4879033b"
+              LastKnownName="Design::Views::ViewAttendanceCode1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf6ed070-df86-4db5-8c5a-7d865d6e0675"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51f309be-a944-4537-97ef-180e93e96881"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3bafdf90-8086-464e-8f8c-75c3648609cb"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="78d92cbe-587a-4a51-9baf-e05b8e541562"
+              LastKnownName="Design::Views::SubmitAttendanceCode1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a724b3d6-8247-4310-9ba4-953c7a23e9b0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e819c641-dc7c-4fea-97fa-f9b7639ca19b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5d4c2894-cc3f-4457-9459-5ea95d7c6d16"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2bf4de1c-ae29-48a4-87a0-ffcedea0df4a"
+              LastKnownName="Design::Views::ViewCourse1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="998836ed-0ef1-469a-bfa7-7a270ec2b27b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4c272bfa-ffab-46f8-8129-27c4f75542a2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8006b9c4-3b42-4283-a113-796ed0494b9e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="62d0b64d-298c-4e29-9618-9c4d3779322e"
+              LastKnownName="Design::Views::EditCourse1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c65bde1-7d72-46cb-97dc-77fae940b3a1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f6ed65ce-9811-49cd-a3d8-ac3c719e380c"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a4196bca-86c6-4717-b8c1-54012de5cb26"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b40e69ef-2888-4b70-a28b-403accd33926"
+              LastKnownName="Design::Views::EditAttendance1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1c765a4a-1caf-47c0-9cb1-9e4c83e17983"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dd622af5-e978-4ec9-9d99-1c7f0987d9d2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4f46d16b-ac52-4982-b3b3-c0554e4b175f"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e9a3e0fb-c620-4e94-b92f-ad141fbf39bf"
+              LastKnownName="Design::Views::ViewAttendance1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e21515fe-2477-4fe5-a35d-ed0f7d45af91"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b8454a1c-1785-4775-ac4e-16497fa693fc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="2a1d0e22-aa7e-4da1-b08e-7bd728c19235"
@@ -2361,7 +2918,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="a2218ae8-f552-4ed3-858f-341efc8fef90"
+            Id="541116b5-7dcd-4c63-a3e5-55b11c12d90b"
             name="saveAttendance"
             isLeaf="false"
             isStatic="false"
@@ -2370,54 +2927,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="ec782821-4000-4721-8c3a-2b7007d6548e"
+                Id="488ac9aa-5d93-4830-92b8-176cca8bb0d1"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsaveAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourseAttendance)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="39f2c85b-86fa-499d-9a0d-b6a8d4a95b40"
+                Id="ce970814-3fee-4aee-824b-d342cdc49eba"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3bcaf954-8e8e-4d89-9833-8cb90ca0a3c6">
+                    Id="c0401502-e22c-4d52-81c2-c19f2abdee44">
                     <propertyInstance
-                      Id="5e2204c6-d331-4dea-838f-a4408bf767db"
+                      Id="8f3a7f3b-d6b5-4ace-8e05-25205d625a5b"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="74ccd08e-9506-4e61-aaae-2377ccbd06f1">
+                    Id="1d3eba20-1dce-41fa-9a93-33f682ca9083">
                     <propertyInstance
-                      Id="923412b2-4ea9-4828-a82f-fdca5e71e2f4"
+                      Id="0426ae42-1305-406e-9d38-dcb1f66bd731"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c90f1cbf-c5d4-4137-a0c0-0107a134543e">
+                    Id="389e52d5-dd91-4b40-97fc-1a907cb6e166">
                     <propertyInstance
-                      Id="edf1e588-1d10-4aaa-a788-2e0ff4d7360f"
+                      Id="d3027a23-8c37-4c3a-bb28-dbe1594f7e3c"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e7b55673-ea8a-41a7-9ee5-58055e130619">
+                    Id="2eb93098-1901-46c6-83d2-918cd536f838">
                     <propertyInstance
-                      Id="132203fc-dac0-4c2d-99c6-93f6a3536fe3"
+                      Id="4c12ecef-7923-4a7f-a80a-aa4304d25349"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4b00bc07-8a84-4ae7-8309-9ea2182bf2be">
+                    Id="270e9f56-5904-4037-b6b5-aa3e53fcb5ae">
                     <propertyInstance
-                      Id="51e89408-5a21-4e67-87c1-1dcc5457a19a"
+                      Id="38a02a50-862c-4318-b45c-562c03597b69"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="df6a4613-847b-46e7-9711-6c38a191a585">
+                    Id="1864e37d-4163-48e0-8c2c-2391d98a4a23">
                     <propertyInstance
-                      Id="9842fab1-6ed3-48a2-9051-38925e2976d3"
+                      Id="cad33f95-a72a-498a-817b-2fa0c52464ac"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2427,7 +2984,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="20ea651c-4bc2-490e-b6f5-cfcdc5b4d45d"
+                  Id="8b5a0c2b-cd2b-49df-9c3a-7b225ced1094"
                   direction="Return">
                   <type_NamedElement>
                     <primitiveTypeMoniker
@@ -2439,12 +2996,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e66dc577-f1e4-4d78-a63f-9b15710d06d3"
+                  Id="2eae56d1-598a-4510-ac93-d5b2b02ff45f"
                   name="attendance"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="2eebc816-f7b2-4485-b0be-44508f4a07d1"
+                      Id="64179520-ba78-4c8a-86c5-3050813661ac"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D(Name%3DsaveAttendance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Models Type%3DCourseAttendance)]))]) ParameterIdentifier%3Dattendance"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -2459,7 +3016,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="a79ac19f-8f92-4207-8c38-44997a7ed885"
+            Id="6767777a-aa04-4fb1-8c1d-4f457099ad28"
             name="CourseController"
             isLeaf="false"
             isStatic="false"
@@ -2468,54 +3025,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="9dcaae8a-f7be-4d0c-979b-962eb64c6ab9"
+                Id="88d2cb33-b35e-43b4-a35b-6675518a422b"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DCourseController Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="a7721366-0922-470b-ae07-715646d23299"
+                Id="d73c4214-c210-4f3e-a8aa-f85ee0dfbb11"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="77124d0f-a1e3-4e2f-9983-3942d69c647b">
+                    Id="e654dca0-f0d9-45cd-8edb-838a7852bf1c">
                     <propertyInstance
-                      Id="f4c0064b-b701-4f6c-ae0e-bd93a08fd7b1"
+                      Id="013ba2c6-ab43-46b8-8084-ea665850ecdb"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0f776150-c30b-4619-b50c-f488fe17ad56">
+                    Id="0aad3585-9656-4cf5-a71a-0336afa0f6de">
                     <propertyInstance
-                      Id="99ff2cea-040e-418e-879f-87b742ce8587"
+                      Id="95fb9145-79ad-484e-b878-fe4850449ce4"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="20206dad-0148-466f-b418-265d8f6a7fa0">
+                    Id="4fa880a8-154a-4c77-912d-f8eeb32faeaf">
                     <propertyInstance
-                      Id="c73994dc-0ae0-421e-8a98-8003964fec49"
+                      Id="56de2d09-4d00-419b-8024-3be5585d0090"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f225e4b9-d4d5-4d4e-a3fe-ff3d3732f727">
+                    Id="df41d07f-37e5-46e8-a3fb-daf308ba978c">
                     <propertyInstance
-                      Id="1695a9e5-83e4-4025-97bb-f8ff17c0e51f"
+                      Id="6065f1de-1981-4c46-9571-ea7c4922b4d2"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="de61ba45-562e-446e-ac58-8c7d82d6efe4">
+                    Id="71c267be-8c20-45fa-9ad4-bab361e50ff7">
                     <propertyInstance
-                      Id="568ba94d-0fda-40ae-b46a-ec6538c7a98a"
+                      Id="91f0d359-69e7-4d11-a38a-f04b42d974b7"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4e45c3a4-04c4-4050-8be5-32529588e863">
+                    Id="4c9e8713-688d-4d9e-8f88-f49de19d19e3">
                     <propertyInstance
-                      Id="d7512e43-a618-4011-a52c-6ca0c8ec4c2c"
+                      Id="562c6581-9210-4733-b112-36aedb1e4ed0"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2964,6 +3521,379 @@
               LastKnownLocation="Package7_2133.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="f8427aa7-7bff-459a-9e51-e9c8bf24a26e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+              LastKnownName="User"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6abfeda6-1aee-4c44-8a20-31bf88a5d880"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f043139a-183d-43dd-8d07-6f1042661080"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="199610fd-7a10-4310-b614-cbade954c264"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="64ded2ff-a9d7-4502-b6dc-ed849f2e8647"
+              LastKnownName="CourseOwner"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ef240d98-e31e-48c3-8d4d-8f5fba71f05b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f8c314a-70fd-4e91-9ab2-e963b116ec78"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="788c566c-2a64-4562-9994-a649d08b3923"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="41b71fe6-30aa-4243-ae47-0e2ffe4232d1"
+              LastKnownName="CourseStudent"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4729bd45-753e-4743-9e73-43cab7e509ba"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="52042a4b-8d38-4f27-b2d0-bcde460064f5"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="aba48d06-55f7-4f1c-a691-00bc79458a25"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4da6672d-2186-4df1-a7e7-8ee44c6a1e45"
+              LastKnownName="Course"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ee33ee3-021e-4eec-a63a-04fdcb97f0d2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ea05caa-e745-4f72-a0d7-32c4d278d543"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="aa2f4639-6e83-4328-9732-06cb6b5ad8b7"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="User"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6587e940-267b-4a2d-9229-8d2e2e89ab69"
+              LastKnownName="User"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="63561c25-e982-4cb3-b1cd-ddda939fc047"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="128c60b9-b9ad-49be-bcda-c50e3d0e7dd4"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e1585d1c-9e05-41b6-9548-e88b39184de2"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="31ab2e52-c347-44a1-8a2d-138db168d9e4"
+              LastKnownName="UserBluetooth"
+              LastKnownLocation="Package1_2133.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="56eae9fe-b5c0-44cc-8a7d-2755ef8b9273"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac071a3e-1c60-4ddf-a070-1f8e851365c6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5d2ba01e-4e36-4788-9208-5ccb6c48ed6d"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c0affdb8-eb25-4583-b686-34940caf9d27"
+              LastKnownName="Design::Views::Authentication1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4456aa36-e305-4854-9e32-a26f8e7866a7"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0fcfef4-bd5f-44c7-b9f4-8f7077235895"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2e6d8563-3190-4f5f-9f56-697c716277be"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2b11012b-8514-4628-a4d7-0eb26a5f79d6"
+              LastKnownName="Design::Views::UserSearch1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="15ebaa46-c8c8-4faa-a885-a3ddd9c51680"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="884e25c8-cebc-49e2-a66b-d2bfd05022a7"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="acf2b4a9-a919-4040-bec9-326136dec587"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f09a9de4-6b9d-4565-ba5f-3f31f0e1a619"
+              LastKnownName="Design::Views::EditUser1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="681ca28e-0ce9-494e-a38d-d4ad21da2aaa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bfcf0317-afe2-46f0-882e-46289c23e787"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2fc48179-60d4-4df6-ba4d-29a13a8b4027"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0ffc23cc-f4d7-40a1-871a-e6b3d3c50d09"
+              LastKnownName="Design::Views::ViewUser1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf9ac943-d1ab-4305-8033-e8a41fe962f9"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="65268647-4522-4ff5-8986-934efcc4da01"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="3cf8dadd-eead-4b45-bf99-daf6f83d26e5"
@@ -3456,7 +4386,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="82c3a10b-ab14-4758-9936-b02cbc2ad837"
+            Id="1ca88247-fa14-4c91-b96c-fa6fb950130a"
             name="UserController"
             isLeaf="false"
             isStatic="false"
@@ -3465,54 +4395,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="7c97c2a3-e3d9-4f7d-a3ac-d706fc29aaaa"
+                Id="4b592ecf-b6f0-410d-8983-cf863e5d2e66"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fcsce361-attendancetracker%2FDesign%2Fvisualstudio%2FDesign%2FDesign%2Fbin%2FDesign.dll Namespace%3DDesign.Controllers Type%3DUserController Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="f36635ee-db9c-48c0-ae99-35476e0f0bb3"
+                Id="18272452-65ca-4fbd-b0ae-9268f82fed6f"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="54f92dc5-7ca4-412a-a73b-aa6b4ac1f407">
+                    Id="97b608be-e03f-41c5-b0e9-e4553cdc9dfe">
                     <propertyInstance
-                      Id="05065dcd-6a44-4b5c-aa8d-97aa9845d71f"
+                      Id="9547278f-59a0-45b1-b977-5b6d248da037"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a0cbe323-9b44-4ef7-88cb-d64e55256ee6">
+                    Id="53556a00-ebc7-49df-95f0-402543a00838">
                     <propertyInstance
-                      Id="5c1e8431-d5f2-43c7-8f85-43ea3e32279f"
+                      Id="cd52698a-012d-450a-b956-7d69047ed7bb"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="14f255b0-4d55-4dd5-b97c-85e8f32ba598">
+                    Id="f7c56eb7-4a63-4550-b84c-6e5ec7154e2e">
                     <propertyInstance
-                      Id="7851ea18-3c14-4512-9811-ce69ef25774f"
+                      Id="f411092a-f708-4ae1-9bf0-b44b98ca5f5a"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7d99c21c-57ff-48f4-a724-2cf229ccfcb2">
+                    Id="7bddc042-f7ed-49eb-932d-f930ba2d46d9">
                     <propertyInstance
-                      Id="a3706645-d808-45c7-9d87-02c79f3f62a3"
+                      Id="d5ce921a-efb9-4cfb-8657-ac680fef8fe0"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8d677fe7-658c-4346-9a6c-a150224ad98d">
+                    Id="195dca0e-b521-4963-8ef7-6b9fce4634f1">
                     <propertyInstance
-                      Id="4c8bab73-3434-454a-864d-9b91784a8c75"
+                      Id="b24e8f7e-cf6d-44f9-bd5c-77322a7e396d"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="282a9fed-0eae-4eb1-b7a5-ac8bdc284d02">
+                    Id="ceb973d2-db8b-4332-b1d9-023fb33cc868">
                     <propertyInstance
-                      Id="b42c7305-ea53-4d49-b9e2-d5c42a1e92ce"
+                      Id="83b73674-5cbf-4578-a3f9-4343c8457f65"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
