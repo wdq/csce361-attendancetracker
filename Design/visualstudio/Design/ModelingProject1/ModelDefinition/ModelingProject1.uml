@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="aba28d28-22ce-4201-b6c0-88a5b05a6797"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2900,6 +2900,778 @@
           </property>
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="badf63b4-fcdd-4aaf-98a7-d84eca5ccf15"
+        name="BluetoothHardwareDiagram"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="f8f3dba1-c044-4aa3-8a7f-a46a95331a0d"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="81d09938-e14f-4165-9a00-8ca959f66c9e"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ModelingProject1.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="3921cf45-b7fd-425a-b066-5fb3baf7f59c"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ModelingProject1.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a7e24626-cc83-4f48-bf24-776e157c2678"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ModelingProject1.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5498870a-43eb-4166-b9b0-c7a0fbdacf75"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ModelingProject1.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="02fc4df6-0008-4784-9a0a-8deebd39ff82"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ModelingProject1.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="602c01c1-6f93-4112-bab8-25e1469501d1"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="ModelingProject1.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0c673875-1890-4038-8587-9052b4bc1a0c"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ModelingProject1.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c375e4c2-fba9-43c4-a960-8e3fd7bab828"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ModelingProject1.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="3921cf45-b7fd-425a-b066-5fb3baf7f59c"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="98ee6979-4d25-4abf-97da-83fce669e33f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget
+            Id="5ed45324-6bda-4468-8759-4b849ead2679"
+            name="LostFoundTarget1" />
+          <messageOccurrenceSpecification
+            Id="a7e24626-cc83-4f48-bf24-776e157c2678"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="8dd8e160-5fbd-4843-81b3-91f1dd9daa9a"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="593fd219-5df6-40ca-8b74-e1e3364c2ad5"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ModelingProject1.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="59fe7884-dd8a-4568-bb6d-c50e5f8a2bdb"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ModelingProject1.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="caac524c-a586-442f-9c7f-cf4230c236f6"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ModelingProject1.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="59fe7884-dd8a-4568-bb6d-c50e5f8a2bdb"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a95065a4-3149-43ff-a153-dabae0067628"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5498870a-43eb-4166-b9b0-c7a0fbdacf75"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="caac524c-a586-442f-9c7f-cf4230c236f6"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="593fd219-5df6-40ca-8b74-e1e3364c2ad5"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cf9c107e-4378-494b-9c18-0d1d5b463c81"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f1fb5800-3c19-4123-b256-a342727a05a8"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="8fc95b02-de95-4fee-9681-b9e4a8dfbdb0"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="ModelingProject1.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="bd589818-7553-4f6f-aba2-8d29bcc80096"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="ModelingProject1.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="748c3a0b-59d0-4876-80bf-f98be2df4d44"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="ModelingProject1.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="bd589818-7553-4f6f-aba2-8d29bcc80096"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b4d6dbe9-5047-41c2-81a5-f8721aefd08a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="748c3a0b-59d0-4876-80bf-f98be2df4d44"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="02fc4df6-0008-4784-9a0a-8deebd39ff82"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="8fc95b02-de95-4fee-9681-b9e4a8dfbdb0"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="55be059c-a1cd-412b-a44c-0f864c54be0c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="248d93b7-e443-4cb5-ae32-f1150b05beab"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="97381053-4eba-4b42-b614-7eb4305c663f"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ModelingProject1.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="71849842-bd74-4363-ba47-04c5368717ee"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ModelingProject1.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7b9c5140-2fbc-4027-8e09-844a0d770876"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ModelingProject1.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="71849842-bd74-4363-ba47-04c5368717ee"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8ff8568b-3001-43ef-8047-d273dbaa48fe"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7b9c5140-2fbc-4027-8e09-844a0d770876"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="602c01c1-6f93-4112-bab8-25e1469501d1"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="97381053-4eba-4b42-b614-7eb4305c663f"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1cd5ec83-0a04-4d14-ace4-b9f0056da1c8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0da7a81c-47f7-449e-8c80-877ebe3601a4"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="b243dfc8-b5aa-48a0-a8b2-ba012b836dc0"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="ModelingProject1.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5c683cdd-cbfb-44f2-b2e2-e878bae60ae2"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="ModelingProject1.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d91ca6c3-65c4-4171-afe3-b9a7f5aab53e"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ModelingProject1.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5c683cdd-cbfb-44f2-b2e2-e878bae60ae2"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="eaeef618-0ac3-4b6e-a94f-538de5c52994"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0c673875-1890-4038-8587-9052b4bc1a0c"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d91ca6c3-65c4-4171-afe3-b9a7f5aab53e"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="b243dfc8-b5aa-48a0-a8b2-ba012b836dc0"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fd23a94e-b67c-4ba1-a72b-56f3cfe45fc4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="3c7c571d-2104-49b0-9406-1dfb8154201a"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ceb4526b-b840-4483-84b0-12a2648cffcf"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="ModelingProject1.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="927a9068-28b8-4a9f-bd2a-329cd5b1d325"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="ModelingProject1.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e0bfa4a5-245a-44ef-8984-784469440bb0"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="ModelingProject1.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="927a9068-28b8-4a9f-bd2a-329cd5b1d325"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a818455d-11c9-4e09-9909-d0b1dbe5fe0f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c375e4c2-fba9-43c4-a960-8e3fd7bab828"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e0bfa4a5-245a-44ef-8984-784469440bb0"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ceb4526b-b840-4483-84b0-12a2648cffcf"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="88dcb3ed-23bf-4d52-acf6-7253a0c1419a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+                LastKnownName="Methods"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="81d09938-e14f-4165-9a00-8ca959f66c9e"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d8604eda-cdd3-4d32-ac5f-8049d7b3b572"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+                LastKnownName="Bluetooth Hardware Device Scan Process"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="abde3acc-b0b6-4378-9e05-1c2189db4a4f"
+            name="Bluetooth Hardware Device Scan Process"
+            isActor="false"
+            lifelineDisplayName="Bluetooth Hardware Device Scan Process">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="3921cf45-b7fd-425a-b066-5fb3baf7f59c"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="81d09938-e14f-4165-9a00-8ca959f66c9e"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ModelingProject1.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="815f6e69-2a17-48c7-8330-00f9ca0d7daf"
+            name="Methods"
+            isActor="false"
+            lifelineDisplayName="Methods">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="59fe7884-dd8a-4568-bb6d-c50e5f8a2bdb"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="593fd219-5df6-40ca-8b74-e1e3364c2ad5"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="bd589818-7553-4f6f-aba2-8d29bcc80096"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8fc95b02-de95-4fee-9681-b9e4a8dfbdb0"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="71849842-bd74-4363-ba47-04c5368717ee"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="97381053-4eba-4b42-b614-7eb4305c663f"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5c683cdd-cbfb-44f2-b2e2-e878bae60ae2"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b243dfc8-b5aa-48a0-a8b2-ba012b836dc0"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="927a9068-28b8-4a9f-bd2a-329cd5b1d325"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ceb4526b-b840-4483-84b0-12a2648cffcf"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="ModelingProject1.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="495cb5f0-31f3-471e-ba11-9e86928ed39d"
+            name="Start scan handling process"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="5ed45324-6bda-4468-8759-4b849ead2679"
+                LastKnownName="LostFoundTarget1"
+                LastKnownLocation="ModelingProject1.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a7e24626-cc83-4f48-bf24-776e157c2678"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ModelingProject1.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="216a0549-bfee-40d2-ba87-c634c910189b"
+            name="Turn on Bluetooth radio"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5498870a-43eb-4166-b9b0-c7a0fbdacf75"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ModelingProject1.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="caac524c-a586-442f-9c7f-cf4230c236f6"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ModelingProject1.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8b997885-caf0-4bc6-b2bc-08ed5230877b"
+            name="Check network for each user Bluetooth address that was requested"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="02fc4df6-0008-4784-9a0a-8deebd39ff82"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ModelingProject1.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="748c3a0b-59d0-4876-80bf-f98be2df4d44"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="ModelingProject1.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a5a0779c-fc61-4f44-968f-bd4b7c4da5b5"
+            name="Prepare result packet to send to web application"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="602c01c1-6f93-4112-bab8-25e1469501d1"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="ModelingProject1.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7b9c5140-2fbc-4027-8e09-844a0d770876"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ModelingProject1.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b175a511-2d94-4d69-bde0-53104dc2c5e3"
+            name="Send packet to web application"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0c673875-1890-4038-8587-9052b4bc1a0c"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ModelingProject1.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d91ca6c3-65c4-4171-afe3-b9a7f5aab53e"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ModelingProject1.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c86a768e-8321-42af-a0d1-d3520c2f04dd"
+            name="Turn off Bluetooth radio"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c375e4c2-fba9-43c4-a960-8e3fd7bab828"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ModelingProject1.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e0bfa4a5-245a-44ef-8984-784469440bb0"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="ModelingProject1.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="98ee6979-4d25-4abf-97da-83fce669e33f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d8604eda-cdd3-4d32-ac5f-8049d7b3b572"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a95065a4-3149-43ff-a153-dabae0067628"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="cf9c107e-4378-494b-9c18-0d1d5b463c81"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b4d6dbe9-5047-41c2-81a5-f8721aefd08a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="55be059c-a1cd-412b-a44c-0f864c54be0c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8ff8568b-3001-43ef-8047-d273dbaa48fe"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1cd5ec83-0a04-4d14-ace4-b9f0056da1c8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="eaeef618-0ac3-4b6e-a94f-538de5c52994"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fd23a94e-b67c-4ba1-a72b-56f3cfe45fc4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a818455d-11c9-4e09-9909-d0b1dbe5fe0f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="88dcb3ed-23bf-4d52-acf6-7253a0c1419a"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
