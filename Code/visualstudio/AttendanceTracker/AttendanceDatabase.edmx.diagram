@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4c534d47f77547478ee92ab37d753bda" Name="Diagram1">
+        <EntityTypeShape EntityType="AttendanceTrackerModel.Building" Width="1.5" PointX="1.5" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.Course" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.CourseAttendance" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.CourseOwner" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.CourseStudent" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.Room" Width="1.5" PointX="1.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.RoomDevice" Width="1.5" PointX="3.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.SchemaChanx" Width="1.5" PointX="5.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.User" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.UserBluetooth" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_Room_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_Course_LocationRoomId" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_CourseAttendance_CourseId" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_CourseOwner_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_CourseStudent_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_CourseAttendance_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_CourseOwner_User" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_CourseStudent_User" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_RoomDevice_Room" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_UserBluetooth_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.C__MigrationHistory" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.AspNetRole" Width="1.5" PointX="5.375" PointY="8.5" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.AspNetUserClaim" Width="1.5" PointX="9.875" PointY="7" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.AspNetUserLogin" Width="1.5" PointX="9.875" PointY="9.75" />
+        <EntityTypeShape EntityType="AttendanceTrackerModel.AspNetUser" Width="1.5" PointX="7.625" PointY="7.375" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="AttendanceTrackerModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
