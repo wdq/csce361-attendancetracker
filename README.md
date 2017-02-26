@@ -12,3 +12,6 @@ You will need to have IIS installed (along with most of its features) on your co
 
 If you set everything up correctly you can build the project, and then open the application in your browser: [http://localhost/AttendanceTracker/](http://localhost/AttendanceTracker). The first time it loads it may take longer than usual.
 
+## Azure instance
+
+I setup an Azure instance of the project that pulls changes from this repository's master branch every hour. You can find it at [http://13.65.210.250/AttendanceTracker/](http://13.65.210.250/AttendanceTracker/).
