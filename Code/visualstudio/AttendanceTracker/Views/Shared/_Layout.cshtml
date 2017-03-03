@@ -6,6 +6,16 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/datatables")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="~/Scripts/knockout-3.4.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-mapping.js"></script>
+    <script type="text/javascript" src="~/Scripts/typeahead.js/typeahead.bundle.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap-datepicker-1.6.1/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parsley.js-2.3.13/dist/parsley.js"></script>
 
 </head>
 <body>
@@ -29,16 +39,6 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
