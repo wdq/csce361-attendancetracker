@@ -67,7 +67,36 @@ namespace SchedulerService
                 notification = "Running... " + DateTime.Now.ToString() + "\n";
                 Console.Write(notification);
 
+                DateTime now = DateTime.Now;
+                int nowInt = (now.Hour * 100) + (now.Minute); // Database stop/start times are in the form: 1430 instead of 2:30 PM.
+                var dayOfWeek = now.DayOfWeek;
+                nowInt = 1531; // testing
+                dayOfWeek = DayOfWeek.Friday; // testing
+                using (var context = new AttendanceSchedulerEntities())
+                {
+                    var coursesInSession = context.Courses.Where(x => (nowInt >= x.StartTime) && (nowInt < x.StopTime) && (x.IsActive));
 
+                    if (dayOfWeek == DayOfWeek.Sunday) coursesInSession = coursesInSession.Where(x => x.IsOnSunday == true);
+                    if (dayOfWeek == DayOfWeek.Monday) coursesInSession = coursesInSession.Where(x => x.IsOnMonday == true);
+                    if (dayOfWeek == DayOfWeek.Tuesday) coursesInSession = coursesInSession.Where(x => x.IsOnTuesday == true);
+                    if (dayOfWeek == DayOfWeek.Wednesday) coursesInSession = coursesInSession.Where(x => x.IsOnWednesday == true);
+                    if (dayOfWeek == DayOfWeek.Thursday) coursesInSession = coursesInSession.Where(x => x.IsOnThursday == true);
+                    if (dayOfWeek == DayOfWeek.Friday) coursesInSession = coursesInSession.Where(x => x.IsOnFriday == true);
+                    if (dayOfWeek == DayOfWeek.Saturday) coursesInSession = coursesInSession.Where(x => x.IsOnSaturday == true);
+
+                    foreach (var course in coursesInSession)
+                    {
+                        Console.Write(course.Id + " is in session, getting student information.");
+
+                        // Get students in the course from Canvas API
+                        // Get the student Bluetooth device addresses from the database (not in schema yet)
+                        // Get the IP address of the room device in the room
+                        // Send a request to the room device to take attendance
+
+                    }
+
+
+                }
 
 
                 notification = "----------\n";
