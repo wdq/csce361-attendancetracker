@@ -86,10 +86,10 @@ class network:
         tmp[key] = value
         self.send_dictionary(tmp)
 
-    def send_key_value(self, key, value):
-        tmp = dict()
-        tmp[key] = value
-        self.send_dictionary(tmp)
+    # def send_key_value(self, key, value):
+    #     tmp = dict()
+    #     tmp[key] = value
+    #     self.send_dictionary(tmp)
 
     def test_student_bank(self):
         tmp = dict()

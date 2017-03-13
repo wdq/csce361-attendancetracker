@@ -6,6 +6,14 @@ import requests
 from time import sleep
 from uuid import getnode as get_mac
 
+# # Student class to hold a student BT mac address and weather or not they are preset.
+# class student_t():
+#     """docstring for student_t"""
+#     def __init__(self, **kwargs):
+#         self.kwargs = kwargs
+#         self.bluetooth_addr = None
+#         self.present        = False
+
 class serv():
 
     def __init__(self, **kwargs):
@@ -35,6 +43,12 @@ class serv():
 
             #loop through the students and mark them present or absent
             for student in self.student_dict:
+
+                # Get addr and present status
+                addr    = student
+
+                #print address
+                # print addr
 
                 # using state and service to remove false triggers
                 # We might need to change this in the future
