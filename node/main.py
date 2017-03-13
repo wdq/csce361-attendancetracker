@@ -66,14 +66,17 @@ class serv():
                 if state != None:
                     self.student_dict[student] = True
                     print "Student present!"
-                    print state
+                    # print state
 
                 # No student detected. Mark as absent
                 else:
                     self.student_dict[student] = False
                     print("Student absent! ")
 
+                # self.network.send_key_value(key = student, value = self.student_dict[student])
+
             self.sleep_time = self.__get_sleep_time__()
+                
             self.network.send_dictionary(self.student_dict)
 
             end_time = time.time()
