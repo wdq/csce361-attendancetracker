@@ -39,10 +39,13 @@ while True:
     # Try to gather information from the desired device.
     # We're using two different metrics (readable name and data services)
     # to reduce false negatives.
-    state = bluetooth.lookup_name(addr, timeout=20)
-    services = bluetooth.find_service(address=addr)
+    state = bluetooth.lookup_name(addr, timeout=5)
+    print state
+    # services = bluetooth.find_service(address=addr)
+    print services
+    # services = "15"
     # Flip the LED pin on or off depending on whether the device is nearby
-    if state == None and services == []:
+    if state == None:
         print("No device detected in range...")
 
     else:

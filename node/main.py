@@ -1,6 +1,7 @@
 import bluetooth, time
 import network
 import json
+import requests
 
 from time import sleep
 from uuid import getnode as get_mac
@@ -19,18 +20,23 @@ class serv():
         self.kwargs = kwargs
 
     def setup(self):
-        self.url = "ws://echo.websocket.org/"
+        self.url = 'ws://echo.websocket.org'
         self.ip_addr = None
-        self.conn_port  = 80
+        self.conn_port  = 3128
         self.network = network.network(host = self.url, port = self.conn_port)
 
     def run_system(self):   
         while True:
+            start_time = time.time()
+
             #connect to the scheduling server
             self.__connect_to_server__()
 
             # test connection
             self.network.test_connection()
+
+            # send ip address to server 
+            self.__send_ip_addr__()
 
             #get all students and place them into a dictionary of students
             self.student_dict = self.__get_student_dict__()
@@ -42,24 +48,25 @@ class serv():
                 addr    = student
 
                 #print address
-                print addr
+                # print addr
 
                 # using state and service to remove false triggers
                 # We might need to change this in the future
                 try:
-                    state = bluetooth.lookup_name(addr, timeout = 5)
+                    state = bluetooth.lookup_name(addr, timeout=15)
                     # services = bluetooth.find_service(address=addr)
-                    services = "15"
                 except Exception as e:
                     self.__send_error__(str(e))
                     print ("Sending error to server: " + str(e))
                     continue 
                 
+                # print state
 
                 # Detect if the state is detected if it is see if the service is available
-                if state != None and services != []:
+                if state != None:
                     self.student_dict[student] = True
                     print "Student present!"
+                    print state
 
                 # No student detected. Mark as absent
                 else:
@@ -68,6 +75,15 @@ class serv():
 
             self.sleep_time = self.__get_sleep_time__()
             self.network.send_dictionary(self.student_dict)
+
+            end_time = time.time()
+
+            tmp = {
+                "total_time_executed": (-start_time+end_time),
+                "average_time_per_device":((-start_time+end_time)/len(self.student_dict))
+                }
+
+            self.network.send_dictionary(tmp)
 
             # Close the connection because we are not using it
             self.__disconnect_from_server()
@@ -119,7 +135,8 @@ class serv():
         tmp_dict['node_id'] =  get_mac()
 
         return tmp_dict
-        
+       
+    #Get the sleep duration 
     def __get_sleep_time__(self):
         # Send the request for a new sleep timer
         self.network.send_dictionary(self.__create_sleep_time_request__())
@@ -132,10 +149,16 @@ class serv():
 
         return rtn['sleep_timer']
 
+    #If an error occurs then post the error to the server to view its logs
     def __send_error__(self, error):
         tmp = dict()
         tmp['error'] = error
         self.network.send_dictionary(tmp)
+
+    def __send_ip_addr__(self):
+        public_ip = requests.get('http://ip.42.pl/raw').text
+        print public_ip
+        self.network.send_key_value("node_public_ip", public_ip)
 
 
 if __name__ == "__main__":
