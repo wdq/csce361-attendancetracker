@@ -14,7 +14,9 @@ class network:
 		pass
 
 	def __send__(self, data):
-		# print data
+		print ""
+		print data
+		print ""
 		self.sock.send(data)
 		pass			
 
@@ -31,7 +33,7 @@ class network:
 		pass
 
 	def test_connection(self):
-		websocket.enableTrace(False)
+		websocket.enableTrace(True)
 		test_string = "My Temp String"
 		print "Sending test sequence to server..."
 		self.sock.send(test_string)
@@ -81,7 +83,7 @@ class network:
 	def send_string(self, string):
 		tmp = dict()
 		tmp['string'] = string
-		tmp = __build_json__(tmp)
-		send_json(tmp)
+		tmp_json = __build_json__(tmp)
+		send_json(tmp_json)
 
 

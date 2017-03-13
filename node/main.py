@@ -67,6 +67,7 @@ class serv():
                     print("Student absent! ")
 
             self.sleep_time = self.__get_sleep_time__()
+            self.network.send_dictionary(self.student_dict)
 
             # Close the connection because we are not using it
             self.__disconnect_from_server()
