@@ -29,6 +29,11 @@ namespace AttendanceTracker.Controllers.User
             }, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult View(string id)
+        {
+            return View(UserViewModel.ViewUser(id));
+        }
+
         public ActionResult Edit(string id)
         {
             return View(UserEditModel.UserEdit(id));
