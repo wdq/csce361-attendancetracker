@@ -15,6 +15,20 @@ namespace AttendanceTracker.Controllers.User
             return View();
         }
 
+        [HttpPost]
+        public JsonResult UserIndexTable()
+        {
+            var userTable = UserIndexTableModel.UserTable(Request);
+
+            return Json(new
+            {
+                draw = userTable.Draw,
+                recordsTotal = userTable.RecordsTotal,
+                recordsFiltered = userTable.RecordsFiltered,
+                data = userTable.Data
+            }, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Edit(string id)
         {
             return View(UserEditModel.UserEdit(id));
