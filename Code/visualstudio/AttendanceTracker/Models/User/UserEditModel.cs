@@ -23,6 +23,7 @@ namespace AttendanceTracker.Models.User
 
         public UserEditModel(AttendanceTracker.User user, string addOrEdit)
         {
+            Id = user.Id;
             AddOrEdit = addOrEdit;
             FirstName = user.FirstName;
             LastName = user.LastName;

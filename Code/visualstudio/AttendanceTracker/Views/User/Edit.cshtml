@@ -22,28 +22,28 @@
         <div class="col-md-4 col-md-offset-1">
             <form id="Form" action="edit" method="post" data-parsley-validate="">
                 <table id="UserTable" class="table table-striped entryTable">
-                    <tbody>
-                        <tr>
-                            <td><b>First Name *:</b></td>
-                            <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.FirstName" data-bind="value: FirstName" /></td>
-                        </tr>
-                        <tr>
-                            <td><b>Last Name *:</b></td>
-                            <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.LastName" data-bind="value: LastName" /></td>
-                        </tr>
-                        <tr>
-                            <td><b>Email:</b></td>
-                            <td><input type="email" data-parsley-trigger="change" class="form-control" value="@Model.EmailAddress" data-bind="value: EmailAddress"/></td>
-                        </tr>
-                        <tr>
-                            <td><b>NUID:</b></td>
-                            <td><input type="text" data-parsley-trigger="change" class="form-control" value="@Model.NUID" data-bind="value: NUID"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding-top: 30px">
-                                <button type="button" data-bind="click: save" class="btn btn-success btn-md"><i class="fa fa-floppy-o"></i> Save</button>
-                            </td>
-                        </tr>
+                    <tbody>            
+                    <tr>
+                        <td><b>First Name:</b></td>
+                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.FirstName" data-bind="value: FirstName"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>Last Name:</b></td>
+                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.LastName" data-bind="value: LastName"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>Email:</b></td>
+                        <td><input type="email" data-parsley-trigger="change" class="form-control" value="@Model.EmailAddress" data-bind="value: EmailAddress"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>NUID:</b></td>
+                        <td><input type="text" data-parsley-trigger="change" class="form-control" value="@Model.NUID" data-bind="value: NUID"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 30px">
+                            <button type="button" data-bind="click: save" class="btn btn-success btn-md"><i class="fa fa-floppy-o"></i> Save</button>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </form>
