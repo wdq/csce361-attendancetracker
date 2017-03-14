@@ -20,12 +20,15 @@ class serv():
         self.kwargs = kwargs
 
     def setup(self):
-        self.url = 'ws://echo.websocket.org'
+        self.url = 'ws://192.168.0.50:4565/node'
         self.ip_addr = None
-        self.conn_port  = 3128
+        self.conn_port  = 4565
         self.network = network.network(host = self.url, port = self.conn_port)
 
     def run_system(self):   
+
+        
+
         while True:
             start_time = time.time()
 
@@ -41,14 +44,16 @@ class serv():
             #get all students and place them into a dictionary of students
             self.student_dict = self.__get_student_dict__()
 
+            sleep(.5)
+
+            # Close the connection because we are not using it
+            self.__disconnect_from_server()
+
             #loop through the students and mark them present or absent
             for student in self.student_dict:
 
                 # Get addr and present status
                 addr    = student
-
-                #print address
-                # print addr
 
                 # using state and service to remove false triggers
                 # We might need to change this in the future
@@ -75,6 +80,10 @@ class serv():
 
                 # self.network.send_key_value(key = student, value = self.student_dict[student])
 
+
+            #connect to the scheduling server
+            self.__connect_to_server__()
+
             self.sleep_time = self.__get_sleep_time__()
                 
             self.network.send_dictionary(self.student_dict)
@@ -89,6 +98,7 @@ class serv():
             self.network.send_dictionary(tmp)
 
             # Close the connection because we are not using it
+            sleep(.5)
             self.__disconnect_from_server()
 
             sleep(self.sleep_time)
@@ -100,13 +110,11 @@ class serv():
         if self.ip_addr is None and self.url is None:
             return "Error: No server address specified."
         
-        if self.ip_addr is None:
-            self.network.connect() 
+        self.network.connect()
 
-        if self.ip_addr is None:    
-            self.network.connect() 
         
     def __disconnect_from_server(self):
+        
         self.network.disconnect()
         pass
 
