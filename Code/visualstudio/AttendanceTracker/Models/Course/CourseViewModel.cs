@@ -8,6 +8,8 @@ namespace AttendanceTracker.Models.Course
     public class CourseViewModel
     {
         public AttendanceTracker.Course Course { get; set; }
+        public AttendanceTracker.Room Room { get; set; }
+        public AttendanceTracker.Building Building { get; set; }
 
         public static CourseViewModel ViewCourse(string id)
         {
@@ -17,6 +19,9 @@ namespace AttendanceTracker.Models.Course
             {
                 AttendanceTracker.Course Course = context.Courses.Where(x => x.Id == new Guid(id)).FirstOrDefault();
                 CourseViewModel.Course = Course;
+
+                CourseViewModel.Room = context.Rooms.FirstOrDefault(x => x.Id == Course.LocationRoomId);
+                CourseViewModel.Building = context.Buildings.FirstOrDefault(x => x.Id == CourseViewModel.Room.BuildingId);
             }
 
             return CourseViewModel;
