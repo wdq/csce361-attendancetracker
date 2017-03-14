@@ -93,7 +93,7 @@
                     </tr>
                     <tr>
                         <td><b>Location:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.LocationRoomId" data-bind="value: LocationRoomId" /></td>
+                        <td><input required="" type="text" class="form-control typeahead location-typeahead" value="@Model.LocationRoomId" data="@Model.LocationRoomId" data-bind="data: LocationRoomId" /></td>
                     </tr>
                     <tr>
                         <td><b>Attendance Code:</b></td>

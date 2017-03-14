@@ -194,6 +194,7 @@
     <Compile Include="Controllers\Course\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Shared\SharedController.cs" />
     <Compile Include="Controllers\User\UserController.cs" />
     <Compile Include="Course.cs">
       <DependentUpon>AttendanceDatabase.tt</DependentUpon>
@@ -215,10 +216,12 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Location\PossibleLocationsModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Course\CourseEditModel.cs" />
     <Compile Include="Models\Course\CourseIndexModel.cs" />
     <Compile Include="Models\Course\CourseViewModel.cs" />
+    <Compile Include="Models\User\PossibleUsersModel.cs" />
     <Compile Include="Models\User\UserEditModel.cs" />
     <Compile Include="Models\User\UserIndexModel.cs" />
     <Compile Include="Models\User\UserViewModel.cs" />
