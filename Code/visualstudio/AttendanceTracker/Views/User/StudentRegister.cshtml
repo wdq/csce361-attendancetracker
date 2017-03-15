@@ -3,18 +3,18 @@
 @{
     if (Model.AddOrEdit == "Add")
     {
-        ViewBag.Title = "Add User - Attendance Tracker";
+        ViewBag.Title = "Student Register - Attendance Tracker";
     }
     else if (Model.AddOrEdit == "Edit")
     {
-        ViewBag.Title = "Edit User: " + Model.FirstName + " " + Model.LastName + " - AttendanceTracker";
+        ViewBag.Title = "Student Edit: " + Model.FirstName + " " + Model.LastName + " - AttendanceTracker";
     }
 }
 
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="col-md-10 col-md-offset-1">
-            <h2>@Model.AddOrEdit User</h2>
+            <h2>Student Info</h2>
             <br />
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="col-md-4 col-md-offset-1">
             <form id="Form" action="edit" method="post" data-parsley-validate="">
                 <table id="UserTable" class="table table-striped entryTable">
-                    <tbody>
+                    <tbody>            
                     <tr>
                         <td><b>First Name:</b></td>
                         <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.FirstName" data-bind="value: FirstName"/></td>
@@ -39,14 +39,6 @@
                         <td><b>NUID:</b></td>
                         <td><input type="text" data-parsley-trigger="change" class="form-control" value="@Model.NUID" data-bind="value: NUID"/></td>
                     </tr>
-                    @if (Model.IsAdmin)
-                    {
-                        <tr>
-                            <td><b>Role:</b></td>
-                            <td><input type="text" data-parsley-trigger="change" class="form-control" value="@Model.Role" data-bind="value: Role"/></td>
-                        </tr>
-                    }
-
                     <tr>
                         <td style="padding-top: 30px">
                             <button type="button" data-bind="click: save" class="btn btn-success btn-md"><i class="fa fa-floppy-o"></i> Save</button>
@@ -54,10 +46,6 @@
                     </tr>
                     </tbody>
                 </table>
-                @if (Model.IsAdmin)
-                {
-                    <p>Role: 0 student, 1 teacher, 2 admin</p>
-                }
             </form>
         </div>
     </div>

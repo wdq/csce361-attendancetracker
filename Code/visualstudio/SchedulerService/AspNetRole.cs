@@ -12,19 +12,18 @@ namespace AttendanceTracker
     using System;
     using System.Collections.Generic;
     
-    public partial class Building
+    public partial class AspNetRole
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Building()
+        public AspNetRole()
         {
-            this.Rooms = new HashSet<Room>();
+            this.AspNetUsers = new HashSet<AspNetUser>();
         }
     
-        public System.Guid Id { get; set; }
-        public string Code { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Room> Rooms { get; set; }
+        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
     }
 }

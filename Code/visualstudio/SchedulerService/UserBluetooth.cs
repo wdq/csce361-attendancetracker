@@ -12,12 +12,13 @@ namespace AttendanceTracker
     using System;
     using System.Collections.Generic;
     
-    public partial class RoomDevice
+    public partial class UserBluetooth
     {
         public System.Guid Id { get; set; }
-        public string IpAddress { get; set; }
-        public System.Guid RoomId { get; set; }
+        public System.Guid UserId { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
     
-        public virtual Room Room { get; set; }
+        public virtual User User { get; set; }
     }
 }

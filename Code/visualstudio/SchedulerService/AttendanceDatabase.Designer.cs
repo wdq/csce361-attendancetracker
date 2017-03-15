@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Projects\csce361-attendancetracker\Code\visualstudio\SchedulerService\SchedulerData.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Projects\csce361-attendancetracker\Code\visualstudio\AttendanceTracker\AttendanceDatabase.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
