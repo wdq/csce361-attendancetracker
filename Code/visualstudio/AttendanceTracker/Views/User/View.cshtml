@@ -31,6 +31,14 @@
                     <td><b>NUID:</b></td>
                     <td>@Model.User.NUID</td>
                 </tr>
+                @if (Model.IsAdmin)
+                {
+                    <tr>
+                        <td><b>Role:</b></td>
+                        <td>@Model.User.Role</td>
+                    </tr>
+                    <p>Role: 0 student, 1 teacher, 2 admin</p>
+                }
                 </tbody>
             </table>
         </div>

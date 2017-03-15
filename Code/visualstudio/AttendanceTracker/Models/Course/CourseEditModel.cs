@@ -82,7 +82,7 @@ namespace AttendanceTracker.Models.Course
             }
         }
 
-        public static AttendanceTracker.Course CourseEditPost(CourseEditModel courseModel)
+        public static AttendanceTracker.Course CourseEditPost(CourseEditModel courseModel, string userId)
         {
             AttendanceTracker.Course databaseCourse = new AttendanceTracker.Course();
             using (AttendanceTrackerDatabaseConnection context = new AttendanceTrackerDatabaseConnection())
@@ -114,7 +114,8 @@ namespace AttendanceTracker.Models.Course
                 else
                 {
                     databaseCourse = new AttendanceTracker.Course();
-
+                    var databaseCourseTeacher = new AttendanceTracker.CourseOwner();
+                    
                     databaseCourse.CourseCode = courseModel.CourseCode;
                     databaseCourse.CourseNumber = courseModel.CourseNumber;
                     databaseCourse.CourseSection = courseModel.CourseSection;
@@ -136,6 +137,12 @@ namespace AttendanceTracker.Models.Course
                     databaseCourse.ActiveAttendanceCode = courseModel.ActiveAttendanceCode;
 
                     databaseCourse.Id = Guid.NewGuid();
+
+                    databaseCourseTeacher.Id = Guid.NewGuid();
+                    databaseCourseTeacher.CourseId = databaseCourse.Id;
+                    databaseCourseTeacher.UserId = context.Users.FirstOrDefault(x => x.AspNetUsersId == userId).Id;
+                    context.CourseOwners.Add(databaseCourseTeacher);
+
 
                     context.Courses.Add(databaseCourse);
                 }

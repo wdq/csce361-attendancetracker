@@ -54,7 +54,7 @@ namespace AttendanceTracker.Controllers.Course
         public ActionResult EditPost(CourseEditModel courseModel)
         {
             JsonResult jsonResult = new JsonResult();
-            jsonResult.Data = CourseEditModel.CourseEditPost(courseModel).Id;
+            jsonResult.Data = CourseEditModel.CourseEditPost(courseModel, User.Identity.GetUserId()).Id;
 
             return jsonResult;
         }

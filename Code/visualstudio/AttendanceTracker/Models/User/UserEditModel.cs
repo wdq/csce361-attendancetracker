@@ -16,13 +16,14 @@ namespace AttendanceTracker.Models.User
         public int NUID { get; set; }
         public int Role { get; set; }
         public string AspNetUsersId { get; set; }
+        public bool IsAdmin { get; set; }
 
         public UserEditModel()
         {
             
         }
 
-        public UserEditModel(AttendanceTracker.User user, string addOrEdit)
+        public UserEditModel(AttendanceTracker.User user, string addOrEdit, bool isAdmin)
         {
             Id = user.Id;
             AddOrEdit = addOrEdit;
@@ -32,14 +33,15 @@ namespace AttendanceTracker.Models.User
             NUID = user.NUID;
             Role = user.Role;
             AspNetUsersId = user.AspNetUsersId;
+            IsAdmin = isAdmin;
         }
 
-        public static UserEditModel UserEdit(string id)
+        public static UserEditModel UserEdit(string id, bool isAdmin)
         {
             string addOrEdit;
             if (string.IsNullOrEmpty(id))
             {
-                UserEditModel userEditModel = new UserEditModel(new AttendanceTracker.User(), "Add");
+                UserEditModel userEditModel = new UserEditModel(new AttendanceTracker.User(), "Add", isAdmin);
 
                 return userEditModel;
             }
@@ -50,7 +52,7 @@ namespace AttendanceTracker.Models.User
                 {
                     user = context.Users.FirstOrDefault(x => x.Id == new Guid(id));
                 }
-                UserEditModel userEditModel = new UserEditModel(user, "Edit");
+                UserEditModel userEditModel = new UserEditModel(user, "Edit", isAdmin);
 
                 return userEditModel;
             }

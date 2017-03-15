@@ -24,7 +24,7 @@ namespace AttendanceTracker.Models.User
                 var user = context.Users.FirstOrDefault(x => x.AspNetUsersId == userId);
                 if (user != null)
                 {
-                    UserEditModel userEdit = new UserEditModel(user, "Edit");
+                    UserEditModel userEdit = new UserEditModel(user, "Edit", false);
                     return userEdit;
                 }
                 else
@@ -32,7 +32,7 @@ namespace AttendanceTracker.Models.User
                     user = new AttendanceTracker.User();
                     user.Role = 0;
                     user.AspNetUsersId = userId;
-                    UserEditModel userEdit = new UserEditModel(user, "Add");
+                    UserEditModel userEdit = new UserEditModel(user, "Add", false);
                     return userEdit;
                 }
             }

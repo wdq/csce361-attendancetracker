@@ -50,12 +50,13 @@ namespace AttendanceTracker.Controllers.User
                     id = context.Users.FirstOrDefault(x => x.AspNetUsersId == aspUserId).Id.ToString();
                 }
             }
-            return View(UserViewModel.ViewUser(id));
+            return View(UserViewModel.ViewUser(id, UserRolesModel.IsAdmin(User.Identity.GetUserId())));
         }
 
         public ActionResult Edit(string id)
         {
-            return View(UserEditModel.UserEdit(id));
+            var userId = User.Identity.GetUserId();
+            return View(UserEditModel.UserEdit(id, UserRolesModel.IsAdmin(userId)));
         }
 
         [HttpPost]
