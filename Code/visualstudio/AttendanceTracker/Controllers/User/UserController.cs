@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AttendanceTracker.Models;
 using AttendanceTracker.Models.User;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace AttendanceTracker.Controllers.User
 {
@@ -13,7 +15,15 @@ namespace AttendanceTracker.Controllers.User
         // GET: User
         public ActionResult Index()
         {
-            return View();
+            var userId = User.Identity.GetUserId();
+            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Unauthorized", "User");
+            }
         }
 
         [HttpPost]
@@ -32,6 +42,14 @@ namespace AttendanceTracker.Controllers.User
 
         public ActionResult View(string id)
         {
+            if (string.IsNullOrEmpty(id))
+            {
+                using (var context = new AttendanceTrackerDatabaseConnection())
+                {
+                    var aspUserId = User.Identity.GetUserId();
+                    id = context.Users.FirstOrDefault(x => x.AspNetUsersId == aspUserId).Id.ToString();
+                }
+            }
             return View(UserViewModel.ViewUser(id));
         }
 
@@ -66,6 +84,11 @@ namespace AttendanceTracker.Controllers.User
         {
             var userId = User.Identity.GetUserId();
             return View(StudentRegisterModel.StudentRegister(userId));
+        }
+
+        public ActionResult Unauthorized()
+        {
+            return View();
         }
     }
 }

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AttendanceTracker.Controllers.User;
+using AttendanceTracker.Models;
 using AttendanceTracker.Models.Course;
+using Microsoft.AspNet.Identity;
 
 namespace AttendanceTracker.Controllers.Course
 {
@@ -12,7 +15,15 @@ namespace AttendanceTracker.Controllers.Course
         // GET: Course
         public ActionResult Index()
         {
-            return View();
+            var userId = User.Identity.GetUserId();
+            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Unauthorized", "User");
+            }
         }
 
         [HttpPost]
