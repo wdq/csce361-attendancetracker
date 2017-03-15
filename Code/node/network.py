@@ -1,6 +1,7 @@
 import websocket
 import json
 import time
+import threading
 from uuid import getnode as get_mac
 
 class network:
@@ -9,6 +10,7 @@ class network:
         self.host = host
         self.port = port
         self.sock = None
+        self.network_in_use  = threading.BoundedSemaphore(value =1)
 
     def connect(self):
         if self.sock != None:
@@ -28,6 +30,9 @@ class network:
         print ""
         print data
         print ""
+
+        self.network_in_use.acquire()
+
         try:
             self.sock.send(data)
         except:
@@ -40,6 +45,8 @@ class network:
                 self.sock.send(data)
             except:
                 print "Error. Socket is broken."
+
+        self.network_in_use.release()
 
 
     def send_json(self, json_message):
