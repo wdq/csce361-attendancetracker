@@ -33,7 +33,7 @@ namespace AttendanceTracker.Models.Course
         public string CourseTitle { get; set; }
         public string CourseSemesterYear { get; set; }
 
-        public static CourseIndexTableResultModel CourseTable(HttpRequestBase Request)
+        public static CourseIndexTableResultModel CourseTable(HttpRequestBase Request, string userId)
         {
             string search = Request.Form.GetValues("search[value]")[0];
             string draw = Request.Form.GetValues("draw")[0];
@@ -47,8 +47,30 @@ namespace AttendanceTracker.Models.Course
             using (AttendanceTrackerDatabaseConnection database = new AttendanceTrackerDatabaseConnection())
             {
                 var Courses = database.Courses.ToList();
+                List<AttendanceTracker.Course> filteredCourses = new List<AttendanceTracker.Course>();
 
-                foreach (var Course in Courses)
+                var user = database.Users.FirstOrDefault(x => x.AspNetUsersId == userId);
+                if (user.Role == 0)
+                {
+                    foreach (var course in Courses)
+                    {
+                        if (database.CourseStudents.Any(x => x.UserId == user.Id && x.CourseId == course.Id))
+                        {
+                            filteredCourses.Add(course);
+                        }
+                    }
+                }
+                if (user.Role == 1)
+                {
+                    foreach (var course in Courses)
+                    {
+                        if (database.CourseOwners.Any(x => x.UserId == user.Id && x.CourseId == course.Id))
+                        {
+                            filteredCourses.Add(course);
+                        }
+                    }
+                }
+                foreach (var Course in filteredCourses)
                 {
                     CoursesTable.Add(FromCourse(Course, database));
                 }

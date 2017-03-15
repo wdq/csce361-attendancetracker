@@ -16,7 +16,7 @@ namespace AttendanceTracker.Controllers.Course
         public ActionResult Index()
         {
             var userId = User.Identity.GetUserId();
-            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            if (UserRolesModel.IsStudent(userId) || UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
             {
                 return View();
             }
@@ -29,7 +29,8 @@ namespace AttendanceTracker.Controllers.Course
         [HttpPost]
         public JsonResult CourseIndexTable()
         {
-            var courseTable = CourseIndexTableModel.CourseTable(Request);
+            var userId = User.Identity.GetUserId();
+            var courseTable = CourseIndexTableModel.CourseTable(Request, userId);
 
             return Json(new
             {
