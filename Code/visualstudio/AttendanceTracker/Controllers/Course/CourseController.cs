@@ -43,43 +43,84 @@ namespace AttendanceTracker.Controllers.Course
 
         public ActionResult View(string id)
         {
-            return View(CourseViewModel.ViewCourse(id));
+            var userId = User.Identity.GetUserId();
+            return View(CourseViewModel.ViewCourse(id, UserRolesModel.IsAdmin(userId), UserRolesModel.IsTeacher(userId), UserRolesModel.IsStudent(userId)));
         }
 
         public ActionResult Edit(string id)
         {
-            return View(CourseEditModel.CourseEdit(id));
+            var userId = User.Identity.GetUserId();
+            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            {
+                return View(CourseEditModel.CourseEdit(id));
+            }
+            else
+            {
+                return RedirectToAction("Unauthorized", "User");
+            }
         }
 
         [HttpPost]
         public ActionResult EditPost(CourseEditModel courseModel)
         {
-            JsonResult jsonResult = new JsonResult();
-            jsonResult.Data = CourseEditModel.CourseEditPost(courseModel, User.Identity.GetUserId()).Id;
+            var userId = User.Identity.GetUserId();
+            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            {
+                JsonResult jsonResult = new JsonResult();
+                jsonResult.Data = CourseEditModel.CourseEditPost(courseModel, User.Identity.GetUserId()).Id;
 
-            return jsonResult;
+                return jsonResult;
+            }
+            else
+            {
+                return RedirectToAction("Unauthorized", "User");
+            }
         }
 
         public ActionResult AddStudent(string courseId)
         {
-            return View(CourseStudentEditModel.CourseStudentEdit(courseId));
+            var userId = User.Identity.GetUserId();
+            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            {
+                return View(CourseStudentEditModel.CourseStudentEdit(courseId));
+            }
+            else
+            {
+                return RedirectToAction("Unauthorized", "User");
+            }
         }
 
         [HttpPost]
         public ActionResult AddStudentPost(CourseStudentEditModel model)
         {
-            JsonResult json = new JsonResult();
-            json.Data = CourseStudentEditModel.CourseStudentEditPost(model).CourseId;
-            return json;
+            var userId = User.Identity.GetUserId();
+            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            {
+                JsonResult json = new JsonResult();
+                json.Data = CourseStudentEditModel.CourseStudentEditPost(model).CourseId;
+                return json;
+            }
+            else
+            {
+                return RedirectToAction("Unauthorized", "User");
+            }
         }
 
         public ActionResult RemoveStudentPost(string id)
         {
-            JsonResult json = new JsonResult();
-            var run = CourseStudentEditModel.CourseStudentRemovePost(id);
-            json.Data = "ok";
-            json.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
-            return json;
+            var userId = User.Identity.GetUserId();
+            if (UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            {
+                JsonResult json = new JsonResult();
+                var run = CourseStudentEditModel.CourseStudentRemovePost(id);
+                json.Data = "ok";
+                json.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+                return json;
+            }
+            else
+            {
+                return RedirectToAction("Unauthorized", "User");
+            }
         }
     }
 }

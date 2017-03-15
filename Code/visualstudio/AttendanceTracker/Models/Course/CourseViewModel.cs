@@ -11,6 +11,9 @@ namespace AttendanceTracker.Models.Course
         public AttendanceTracker.Room Room { get; set; }
         public AttendanceTracker.Building Building { get; set; }
         public List<CourseStudentStudent> Students { get; set; }
+        public bool IsAdmin { get; set; }
+        public bool IsTeacher { get; set; }
+        public bool IsStudent { get; set; }
 
         public class CourseStudentStudent
         {
@@ -29,7 +32,7 @@ namespace AttendanceTracker.Models.Course
             }
         }
 
-        public static CourseViewModel ViewCourse(string id)
+        public static CourseViewModel ViewCourse(string id, bool isAdmin, bool isTeacher, bool isStudent)
         {
             CourseViewModel CourseViewModel = new CourseViewModel();
 
@@ -37,6 +40,9 @@ namespace AttendanceTracker.Models.Course
             {
                 AttendanceTracker.Course Course = context.Courses.FirstOrDefault(x => x.Id == new Guid(id));
                 CourseViewModel.Course = Course;
+                CourseViewModel.IsAdmin = isAdmin;
+                CourseViewModel.IsTeacher = isTeacher;
+                CourseViewModel.IsStudent = isStudent;
 
                 CourseViewModel.Room = Course.Room;
                 CourseViewModel.Building = Course.Room.Building;

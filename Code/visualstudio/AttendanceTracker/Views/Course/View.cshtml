@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="col-md-10 col-md-offset-1">
-            <h2>View Course <a class="btn btn-success" href="@Url.Action("Edit", "Course")?id=@Model.Course.Id">Edit</a></h2>
+            <h2>View Course @if(Model.IsAdmin || Model.IsTeacher){<a class="btn btn-success" href="@Url.Action("Edit", "Course")?id=@Model.Course.Id">Edit</a>}</h2>
             <br />
         </div>
     </div>
@@ -87,23 +87,28 @@
                     <td><b>Location:</b></td>
                     <td>@Model.Building.Name @Model.Room.Name (@Model.Building.Code-@Model.Room.Name)</td>
                 </tr>
-                <tr>
-                    <td><b>Attendance Code:</b></td>
-                    <td>@Model.Course.ActiveAttendanceCode</td>
-                </tr>
-
+                @if (Model.IsAdmin || Model.IsTeacher)
+                {
+                    <tr>
+                        <td><b>Attendance Code:</b></td>
+                        <td>@Model.Course.ActiveAttendanceCode</td>
+                    </tr>
+                }
                 </tbody>
             </table>
         </div>
         <div class="col-md-4 col-md-offset-1">
-            <h3>Students <a class="btn btn-success" href="@Url.Action("AddStudent", "Course")?courseId=@Model.Course.Id">Add</a></h3>
+            <h3>Students @if(Model.IsAdmin || Model.IsTeacher){<a class="btn btn-success" href="@Url.Action("AddStudent", "Course")?courseId=@Model.Course.Id">Add</a>}</h3>
             <table id="StudentsTable" class="table table-striped">
                 <thead>
                     <tr>
                         <th>Last Name</th>
                         <th>First Name</th>
-                        <th>NUID</th>
-                        <th></th>
+                        @if (Model.IsAdmin || Model.IsTeacher)
+                        {
+                            <th>NUID</th>
+                            <th></th>
+                        }
                     </tr>
                 </thead>
                 <tbody>
@@ -112,8 +117,11 @@
                         <tr>
                             <td>@student.User.LastName</td>
                             <td>@student.User.FirstName</td>
-                            <td>@student.User.NUID</td>
-                            <td><a class="btn btn-danger" href="@Url.Action("RemoveStudentPost", "Course")?id=@student.Student.Id">Remove</a></td>
+                            @if (Model.IsAdmin || Model.IsTeacher)
+                            {
+                                <td>@student.User.NUID</td>
+                                <td><a class="btn btn-danger" href="@Url.Action("RemoveStudentPost", "Course")?id=@student.Student.Id">Remove</a></td>
+                            }
                         </tr>
                     }
                 </tbody>
