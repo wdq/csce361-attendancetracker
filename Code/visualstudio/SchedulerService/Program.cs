@@ -5,6 +5,8 @@ using System.ServiceProcess;
 using System.IO;
 using WebSocketSharp;
 using WebSocketSharp.Server;
+using System.Web.Helpers;
+using Newtonsoft.Json;
 
 
 namespace SchedulerService
@@ -39,8 +41,24 @@ namespace SchedulerService
             {
                 Console.WriteLine(e.Data);
                 Send(e.Data);
-                
-                // base.OnMessage(e);
+                dynamic json = JsonConvert.DeserializeObject(e.Data);
+                try
+                {
+                    var request = json.request;
+                    if (request == "bt_data_set")
+                    {
+                        Console.WriteLine("Node requsted Bluetooth addresses.");
+                    }
+                    else if (request == "sleep_time")
+                    {
+                        Console.WriteLine("Node requsted sleep time.");
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+
             }
 
             protected override void OnOpen()
