@@ -70,6 +70,10 @@ namespace AttendanceTracker.Models.Course
                         }
                     }
                 }
+                if (user.Role == 2)
+                {
+                    filteredCourses = Courses;
+                }
                 foreach (var Course in filteredCourses)
                 {
                     CoursesTable.Add(FromCourse(Course, database));
