@@ -12,12 +12,13 @@ namespace AttendanceTracker
     using System;
     using System.Collections.Generic;
     
-    public partial class RoomDevice
+    public partial class AspNetUserClaim
     {
-        public System.Guid Id { get; set; }
-        public string IpAddress { get; set; }
-        public System.Guid RoomId { get; set; }
+        public int Id { get; set; }
+        public string UserId { get; set; }
+        public string ClaimType { get; set; }
+        public string ClaimValue { get; set; }
     
-        public virtual Room Room { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

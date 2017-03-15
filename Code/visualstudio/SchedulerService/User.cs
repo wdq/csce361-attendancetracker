@@ -12,43 +12,33 @@ namespace AttendanceTracker
     using System;
     using System.Collections.Generic;
     
-    public partial class Course
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Course()
+        public User()
         {
             this.CourseAttendances = new HashSet<CourseAttendance>();
             this.CourseOwners = new HashSet<CourseOwner>();
             this.CourseStudents = new HashSet<CourseStudent>();
+            this.UserBlueteeth = new HashSet<UserBluetooth>();
         }
     
         public System.Guid Id { get; set; }
-        public string CourseCode { get; set; }
-        public string CourseNumber { get; set; }
-        public int CourseSection { get; set; }
-        public string CourseName { get; set; }
-        public int ClassNumber { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsOnSunday { get; set; }
-        public bool IsOnMonday { get; set; }
-        public bool IsOnTuesday { get; set; }
-        public bool IsOnWednesday { get; set; }
-        public bool IsOnThursday { get; set; }
-        public bool IsOnFriday { get; set; }
-        public bool IsOnSaturday { get; set; }
-        public int StartTime { get; set; }
-        public int StopTime { get; set; }
-        public string Semester { get; set; }
-        public int Year { get; set; }
-        public System.Guid LocationRoomId { get; set; }
-        public string ActiveAttendanceCode { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
+        public int NUID { get; set; }
+        public int Role { get; set; }
+        public string AspNetUsersId { get; set; }
     
-        public virtual Room Room { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseAttendance> CourseAttendances { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseOwner> CourseOwners { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseStudent> CourseStudents { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserBluetooth> UserBlueteeth { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

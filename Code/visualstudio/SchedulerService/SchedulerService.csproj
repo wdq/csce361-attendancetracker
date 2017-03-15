@@ -70,58 +70,84 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceDatabase.Context.cs">
+      <DependentUpon>AttendanceDatabase.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AttendanceDatabase.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AttendanceDatabase.Designer.cs">
+      <DependentUpon>AttendanceDatabase.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Building.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Course.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CourseAttendance.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CourseOwner.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CourseStudent.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="RoomDevice.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="SchedulerData.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchedulerData.Context.tt</DependentUpon>
+    <Compile Include="SchemaChanx.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="SchedulerData.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchedulerData.tt</DependentUpon>
+    <Compile Include="User.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="SchedulerData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
+    <Compile Include="UserBluetooth.cs">
+      <DependentUpon>AttendanceDatabase.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AttendanceDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AttendanceDatabase.edmx</DependentUpon>
+      <LastGenOutput>AttendanceDatabase.cs</LastGenOutput>
+    </Content>
     <None Include="App.config" />
-    <EntityDeploy Include="SchedulerData.edmx">
+    <EntityDeploy Include="AttendanceDatabase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SchedulerData.Designer.cs</LastGenOutput>
+      <LastGenOutput>AttendanceDatabase.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="AttendanceDatabase.edmx.diagram">
+      <DependentUpon>AttendanceDatabase.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
-    <None Include="SchedulerData.edmx.diagram">
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SchedulerData.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
-      <LastGenOutput>SchedulerData.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SchedulerData.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
-      <LastGenOutput>SchedulerData.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -137,6 +163,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AttendanceDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AttendanceDatabase.edmx</DependentUpon>
+      <LastGenOutput>AttendanceDatabase.Context.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
