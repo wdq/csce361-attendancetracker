@@ -222,6 +222,7 @@
     <Compile Include="Models\Course\CourseIndexModel.cs" />
     <Compile Include="Models\Course\CourseViewModel.cs" />
     <Compile Include="Models\User\PossibleUsersModel.cs" />
+    <Compile Include="Models\User\UserBluetoothEditModel.cs" />
     <Compile Include="Models\User\UserEditModel.cs" />
     <Compile Include="Models\User\UserIndexModel.cs" />
     <Compile Include="Models\User\UserViewModel.cs" />
@@ -257,6 +258,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Course\CourseEdit.js" />
+    <Content Include="Content\User\UserBluetoothEdit.js" />
     <Content Include="Content\User\UserEdit.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -324,6 +326,7 @@
     <Content Include="Views\Course\Edit.cshtml" />
     <Content Include="Views\Course\View.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\User\EditBluetooth.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

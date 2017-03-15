@@ -47,5 +47,18 @@ namespace AttendanceTracker.Controllers.User
 
             return jsonResult;
         }
+
+        public ActionResult EditBluetooth(string userId, string bluetoothId)
+        {
+            return View(UserBluetoothEditModel.UserBluetoothEdit(userId, bluetoothId));
+        }
+
+        [HttpPost]
+        public ActionResult EditBluetoothPost(UserBluetoothEditModel userBluetoothModel)
+        {
+            JsonResult json = new JsonResult();
+            json.Data = UserBluetoothEditModel.UserBluetoothEditPost(userBluetoothModel).UserId;
+            return json;
+        }
     }
 }

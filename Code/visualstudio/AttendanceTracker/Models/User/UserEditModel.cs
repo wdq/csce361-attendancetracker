@@ -50,7 +50,7 @@ namespace AttendanceTracker.Models.User
                 }
                 UserEditModel userEditModel = new UserEditModel(user, "Edit");
 
-                return userEditModel;;
+                return userEditModel;
             }
         }
 

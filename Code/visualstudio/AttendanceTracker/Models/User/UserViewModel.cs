@@ -8,6 +8,7 @@ namespace AttendanceTracker.Models.User
     public class UserViewModel
     {
         public AttendanceTracker.User User { get; set; }
+        public List<AttendanceTracker.UserBluetooth> Bluetooths { get; set; }
 
         public static UserViewModel ViewUser(string id)
         {
@@ -17,6 +18,7 @@ namespace AttendanceTracker.Models.User
             {
                 AttendanceTracker.User user = context.Users.Where(x => x.Id == new Guid(id)).FirstOrDefault();
                 userViewModel.User = user;
+                userViewModel.Bluetooths = user.UserBlueteeth.ToList();
             }
 
             return userViewModel;

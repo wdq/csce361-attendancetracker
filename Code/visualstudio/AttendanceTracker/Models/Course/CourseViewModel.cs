@@ -17,11 +17,11 @@ namespace AttendanceTracker.Models.Course
 
             using (AttendanceTrackerDatabaseConnection context = new AttendanceTrackerDatabaseConnection())
             {
-                AttendanceTracker.Course Course = context.Courses.Where(x => x.Id == new Guid(id)).FirstOrDefault();
+                AttendanceTracker.Course Course = context.Courses.FirstOrDefault(x => x.Id == new Guid(id));
                 CourseViewModel.Course = Course;
 
-                CourseViewModel.Room = context.Rooms.FirstOrDefault(x => x.Id == Course.LocationRoomId);
-                CourseViewModel.Building = context.Buildings.FirstOrDefault(x => x.Id == CourseViewModel.Room.BuildingId);
+                CourseViewModel.Room = Course.Room;
+                CourseViewModel.Building = Course.Room.Building;
             }
 
             return CourseViewModel;

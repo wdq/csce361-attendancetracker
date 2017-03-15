@@ -37,6 +37,7 @@ namespace AttendanceTracker.Models.Course
 
         public CourseEditModel(AttendanceTracker.Course course, string addOrEdit)
         {
+            AddOrEdit = addOrEdit;
             Id = course.Id;
             CourseCode = course.CourseCode;
             CourseNumber = course.CourseNumber;
