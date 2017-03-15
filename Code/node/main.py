@@ -2,7 +2,7 @@ import bluetooth, time
 import network
 import json
 import requests
-from threading import Thread
+
 from time import sleep
 from uuid import getnode as get_mac
 
@@ -20,15 +20,12 @@ class serv():
         self.kwargs = kwargs
 
     def setup(self):
-        self.url = 'ws://attend.ddns.net:989/node'
-        # self.url = 'ws://192.168.0.50:989/node'
+        self.url = 'ws://192.168.0.50:4565/node'
         self.ip_addr = None
-        self.conn_port  = 989
+        self.conn_port  = 4565
         self.network = network.network(host = self.url, port = self.conn_port)
 
-        self.stay_alive_count = 0
-
-    def run_system(self, **kwargs):   
+    def run_system(self):   
 
         
 
@@ -87,10 +84,7 @@ class serv():
             #connect to the scheduling server
             self.__connect_to_server__()
 
-
-            self.sleep_time = int(self.__get_sleep_time__())
-
-            self.student_dict["bt_scan_results"] = True
+            self.sleep_time = self.__get_sleep_time__()
                 
             self.network.send_dictionary(self.student_dict)
 
@@ -107,7 +101,6 @@ class serv():
             sleep(.5)
             self.__disconnect_from_server()
 
-            # print self.sleep_time
             sleep(self.sleep_time)
 
     # Function to connect to the server
@@ -132,8 +125,8 @@ class serv():
         # convert json object to dictionary 
         rtn = self.network.get_dictionary_return()
 
-        # # for local testing
-        # rtn =  self.network.test_student_bank()
+        # for local testing
+        rtn =  self.network.test_student_bank()
 
         return rtn
 
@@ -163,13 +156,9 @@ class serv():
         rtn = self.network.get_dictionary_return()
 
         # Use this for local testing
-        # rtn = self.network.test_sleep_time()
+        rtn = self.network.test_sleep_time()
 
-        try:
-            return rtn['sleep_timer']
-        except:
-            print "Error get sleep time. Using default."
-            return 5
+        return rtn['sleep_timer']
 
     #If an error occurs then post the error to the server to view its logs
     def __send_error__(self, error):
@@ -182,28 +171,9 @@ class serv():
         print public_ip
         self.network.send_key_value("node_public_ip", public_ip)
 
-    def ping_home(self):
-        while True:
-            self.__connect_to_server__()
-            self.network.send_key_value("ping", str(self.stay_alive_count))
-            self.__disconnect_from_server()
-            self.stay_alive_count += 1
-            sleep(1)
-
 
 if __name__ == "__main__":
     srv = serv(url = "none")
+
     srv.setup()
-
-    attend  = Thread(target = srv.run_system)
-    ping    = Thread(target = srv.ping_home)
-
-    attend.start()
-    ping.start()
-    Thread.join()
-
-    while(raw_input("") != "q"):
-        pass
-
-    attend.kill()
-    ping.kill()
+    srv.run_system()

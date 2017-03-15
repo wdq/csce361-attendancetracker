@@ -12,12 +12,11 @@ namespace AttendanceTracker
     using System;
     using System.Collections.Generic;
     
-    public partial class RoomDevice
+    public partial class C__MigrationHistory
     {
-        public System.Guid Id { get; set; }
-        public string IpAddress { get; set; }
-        public System.Guid RoomId { get; set; }
-    
-        public virtual Room Room { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

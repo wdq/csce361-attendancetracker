@@ -5,7 +5,8 @@ using System.ServiceProcess;
 using System.IO;
 using WebSocketSharp;
 using WebSocketSharp.Server;
-using System.Web.Script.Serialization;
+using System.Web.Helpers;
+using Newtonsoft.Json;
 
 
 namespace SchedulerService
@@ -38,75 +39,37 @@ namespace SchedulerService
         {
             protected override void OnMessage(MessageEventArgs e)
             {
-
-                var serializer = new JavaScriptSerializer(); //using System.Web.Script.Serialization;
-                var input = e.Data;
-                Dictionary<string, string> values = serializer.Deserialize<Dictionary<string, string>>(input);
-                
-
-                if(values.ContainsKey("ping"))
+                Console.WriteLine(e.Data);
+                Send(e.Data);
+                dynamic json = JsonConvert.DeserializeObject(e.Data);
+                try
                 {
-                    Console.WriteLine("Got a ping command");
-                }
-                else if(values.ContainsKey("verify_connection"))
-                {
-                    Send(e.Data);
-                }
-                else if(values.ContainsKey("bt_scan_results"))
-                {
-
-                    values.Remove("bt_scan_results");
-                    
-
-                    Console.WriteLine("Node:" + values["node_id"] + " reporting back! \n Bluetooth device \t Present");
-
-                    values.Remove("node_id");
-
-                    foreach (var result in values)
+                    var request = json.request;
+                    if (request == "bt_data_set")
                     {
-                        Console.WriteLine(result.Key + "\t " + result.Value);
+                        Console.WriteLine("Node requsted Bluetooth addresses.");
                     }
-                    Console.WriteLine("\n");
+                    else if (request == "sleep_time")
+                    {
+                        Console.WriteLine("Node requsted sleep time.");
+                    }
                 }
-                else if(values.ContainsKey("request"))
+                catch (Exception ex)
                 {
 
-                    Dictionary<string, string> node_return = new Dictionary<string, string>();
-
-                    if (values.ContainsValue("bt_data_set"))
-                    {
-                        
-                        node_return.Add("38:CA:DA:BF:84:02", "False");
-                        node_return.Add("B8:C6:8E:1F:B9:3D", "False");
-                        node_return.Add("24:da:9b:13:7e:2b", "False");
-                        node_return.Add("24:da:9b:13:7e:2c", "False");
-                    }
-                    else if(values.ContainsValue("sleep_time"))
-                    {
-                        node_return.Add("sleep_timer", "1");
-                    }
-                    var str = serializer.Serialize(node_return);
-                    Send(str);
-
-                }
-                else if(values.ContainsKey("error"))
-                {
-
-                    Console.WriteLine(values["error"]);
                 }
 
-                
-                
-                // base.OnMessage(e);
             }
 
             protected override void OnOpen()
             {
+                Console.WriteLine("Opening a connection.");
                 base.OnOpen();
             }
 
             protected override void OnClose(CloseEventArgs e)
             {
+                Console.WriteLine("Closing Connection\n");
                 base.OnClose(e);
             }
 
@@ -120,6 +83,11 @@ namespace SchedulerService
             {
 
                 return 0;
+            }
+            private string Dictionary_To_JSON(Dictionary<String, String> input)
+            {
+
+                return "";
             }
         }
 
@@ -150,7 +118,7 @@ namespace SchedulerService
             notification = "---------------------\n";
             Console.Write(notification);
 
-            var NodeSocket = new WebSocketServer(989);
+            var NodeSocket = new WebSocketServer(4565);
 
             Console.Write("Starting websocket port.....");
             NodeSocket.AddWebSocketService<NodeConnection>("/node", ()=> new NodeConnection { IgnoreExtensions = true});

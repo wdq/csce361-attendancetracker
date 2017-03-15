@@ -7,16 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchedulerService
+namespace AttendanceTracker
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Course
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Course()
+        {
+            this.CourseAttendances = new HashSet<CourseAttendance>();
+            this.CourseOwners = new HashSet<CourseOwner>();
+            this.CourseStudents = new HashSet<CourseStudent>();
+        }
+    
         public System.Guid Id { get; set; }
-        public int CanvasId { get; set; }
-        public System.Guid RoomId { get; set; }
+        public string CourseCode { get; set; }
+        public string CourseNumber { get; set; }
+        public int CourseSection { get; set; }
+        public string CourseName { get; set; }
+        public int ClassNumber { get; set; }
+        public bool IsActive { get; set; }
         public bool IsOnSunday { get; set; }
         public bool IsOnMonday { get; set; }
         public bool IsOnTuesday { get; set; }
@@ -26,8 +38,17 @@ namespace SchedulerService
         public bool IsOnSaturday { get; set; }
         public int StartTime { get; set; }
         public int StopTime { get; set; }
-        public bool IsActive { get; set; }
+        public string Semester { get; set; }
+        public int Year { get; set; }
+        public System.Guid LocationRoomId { get; set; }
+        public string ActiveAttendanceCode { get; set; }
     
         public virtual Room Room { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CourseAttendance> CourseAttendances { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CourseOwner> CourseOwners { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CourseStudent> CourseStudents { get; set; }
     }
 }
