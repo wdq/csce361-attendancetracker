@@ -73,58 +73,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Building.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Course.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RoomDevice.cs">
-      <DependentUpon>SchedulerData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SchedulerData.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchedulerData.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SchedulerData.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchedulerData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SchedulerData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="SchedulerData.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SchedulerData.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="packages.config" />
-    <None Include="SchedulerData.edmx.diagram">
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SchedulerData.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
-      <LastGenOutput>SchedulerData.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SchedulerData.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchedulerData.edmx</DependentUpon>
-      <LastGenOutput>SchedulerData.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
