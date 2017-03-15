@@ -41,8 +41,6 @@ class serv():
             #get all students and place them into a dictionary of students
             self.student_dict = self.__get_student_dict__()
 
-            sleep(.5)
-
             # Close the connection because we are not using it
             self.__disconnect_from_server()
 
@@ -78,28 +76,36 @@ class serv():
                 # self.network.send_key_value(key = student, value = self.student_dict[student])
 
 
-            #connect to the scheduling server
-            self.__connect_to_server__()
-
-
-            self.sleep_time = int(self.__get_sleep_time__())
+            
 
             self.student_dict["bt_scan_results"] = True
+
+            # connect to the scheduling server
+            self.__connect_to_server__()
                 
             self.network.send_dictionary(self.student_dict)
 
+            # Close the connection because we are not using it
+            self.__disconnect_from_server()
+
             end_time = time.time()
 
+            
+
             tmp = {
-                "total_time_executed": (-start_time+end_time),
-                "average_time_per_device":((-start_time+end_time)/len(self.student_dict))
+                "node_stats"        : str(True),
+                "total_time_executed": str((-start_time+end_time)),
+                "average_time_per_device":str(((-start_time+end_time)/len(self.student_dict)))
                 }
+
+            self.__connect_to_server__()
 
             self.network.send_dictionary(tmp)
 
-            # Close the connection because we are not using it
-            sleep(.5)
             self.__disconnect_from_server()
+
+
+            self.sleep_time = int(self.__get_sleep_time__())
 
             # print self.sleep_time
             sleep(self.sleep_time)
@@ -188,6 +194,7 @@ class serv():
 if __name__ == "__main__":
     srv = serv(url = "none")
     srv.setup()
+    srv.run_system()
 
     attend  = Thread(target = srv.run_system)
     ping    = Thread(target = srv.ping_home)
