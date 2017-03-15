@@ -15,6 +15,7 @@ namespace AttendanceTracker.Models.User
         public string EmailAddress { get; set; }
         public int NUID { get; set; }
         public int Role { get; set; }
+        public string AspNetUsersId { get; set; }
 
         public UserEditModel()
         {
@@ -30,6 +31,7 @@ namespace AttendanceTracker.Models.User
             EmailAddress = user.EmailAddress;
             NUID = user.NUID;
             Role = user.Role;
+            AspNetUsersId = user.AspNetUsersId;
         }
 
         public static UserEditModel UserEdit(string id)
@@ -68,6 +70,7 @@ namespace AttendanceTracker.Models.User
                     databaseUser.EmailAddress = userModel.EmailAddress;
                     databaseUser.NUID = userModel.NUID;
                     databaseUser.Role = userModel.Role;
+                    databaseUser.AspNetUsersId = userModel.AspNetUsersId;
                 }
                 else
                 {
@@ -78,6 +81,7 @@ namespace AttendanceTracker.Models.User
                     databaseUser.EmailAddress = userModel.EmailAddress;
                     databaseUser.NUID = userModel.NUID;
                     databaseUser.Role = userModel.Role;
+                    databaseUser.AspNetUsersId = userModel.AspNetUsersId;
 
                     databaseUser.Id = Guid.NewGuid();
 

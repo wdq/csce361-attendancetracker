@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AttendanceTracker.Models.User;
+using Microsoft.AspNet.Identity;
 
 namespace AttendanceTracker.Controllers.User
 {
@@ -59,6 +60,12 @@ namespace AttendanceTracker.Controllers.User
             JsonResult json = new JsonResult();
             json.Data = UserBluetoothEditModel.UserBluetoothEditPost(userBluetoothModel).UserId;
             return json;
+        }
+
+        public ActionResult StudentRegister()
+        {
+            var userId = User.Identity.GetUserId();
+            return View(StudentRegisterModel.StudentRegister(userId));
         }
     }
 }

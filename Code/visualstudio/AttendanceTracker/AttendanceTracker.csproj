@@ -222,6 +222,7 @@
     <Compile Include="Models\Course\CourseIndexModel.cs" />
     <Compile Include="Models\Course\CourseViewModel.cs" />
     <Compile Include="Models\User\PossibleUsersModel.cs" />
+    <Compile Include="Models\User\StudentRegisterModel.cs" />
     <Compile Include="Models\User\UserBluetoothEditModel.cs" />
     <Compile Include="Models\User\UserEditModel.cs" />
     <Compile Include="Models\User\UserIndexModel.cs" />
@@ -327,6 +328,7 @@
     <Content Include="Views\Course\View.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
     <Content Include="Views\User\EditBluetooth.cshtml" />
+    <Content Include="Views\User\StudentRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

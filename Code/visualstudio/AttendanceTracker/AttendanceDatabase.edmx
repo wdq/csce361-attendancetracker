@@ -162,6 +162,7 @@
           <Property Name="EmailAddress" Type="nvarchar(max)" Nullable="false" />
           <Property Name="NUID" Type="int" Nullable="false" />
           <Property Name="Role" Type="int" Nullable="false" />
+          <Property Name="AspNetUsersId" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="UserBluetooth">
           <Key>
@@ -336,6 +337,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_User_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="AspNetUsersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_UserBluetooth_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="UserBluetooth" Type="Self.UserBluetooth" Multiplicity="*" />
@@ -416,6 +429,10 @@
           <AssociationSet Name="FK_RoomDevice_Room" Association="Self.FK_RoomDevice_Room">
             <End Role="Room" EntitySet="Room" />
             <End Role="RoomDevice" EntitySet="RoomDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_AspNetUsers" Association="Self.FK_User_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="User" EntitySet="User" />
           </AssociationSet>
           <AssociationSet Name="FK_UserBluetooth_User" Association="Self.FK_UserBluetooth_User">
             <End Role="User" EntitySet="User" />
@@ -541,6 +558,8 @@
           <NavigationProperty Name="CourseOwners" Relationship="Self.FK_CourseOwner_User" FromRole="User" ToRole="CourseOwner" />
           <NavigationProperty Name="CourseStudents" Relationship="Self.FK_CourseStudent_User" FromRole="User" ToRole="CourseStudent" />
           <NavigationProperty Name="UserBlueteeth" Relationship="Self.FK_UserBluetooth_User" FromRole="User" ToRole="UserBluetooth" />
+          <Property Name="AspNetUsersId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="AttendanceTrackerModel.FK_User_AspNetUsers" FromRole="User" ToRole="AspNetUser" />
         </EntityType>
         <EntityType Name="UserBluetooth">
           <Key>
@@ -740,6 +759,10 @@
             <End Role="AspNetRole" EntitySet="AspNetRoles" />
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
           </AssociationSet>
+          <AssociationSet Name="FK_User_AspNetUsers" Association="AttendanceTrackerModel.FK_User_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="C__MigrationHistory">
           <Key>
@@ -799,6 +822,7 @@
           <NavigationProperty Name="AspNetUserClaims" Relationship="AttendanceTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
           <NavigationProperty Name="AspNetUserLogins" Relationship="AttendanceTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
           <NavigationProperty Name="AspNetRoles" Relationship="AttendanceTrackerModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+          <NavigationProperty Name="Users" Relationship="AttendanceTrackerModel.FK_User_AspNetUsers" FromRole="AspNetUser" ToRole="User" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Type="AttendanceTrackerModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
@@ -831,6 +855,18 @@
         <Association Name="AspNetUserRoles">
           <End Type="AttendanceTrackerModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
           <End Type="AttendanceTrackerModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_User_AspNetUsers">
+          <End Type="AttendanceTrackerModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+          <End Type="AttendanceTrackerModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="AspNetUsersId" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -935,6 +971,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="AttendanceTrackerModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="AspNetUsersId" ColumnName="AspNetUsersId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />

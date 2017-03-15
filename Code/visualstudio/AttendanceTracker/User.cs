@@ -29,6 +29,7 @@ namespace AttendanceTracker
         public string EmailAddress { get; set; }
         public int NUID { get; set; }
         public int Role { get; set; }
+        public string AspNetUsersId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseAttendance> CourseAttendances { get; set; }
@@ -38,5 +39,6 @@ namespace AttendanceTracker
         public virtual ICollection<CourseStudent> CourseStudents { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserBluetooth> UserBlueteeth { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

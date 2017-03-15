@@ -33,6 +33,7 @@
         <AssociationConnector Association="AttendanceTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="AttendanceTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="AttendanceTrackerModel.AspNetUserRoles" />
+        <AssociationConnector Association="AttendanceTrackerModel.FK_User_AspNetUsers" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
