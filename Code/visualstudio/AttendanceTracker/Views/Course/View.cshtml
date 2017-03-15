@@ -15,83 +15,107 @@
         <div class="col-md-4 col-md-offset-1">
             <table id="CourseTable" class="table table-striped">
                 <tbody>
-                    <tr>
-                        <td><b>Course Code:</b></td>
-                        <td>@Model.Course.CourseCode</td>
-                    </tr>
-                    <tr>
-                        <td><b>Course Number:</b></td>
-                        <td>@Model.Course.CourseNumber</td>
-                    </tr>
-                    <tr>
-                        <td><b>Course Section:</b></td>
-                        <td>@Model.Course.CourseSection</td>
-                    </tr>
-                    <tr>
-                        <td><b>Course Name:</b></td>
-                        <td>@Model.Course.CourseName</td>
-                    </tr>
-                    <tr>
-                        <td><b>Class Number:</b></td>
-                        <td>@Model.Course.ClassNumber</td>
-                    </tr>
-                    <tr>
-                        <td><b>Active:</b></td>
-                        <td>@Model.Course.IsActive</td>
-                    </tr>
-                    <tr>
-                        <td><b>Sunday:</b></td>
-                        <td>@Model.Course.IsOnSunday</td>
-                    </tr>
-                    <tr>
-                        <td><b>Monday:</b></td>
-                        <td>@Model.Course.IsOnMonday</td>
-                    </tr>
-                    <tr>
-                        <td><b>Tuesday:</b></td>
-                        <td>@Model.Course.IsOnTuesday</td>
-                    </tr>
-                    <tr>
-                        <td><b>Wednesday:</b></td>
-                        <td>@Model.Course.IsOnWednesday</td>
-                    </tr>
-                    <tr>
-                        <td><b>Thursday:</b></td>
-                        <td>@Model.Course.IsOnThursday</td>
-                    </tr>
-                    <tr>
-                        <td><b>Friday:</b></td>
-                        <td>@Model.Course.IsOnFriday</td>
-                    </tr>
-                    <tr>
-                        <td><b>Saturday:</b></td>
-                        <td>@Model.Course.IsOnSaturday</td>
-                    </tr>
-                    <tr>
-                        <td><b>Start Time:</b></td>
-                        <td>@Model.Course.StartTime</td>
-                    </tr>
-                    <tr>
-                        <td><b>Stop Time:</b></td>
-                        <td>@Model.Course.StopTime</td>
-                    </tr>
-                    <tr>
-                        <td><b>Semester:</b></td>
-                        <td>@Model.Course.Semester</td>
-                    </tr>
-                    <tr>
-                        <td><b>Year:</b></td>
-                        <td>@Model.Course.Year</td>
-                    </tr>
-                    <tr>
-                        <td><b>Location:</b></td>
-                        <td>@Model.Building.Name @Model.Room.Name (@Model.Building.Code-@Model.Room.Name)</td>
-                    </tr>
-                    <tr>
-                        <td><b>Attendance Code:</b></td>
-                        <td>@Model.Course.ActiveAttendanceCode</td>
-                    </tr>
+                <tr>
+                    <td><b>Course Code:</b></td>
+                    <td>@Model.Course.CourseCode</td>
+                </tr>
+                <tr>
+                    <td><b>Course Number:</b></td>
+                    <td>@Model.Course.CourseNumber</td>
+                </tr>
+                <tr>
+                    <td><b>Course Section:</b></td>
+                    <td>@Model.Course.CourseSection</td>
+                </tr>
+                <tr>
+                    <td><b>Course Name:</b></td>
+                    <td>@Model.Course.CourseName</td>
+                </tr>
+                <tr>
+                    <td><b>Class Number:</b></td>
+                    <td>@Model.Course.ClassNumber</td>
+                </tr>
+                <tr>
+                    <td><b>Active:</b></td>
+                    <td>@Model.Course.IsActive</td>
+                </tr>
+                <tr>
+                    <td><b>Sunday:</b></td>
+                    <td>@Model.Course.IsOnSunday</td>
+                </tr>
+                <tr>
+                    <td><b>Monday:</b></td>
+                    <td>@Model.Course.IsOnMonday</td>
+                </tr>
+                <tr>
+                    <td><b>Tuesday:</b></td>
+                    <td>@Model.Course.IsOnTuesday</td>
+                </tr>
+                <tr>
+                    <td><b>Wednesday:</b></td>
+                    <td>@Model.Course.IsOnWednesday</td>
+                </tr>
+                <tr>
+                    <td><b>Thursday:</b></td>
+                    <td>@Model.Course.IsOnThursday</td>
+                </tr>
+                <tr>
+                    <td><b>Friday:</b></td>
+                    <td>@Model.Course.IsOnFriday</td>
+                </tr>
+                <tr>
+                    <td><b>Saturday:</b></td>
+                    <td>@Model.Course.IsOnSaturday</td>
+                </tr>
+                <tr>
+                    <td><b>Start Time:</b></td>
+                    <td>@Model.Course.StartTime</td>
+                </tr>
+                <tr>
+                    <td><b>Stop Time:</b></td>
+                    <td>@Model.Course.StopTime</td>
+                </tr>
+                <tr>
+                    <td><b>Semester:</b></td>
+                    <td>@Model.Course.Semester</td>
+                </tr>
+                <tr>
+                    <td><b>Year:</b></td>
+                    <td>@Model.Course.Year</td>
+                </tr>
+                <tr>
+                    <td><b>Location:</b></td>
+                    <td>@Model.Building.Name @Model.Room.Name (@Model.Building.Code-@Model.Room.Name)</td>
+                </tr>
+                <tr>
+                    <td><b>Attendance Code:</b></td>
+                    <td>@Model.Course.ActiveAttendanceCode</td>
+                </tr>
 
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+            <h3>Students <a class="btn btn-success" href="@Url.Action("AddStudent", "Course")?courseId=@Model.Course.Id">Add</a></h3>
+            <table id="StudentsTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>NUID</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Students)
+                    {
+                        <tr>
+                            <td>@student.User.LastName</td>
+                            <td>@student.User.FirstName</td>
+                            <td>@student.User.NUID</td>
+                            <td><a class="btn btn-danger" href="@Url.Action("RemoveStudentPost", "Course")?id=@student.Student.Id">Remove</a></td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>

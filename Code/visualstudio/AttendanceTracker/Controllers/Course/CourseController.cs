@@ -58,5 +58,27 @@ namespace AttendanceTracker.Controllers.Course
 
             return jsonResult;
         }
+
+        public ActionResult AddStudent(string courseId)
+        {
+            return View(CourseStudentEditModel.CourseStudentEdit(courseId));
+        }
+
+        [HttpPost]
+        public ActionResult AddStudentPost(CourseStudentEditModel model)
+        {
+            JsonResult json = new JsonResult();
+            json.Data = CourseStudentEditModel.CourseStudentEditPost(model).CourseId;
+            return json;
+        }
+
+        public ActionResult RemoveStudentPost(string id)
+        {
+            JsonResult json = new JsonResult();
+            var run = CourseStudentEditModel.CourseStudentRemovePost(id);
+            json.Data = "ok";
+            json.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            return json;
+        }
     }
 }

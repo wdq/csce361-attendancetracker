@@ -10,6 +10,24 @@ namespace AttendanceTracker.Models.Course
         public AttendanceTracker.Course Course { get; set; }
         public AttendanceTracker.Room Room { get; set; }
         public AttendanceTracker.Building Building { get; set; }
+        public List<CourseStudentStudent> Students { get; set; }
+
+        public class CourseStudentStudent
+        {
+            public CourseStudent Student { get; set; }
+            public AttendanceTracker.User User { get; set; }
+
+            public CourseStudentStudent()
+            {
+                
+            }
+
+            public CourseStudentStudent(CourseStudent student, AttendanceTracker.User user)
+            {
+                Student = student;
+                User = user;
+            }
+        }
 
         public static CourseViewModel ViewCourse(string id)
         {
@@ -22,6 +40,13 @@ namespace AttendanceTracker.Models.Course
 
                 CourseViewModel.Room = Course.Room;
                 CourseViewModel.Building = Course.Room.Building;
+
+                List<CourseStudentStudent> studentsTemp = new List<CourseStudentStudent>();
+                foreach (var student in Course.CourseStudents)
+                {
+                    studentsTemp.Add(new CourseStudentStudent(student, student.User));
+                }
+                CourseViewModel.Students = studentsTemp.OrderBy(x => x.User.LastName).ToList();
             }
 
             return CourseViewModel;
