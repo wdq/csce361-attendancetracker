@@ -12,12 +12,13 @@ namespace AttendanceTracker
     using System;
     using System.Collections.Generic;
     
-    public partial class RoomDevice
+    public partial class CourseStudent
     {
         public System.Guid Id { get; set; }
-        public string IpAddress { get; set; }
-        public System.Guid RoomId { get; set; }
+        public System.Guid CourseId { get; set; }
+        public System.Guid UserId { get; set; }
     
-        public virtual Room Room { get; set; }
+        public virtual Course Course { get; set; }
+        public virtual User User { get; set; }
     }
 }

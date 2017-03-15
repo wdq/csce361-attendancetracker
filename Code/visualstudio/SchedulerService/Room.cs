@@ -7,13 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchedulerService
+namespace AttendanceTracker
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Room
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Room()
         {
             this.Courses = new HashSet<Course>();
@@ -25,7 +26,9 @@ namespace SchedulerService
         public string Name { get; set; }
     
         public virtual Building Building { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RoomDevice> RoomDevices { get; set; }
     }
 }

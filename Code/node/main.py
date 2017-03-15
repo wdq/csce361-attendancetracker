@@ -7,12 +7,6 @@ from time import sleep
 from uuid import getnode as get_mac
 
 # # Student class to hold a student BT mac address and weather or not they are preset.
-# class student_t():
-#     """docstring for student_t"""
-#     def __init__(self, **kwargs):
-#         self.kwargs = kwargs
-#         self.bluetooth_addr = None
-#         self.present        = False
 
 class serv():
 

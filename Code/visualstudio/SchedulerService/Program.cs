@@ -42,21 +42,21 @@ namespace SchedulerService
                 var serializer = new JavaScriptSerializer(); //using System.Web.Script.Serialization;
                 var input = e.Data;
                 Dictionary<string, string> values = serializer.Deserialize<Dictionary<string, string>>(input);
-                
 
-                if(values.ContainsKey("ping"))
+
+                if (values.ContainsKey("ping"))
                 {
                     Console.WriteLine("Got a ping command");
                 }
-                else if(values.ContainsKey("verify_connection"))
+                else if (values.ContainsKey("verify_connection"))
                 {
                     Send(e.Data);
                 }
-                else if(values.ContainsKey("bt_scan_results"))
+                else if (values.ContainsKey("bt_scan_results"))
                 {
 
                     values.Remove("bt_scan_results");
-                    
+
 
                     Console.WriteLine("Node:" + values["node_id"] + " reporting back! \n Bluetooth device \t Present");
 
@@ -68,20 +68,20 @@ namespace SchedulerService
                     }
                     Console.WriteLine("\n");
                 }
-                else if(values.ContainsKey("request"))
+                else if (values.ContainsKey("request"))
                 {
 
                     Dictionary<string, string> node_return = new Dictionary<string, string>();
 
                     if (values.ContainsValue("bt_data_set"))
                     {
-                        
+
                         node_return.Add("38:CA:DA:BF:84:02", "False");
                         node_return.Add("B8:C6:8E:1F:B9:3D", "False");
                         node_return.Add("24:da:9b:13:7e:2b", "False");
                         node_return.Add("24:da:9b:13:7e:2c", "False");
                     }
-                    else if(values.ContainsValue("sleep_time"))
+                    else if (values.ContainsValue("sleep_time"))
                     {
                         node_return.Add("sleep_timer", "1");
                     }
@@ -89,14 +89,14 @@ namespace SchedulerService
                     Send(str);
 
                 }
-                else if(values.ContainsKey("error"))
+                else if (values.ContainsKey("error"))
                 {
 
                     Console.WriteLine(values["error"]);
                 }
 
-                
-                
+
+
                 // base.OnMessage(e);
             }
 
@@ -112,7 +112,7 @@ namespace SchedulerService
 
             protected override void OnError(WebSocketSharp.ErrorEventArgs e)
             {
-                Console.WriteLine(e); 
+                Console.WriteLine(e);
                 base.OnError(e);
             }
 
@@ -153,7 +153,7 @@ namespace SchedulerService
             var NodeSocket = new WebSocketServer(989);
 
             Console.Write("Starting websocket port.....");
-            NodeSocket.AddWebSocketService<NodeConnection>("/node", ()=> new NodeConnection { IgnoreExtensions = true});
+            NodeSocket.AddWebSocketService<NodeConnection>("/node", () => new NodeConnection { IgnoreExtensions = true });
             NodeSocket.Start();
 
             if (NodeSocket.IsListening)
@@ -166,19 +166,19 @@ namespace SchedulerService
             Console.Write("Websocket running");
 
             using (StreamWriter w = System.IO.File.AppendText(@"ServiceLog.txt"))
-            while (true)
-            {
-                notification = "Running... " + DateTime.Now.ToString() + "\n";
-                Console.Write(notification);
-                
-                
-                
+                while (true)
+                {
+                    notification = "Running... " + DateTime.Now.ToString() + "\n";
+                    Console.Write(notification);
 
 
-                notification = "----------\n";
-                Console.Write(notification);
-                Thread.Sleep(TimeSpan.FromMinutes(1));
-            }
+
+
+
+                    notification = "----------\n";
+                    Console.Write(notification);
+                    Thread.Sleep(TimeSpan.FromMinutes(1));
+                }
         }
 
         private static void Stop()
