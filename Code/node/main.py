@@ -194,28 +194,16 @@ class serv():
 if __name__ == "__main__":
     srv = serv(url = "none")
     srv.setup()
-    srv.run_system()
 
-    ping_srv = serv()
-    ping_srv.setup()
-
-    try:
     attend  = Thread(target = srv.run_system)
     ping    = Thread(target = srv.ping_home)
 
     attend.start()
     ping.start()
-    thread.join()
-    # except:
-    #     print "Couldn't start attendance process"
+    Thread.join()
 
     while(raw_input("") != "q"):
         pass
 
     attend.kill()
     ping.kill()
-
-    try:
-        thread.start_new_thread(srv.ping_home)
-    except:
-        print "Couldn't start ping connection"
