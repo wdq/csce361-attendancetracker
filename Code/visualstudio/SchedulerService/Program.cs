@@ -79,10 +79,15 @@ namespace SchedulerService
                             var bluetooths = user.UserBlueteeth;
                             foreach (var bluetooth in user.UserBlueteeth)
                             {
-                                if (values[bluetooth.Address] == "True")
+                                try
                                 {
-                                    here = true;
-                                    break;
+                                    if (values[bluetooth.Address] == "True")
+                                    {
+                                        here = true;
+                                        break;
+                                    }
+                                }
+                                catch (Exception ex) { 
                                 }
                             }
                             CourseAttendance record = new CourseAttendance();
