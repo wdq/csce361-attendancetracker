@@ -6,7 +6,7 @@ using System.IO;
 using WebSocketSharp;
 using WebSocketSharp.Server;
 using System.Web.Script.Serialization;
-
+using System.Linq;
 
 namespace SchedulerService
 {
@@ -60,7 +60,41 @@ namespace SchedulerService
 
                     Console.WriteLine("Node:" + values["node_id"] + " reporting back! \n Bluetooth device \t Present");
 
+                    var nodeId = values["node_id"];
                     values.Remove("node_id");
+
+                    using (AttendanceTrackerEntities1 context = new AttendanceTrackerEntities1())
+                    {
+                        var device = context.RoomDevices.FirstOrDefault(x => x.IpAddress == nodeId);
+                        var room = device.Room;
+                        var courses = context.Courses.Where(x => x.LocationRoomId == room.Id);
+                        var currentCourse = courses.FirstOrDefault(x => x.Id == new Guid("7dc7d22b-ccdb-4b4c-94bb-77b8df245041")); // todo: base this on the class currently in session, this is just for the demo/testing
+                        var students = currentCourse.CourseStudents;
+
+                        foreach (var student in students)
+                        {
+                            bool here = false;
+
+                            var user = student.User;
+                            var bluetooths = user.UserBlueteeth;
+                            foreach (var bluetooth in user.UserBlueteeth)
+                            {
+                                if (values[bluetooth.Address] == "True")
+                                {
+                                    here = true;
+                                    break;
+                                }
+                            }
+                            CourseAttendance record = new CourseAttendance();
+                            record.Id = Guid.NewGuid();
+                            record.Date = DateTime.Now.Date;
+                            record.CourseId = currentCourse.Id;
+                            record.UserId = user.Id;
+                            record.Attendance = here;
+                            context.CourseAttendances.Add(record);
+                        }
+                        context.SaveChanges();
+                    }
 
                     foreach (var result in values)
                     {
@@ -75,11 +109,29 @@ namespace SchedulerService
 
                     if (values.ContainsValue("bt_data_set"))
                     {
+                        var nodeId = values["node_id"];
+                        using (AttendanceTrackerEntities1 context = new AttendanceTrackerEntities1())
+                        {
+                            var device = context.RoomDevices.FirstOrDefault(x => x.IpAddress == nodeId);
+                            var room = device.Room;
+                            var courses = context.Courses.Where(x => x.LocationRoomId == room.Id);
+                            var currentCourse = courses.FirstOrDefault(x => x.Id == new Guid("7dc7d22b-ccdb-4b4c-94bb-77b8df245041")); // todo: base this on the class currently in session, this is just for the demo/testing
+                            var students = currentCourse.CourseStudents;
+
+                            foreach (var student in students)
+                            {
+                                var user = student.User;
+                                foreach (var bluetooth in user.UserBlueteeth)
+                                {
+                                    node_return.Add(bluetooth.Address, "False");
+                                }
+                            }
+                        }
                         
-                        node_return.Add("38:CA:DA:BF:84:02", "False");
-                        node_return.Add("B8:C6:8E:1F:B9:3D", "False");
-                        node_return.Add("24:da:9b:13:7e:2b", "False");
-                        node_return.Add("24:da:9b:13:7e:2c", "False");
+                        //node_return.Add("38:CA:DA:BF:84:02", "False");
+                        //node_return.Add("B8:C6:8E:1F:B9:3D", "False");
+                        //node_return.Add("24:da:9b:13:7e:2b", "False");
+                        //node_return.Add("24:da:9b:13:7e:2c", "False");
                     }
                     else if(values.ContainsValue("sleep_time"))
                     {

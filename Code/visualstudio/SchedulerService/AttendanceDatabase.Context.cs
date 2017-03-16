@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AttendanceTracker
+namespace SchedulerService
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AttendanceTrackerDatabaseConnection : DbContext
+    public partial class AttendanceTrackerEntities1 : DbContext
     {
-        public AttendanceTrackerDatabaseConnection()
-            : base("name=AttendanceTrackerDatabaseConnection")
+        public AttendanceTrackerEntities1()
+            : base("name=AttendanceTrackerEntities1")
         {
         }
     
@@ -25,6 +25,11 @@ namespace AttendanceTracker
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Building> Buildings { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<CourseAttendance> CourseAttendances { get; set; }
@@ -35,10 +40,5 @@ namespace AttendanceTracker
         public virtual DbSet<SchemaChanx> SchemaChanges { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserBluetooth> UserBlueteeth { get; set; }
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
     }
 }

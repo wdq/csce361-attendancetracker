@@ -7,14 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AttendanceTracker
+namespace SchedulerService
 {
     using System;
     using System.Collections.Generic;
     
     public partial class User
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
             this.CourseAttendances = new HashSet<CourseAttendance>();
@@ -31,14 +30,10 @@ namespace AttendanceTracker
         public int Role { get; set; }
         public string AspNetUsersId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CourseAttendance> CourseAttendances { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CourseOwner> CourseOwners { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CourseStudent> CourseStudents { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserBluetooth> UserBlueteeth { get; set; }
         public virtual AspNetUser AspNetUser { get; set; }
+        public virtual ICollection<CourseAttendance> CourseAttendances { get; set; }
+        public virtual ICollection<CourseOwner> CourseOwners { get; set; }
+        public virtual ICollection<CourseStudent> CourseStudents { get; set; }
+        public virtual ICollection<UserBluetooth> UserBlueteeth { get; set; }
     }
 }

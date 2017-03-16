@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AttendanceTracker
+namespace SchedulerService
 {
     using System;
     using System.Collections.Generic;
