@@ -135,7 +135,8 @@ namespace SchedulerService
                     }
                     else if(values.ContainsValue("sleep_time"))
                     {
-                        node_return.Add("sleep_timer", "1");
+                        Console.WriteLine("Sending sleep time.");
+                        node_return.Add("sleep_timer", "600"); // 600 seconds is for testing/demo (10 minutes), would actually be the next time there is a class in that room
                     }
                     var str = serializer.Serialize(node_return);
                     Send(str);
