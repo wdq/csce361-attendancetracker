@@ -62,9 +62,10 @@ namespace SchedulerService
 
                     var nodeId = values["node_id"];
                     values.Remove("node_id");
-
+                    Console.WriteLine("scan results Connecting to DB");
                     using (AttendanceTrackerEntities1 context = new AttendanceTrackerEntities1())
                     {
+                        Console.WriteLine("scan results Connected to DB");
                         var device = context.RoomDevices.FirstOrDefault(x => x.IpAddress == nodeId);
                         var room = device.Room;
                         var courses = context.Courses.Where(x => x.LocationRoomId == room.Id);
@@ -128,6 +129,7 @@ namespace SchedulerService
                                 var user = student.User;
                                 foreach (var bluetooth in user.UserBlueteeth)
                                 {
+                                    Console.WriteLine("Adding address: " + bluetooth.Address);
                                     node_return.Add(bluetooth.Address, "False");
                                 }
                             }

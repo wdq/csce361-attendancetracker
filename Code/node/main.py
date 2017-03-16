@@ -43,72 +43,73 @@ class serv():
 
             # Close the connection because we are not using it
             self.__disconnect_from_server()
-
-            #loop through the students and mark them present or absent
-            for student in self.student_dict:
-
-                # Get addr and present status
-                addr    = student
-
-                # using state and service to remove false triggers
-                # We might need to change this in the future
-                try:
-                    state = bluetooth.lookup_name(addr, timeout=15)
-                    # services = bluetooth.find_service(address=addr)
-                except Exception as e:
-                    self.__send_error__(str(e))
-                    print ("Sending error to server: " + str(e))
-                    continue 
-                
-                # print state
-
-                # Detect if the state is detected if it is see if the service is available
-                if state != None:
-                    self.student_dict[student] = True
-                    print "Student present!"
+			
+            if any(self.student_dict):
+                #loop through the students and mark them present or absent
+                for student in self.student_dict:
+    
+                    # Get addr and present status
+                    addr    = student
+    
+                    # using state and service to remove false triggers
+                    # We might need to change this in the future
+                    try:
+                        state = bluetooth.lookup_name(addr, timeout=15)
+                        # services = bluetooth.find_service(address=addr)
+                    except Exception as e:
+                        self.__send_error__(str(e))
+                        print ("Sending error to server: " + str(e))
+                        continue 
+                    
                     # print state
-
-                # No student detected. Mark as absent
-                else:
-                    self.student_dict[student] = False
-                    print("Student absent! ")
-
-                # self.network.send_key_value(key = student, value = self.student_dict[student])
-
-
-            
-
-            self.student_dict["bt_scan_results"] = True
-
-            # connect to the scheduling server
-            self.__connect_to_server__()
+    
+                    # Detect if the state is detected if it is see if the service is available
+                    if state != None:
+                        self.student_dict[student] = True
+                        print "Student present!"
+                        # print state
+    
+                    # No student detected. Mark as absent
+                    else:
+                        self.student_dict[student] = False
+                        print("Student absent! ")
+    
+                    # self.network.send_key_value(key = student, value = self.student_dict[student])
+    
+    
                 
-            self.network.send_dictionary(self.student_dict)
-
-            # Close the connection because we are not using it
-            self.__disconnect_from_server()
-
-            end_time = time.time()
-
-            
-
-            tmp = {
-                "node_stats"        : str(True),
-                "total_time_executed": str((-start_time+end_time)),
-                "average_time_per_device":str(((-start_time+end_time)/len(self.student_dict)))
-                }
-
-            self.__connect_to_server__()
-
-            self.network.send_dictionary(tmp)
-
-            self.__disconnect_from_server()
-
-
-            self.sleep_time = int(self.__get_sleep_time__())
-
-            # print self.sleep_time
-            sleep(self.sleep_time)
+    
+                self.student_dict["bt_scan_results"] = True
+    
+                # connect to the scheduling server
+                self.__connect_to_server__()
+                    
+                self.network.send_dictionary(self.student_dict)
+    
+                # Close the connection because we are not using it
+                self.__disconnect_from_server()
+    
+                end_time = time.time()
+    
+                
+    
+                tmp = {
+                    "node_stats"        : str(True),
+                    "total_time_executed": str((-start_time+end_time)),
+                    "average_time_per_device":str(((-start_time+end_time)/len(self.student_dict)))
+                    }
+    
+                self.__connect_to_server__()
+    
+                self.network.send_dictionary(tmp)
+    
+                self.__disconnect_from_server()
+    
+    
+                self.sleep_time = int(self.__get_sleep_time__())
+    
+                # print self.sleep_time
+                sleep(self.sleep_time)
 
     # Function to connect to the server
     def __connect_to_server__(self):
