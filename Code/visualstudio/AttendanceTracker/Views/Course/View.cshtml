@@ -96,6 +96,19 @@
                 }
                 </tbody>
             </table>
+            @if (Model.IsAdmin || Model.IsTeacher)
+            {
+                <br />
+                <h3>Attendance Records</h3>
+                <hr />
+                <div class="form-inline">
+                    <label>Date</label>
+                    <input type="text" class="form-control" id="attendanceDateInput" value="@DateTime.Today.ToShortDateString()"/>
+                    <button class="attendanceDownloadButton btn btn-primary">Export CSV</button>
+                </div>
+            }
+
+
         </div>
         <div class="col-md-4 col-md-offset-1">
             <h3>Students @if(Model.IsAdmin || Model.IsTeacher){<a class="btn btn-success" href="@Url.Action("AddStudent", "Course")?courseId=@Model.Course.Id">Add</a>}</h3>
@@ -129,3 +142,21 @@
         </div>
     </div>
 </div>
+
+@if (Model.IsAdmin || Model.IsTeacher) { 
+<script>
+    $(document).ready(function () {
+        $('#attendanceDateInput').datepicker({
+            maxViewMode: 2,
+            todayBtn: "linked",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $('.attendanceDownloadButton').click(function () {
+            var date = $('#attendanceDateInput').val();
+            window.location.href = '@Url.Action("GetAttendanceCsv", "Course")?courseId=@Model.Course.Id&date=' + date;
+        });
+    });
+</script>
+}

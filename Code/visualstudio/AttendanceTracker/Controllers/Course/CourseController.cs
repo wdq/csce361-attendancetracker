@@ -26,6 +26,29 @@ namespace AttendanceTracker.Controllers.Course
             }
         }
 
+        public FileResult GetAttendanceCsv(string courseId, string date)
+        {
+            string csvString = "Date,Class,StudentName,StudentNUID,Attended";
+            DateTime dateTime = DateTime.Parse(date);
+
+            using (var context = new AttendanceTrackerDatabaseConnection())
+            {
+                var course = context.Courses.FirstOrDefault(x => x.Id == new Guid(courseId));
+                if (course != null)
+                {
+                    if (course.CourseAttendances.Any())
+                    {
+                        var attendances = course.CourseAttendances.Where(x => x.Date == dateTime);
+                        foreach (var attendance in attendances)
+                        {
+                            csvString += "\n" + attendance.Date.ToShortDateString() + "," + course.CourseCode + " " + course.CourseNumber + "-" + course.CourseSection + "," + attendance.User.FirstName + " " + attendance.User.LastName + "," + attendance.User.NUID + "," + attendance.Attendance;                            
+                        }
+                    }
+                }
+            }
+            return File(new System.Text.UTF8Encoding().GetBytes(csvString), "text/csv", "AttendanceExport.csv");            
+        }
+
         [HttpPost]
         public JsonResult CourseIndexTable()
         {
