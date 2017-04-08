@@ -120,7 +120,19 @@ main.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_event.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
- /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/tcp.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/mem.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/netif.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/stats.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/memp.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp6.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -363,3 +375,27 @@ main.o: \
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
 
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/tcp.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/mem.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/netif.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/stats.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/memp.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp.h:
+
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp6.h:

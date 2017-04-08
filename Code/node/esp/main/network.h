@@ -26,6 +26,8 @@
 #include "lwip/dns.h"
 #include "lwip/sys.h"
 
+#include "lwip/tcp.h"
+
 
 //typedef
 #define string char *
@@ -68,7 +70,7 @@ typedef struct network_t
 	int socket; 
 
 	// socket address structs
-	struct sockaddr_in sendAddress;
+	struct sockaddr_in server;
 
 	//localIP
 	ip4_addr_t localIP;
@@ -110,6 +112,7 @@ int connect_to_server(network_t *);
 bool setup_socket(network_t *);
  bool reset_socket_into(network_t *); //
  void setup_wifi(network_t * network); //
+ bool disconnect_socket(network_t * );
 
 
 // private functions

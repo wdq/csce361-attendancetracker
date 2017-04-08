@@ -118,9 +118,17 @@ bool setup_socket(network_t * net)
 
   _setup_ip_by_dns(net);
 
-  /* create the socket */
-  net->socket = lwip_socket(AF_INET, SOCK_STREAM, 0);
-  LWIP_ASSERT("s >= 0", net->socket >= 0);
+  //Create socket
+	net->socket = socket(AF_INET , SOCK_STREAM , 0);
+	if (net->socket == -1)
+	{
+		printf("Could not create socket");
+	}
+
+	net->server.sin_addr.s_addr = inet_addr("13.65.210.250");
+	net->server.sin_family = AF_INET;
+	net->server.sin_port = htons( 989 );
+
 
   return true;
 }
@@ -130,7 +138,8 @@ bool reset_socket_info(network_t * net)
   //todo have logic to see if the socket is closed, if so continue else exit
 
   //Destroy sender address
-  memset(&(net->sendAddress), 0, sizeof(net->sendAddress));
+	close(net->socket);
+  memset(&(net->server), 0, sizeof(net->server));
 
   return true; 
 }
@@ -144,15 +153,20 @@ int connect_to_server(network_t * net)
 		setup_socket(net);
 	}
 
-	int ret;
-
-	/* connect */
-  ret = lwip_connect(net->socket, (struct sockaddr*)&net->sendAddress, sizeof(net->sendAddress));
-  /* should succeed */
-  printf("lwip_connect return: %d\n", ret);
-  LWIP_ASSERT("ret == 0", ret == 0);
+	if (connect(net->socket , (struct sockaddr *)&net->server , sizeof(net->server)) < 0)
+		{
+			perror("connect failed. Error");
+			return 1;
+		}
 
   return 0; 
+}
+
+bool disconnect_socket(network_t * net)
+{
+	if(net->isConnected == true)
+		close(net->socket);
+	return true;
 }
 
 bool _send_pkt(network_t * net, pkt_t * pkt)
@@ -226,106 +240,63 @@ string _recv(network_t * net)
 }
 
 
-//bool verify_connection(network_t * net)
-//{
-//	string tmp = "\"verify_connection\":\"AABBCCDD112233\"";
-//
-//	int tmp_recv;
-//
-//	connect_to_server(net);
-//
-//	if((tmp_recv = write(net->socket, tmp, sizeof(*tmp))) < 0)
-//	  {
-//		printf("WTF %d\n", tmp_recv);
-//		return false;
-//	  }
-//
-//	int recv_bytes = recv(net->socket, (void *)net->rx_buffer, sizeof(net->rx_buffer), 0);
-//
-//	net->rx_buffer[recv_bytes] = '\0';
-//
-//	printf("Returned data: %s", net->rx_buffer);
-//
-//	if(recv_bytes < sizeof(tmp) )
-//		  {
-//			return false;
-//		  }
-//
-//
-//	return true;
-//
-//}
-
-
-
 bool verify_connection(network_t * net)
 {
 
-	int lSocket;
-	struct sockaddr_in sLocalAddr;
+	 int sock;
+	    struct sockaddr_in server;
+	    char message[] = "{\"verify_connection\":\"AABBCCDD112233\"}" , server_reply[2000];
+	    printf("Test message: %s\n", message);
 
-	lSocket = lwip_socket(AF_INET, SOCK_STREAM, 0);
-	if (lSocket < 0) return false;
+	    int rcv = 0;
 
-	memset((char *)&sLocalAddr, 0, sizeof(sLocalAddr));
-	sLocalAddr.sin_family = AF_INET;
-	sLocalAddr.sin_len = sizeof(sLocalAddr);
-	sLocalAddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	sLocalAddr.sin_port = htons(989;
-
-	if (lwip_bind(lSocket, (struct sockaddr *)&sLocalAddr, sizeof(sLocalAddr)) < 0) {
-	        lwip_close(lSocket);
-	        printf("WTF\n");
-	        return false;
-	}
-
-	if ( lwip_listen(lSocket, 20) != 0 ){
-	        lwip_close(lSocket);
-	        printf("SHIT\n");
-	        return false;
-	}
-
-	while (1) {
-	        int clientfd;
-	        struct sockaddr_in client_addr;
-	        u32_t addrlen=sizeof(client_addr);
-	        char buffer[1024];
-	        int nbytes;
-
-
-	        printf("TITS3\n");
-	        vTaskDelay(500*portTICK_PERIOD_MS);
-
-	        printf("TITS\n");
-	        clientfd = lwip_accept(lSocket, (struct sockaddr*)&client_addr, (socklen_t *)&addrlen);
-
-	        printf("TITS1\n");
-	        if (clientfd>0){
-	        	printf("HELL\n");
-	            do{
-	                nbytes=lwip_recv(clientfd, buffer, sizeof(buffer),0);
-	                if (nbytes>0) lwip_send(clientfd, buffer, nbytes, 0);
-	                printf("Bitch\n");
-	            }  while (nbytes>0);
-
-	             lwip_close(clientfd);
-	          }
-	        else
-	        {
-	        	printf("BALLZ\n");
-	        }
-//	        vTaskDelay(500*portTICK_PERIOD_MS);
+	    //Create socket
+	    sock = socket(AF_INET , SOCK_STREAM , 0);
+	    if (sock == -1)
+	    {
+	        printf("Could not create socket");
 	    }
-	    lwip_close(lSocket);
+	    printf("Socket created");
 
-	    return true;
+	    server.sin_addr.s_addr = inet_addr("13.65.210.250");
+	    server.sin_family = AF_INET;
+	    server.sin_port = htons( 989 );
+
+	    //Connect to remote server
+	    if (connect(sock , (struct sockaddr *)&server , sizeof(server)) < 0)
+	    {
+	        perror("connect failed. Error");
+	        return 1;
+	    }
+
+	    printf("Connected\n");
+
+	    //keep communicating with server
 
 
+	        //Send some data
+	        if( send(sock , message , strlen(message) , 0) < 0)
+	        {
+	        	printf("fuck this shit");
+	            return 1;
+	        }
+
+	        vTaskDelay();
+
+	        //Receive a reply from the server
+	        if( (rcv = recv(sock , server_reply , 2000 , 0) )< 0)
+	        {
+	        	printf("recv failed");
+	        	return 0;
+	        }
+
+	        server_reply[rcv] = '\0';
+
+	        printf("Server reply: %s \n", server_reply);
+
+	    close(sock);
+	    return 1;
 }
-
-
-
-
 
 
 
