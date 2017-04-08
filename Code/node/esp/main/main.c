@@ -1,42 +1,101 @@
+/* Hello World Example
+
+ This example code is in the Public Domain (or CC0 licensed, at your option.)
+
+ Unless required by applicable law or agreed to in writing, this
+ software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ CONDITIONS OF ANY KIND, either express or implied.
+ */
+#include <stdio.h>
+#include <string.h>
 #include "freertos/FreeRTOS.h"
-#include "esp_wifi.h"
+#include "freertos/task.h"
+#include "freertos/event_groups.h"
 #include "esp_system.h"
-#include "esp_event.h"
+#include "esp_wifi.h"
 #include "esp_event_loop.h"
+#include "esp_log.h"
 #include "nvs_flash.h"
-#include "driver/gpio.h"
+#include "driver/ledc.h"
+#include "lwip/err.h"
+#include "lwip/arch.h"
+#include "lwip/api.h"
 
-esp_err_t event_handler(void *ctx, system_event_t *event)
+#include "network.h"
+
+network_t network; 
+
+void ping_task(void * pvParameters)
 {
-    return ESP_OK;
+  uint64_t ping_count = 0;
+  while(1)
+  {
+    printf("Ping task is called. %llu\n", ping_count);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
+    ping_count ++;
+  }
 }
 
-void app_main(void)
+void mark_attendance_task(void * pvParameters)
 {
-    nvs_flash_init();
-    tcpip_adapter_init();
-    ESP_ERROR_CHECK( esp_event_loop_init(event_handler, NULL) );
-    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
-    ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
-    ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
-    wifi_config_t sta_config = {
-        .sta = {
-            .ssid = "access_point_name",
-            .password = "password",
-            .bssid_set = false
+  while(1)
+  {
+    printf("mark_attendance_task task is called. \n");
+    vTaskDelay(2000 / portTICK_PERIOD_MS);
+  }
+}
+
+void app_main() {
+   nvs_flash_init();
+
+
+   network.Wifi_ssid = "PasswordisTaco";
+   network.Wifi_password = "Lemur3spelledout";
+   network.Host = "attend.ddns.net";
+   network.Port = 989;
+
+//      network.Host = "echo.websocket.org";
+//      network.Port = 80;
+
+
+   setup_wifi(&network);
+
+
+   printf("Waiting for wifi to connect .");
+     while(!is_connected(&network))
+     {
+
+        printf(" . ");
+        vTaskDelay(250 * portTICK_PERIOD_MS);
+     }
+
+     printf("\n");
+
+
+   while(1)
+        {
+     	   if(verify_connection(&network))
+     	   {
+     		   printf("Connection is successful! \n");
+     	   }
+     	   else
+     	   {
+     		   printf("Shit is fucked real bad! \n");
+     	   }
+     	         vTaskDelay(1000 * portTICK_PERIOD_MS);
         }
-    };
-    ESP_ERROR_CHECK( esp_wifi_set_config(WIFI_IF_STA, &sta_config) );
-    ESP_ERROR_CHECK( esp_wifi_start() );
-    ESP_ERROR_CHECK( esp_wifi_connect() );
 
-    gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
-    int level = 0;
-    while (true) {
-        gpio_set_level(GPIO_NUM_4, level);
-        level = !level;
-        vTaskDelay(300 / portTICK_PERIOD_MS);
-    }
+
+
+
+   setup_socket(&network);
+
+
+
+   xTaskCreate(&ping_task, "ping_task", 2048, NULL, 5, NULL);
+   xTaskCreate(&mark_attendance_task, "mark_attendance_task", 2048, NULL, 5, NULL);
+
 }
+
+
 
