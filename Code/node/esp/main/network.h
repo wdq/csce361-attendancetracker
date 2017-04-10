@@ -77,6 +77,7 @@ typedef struct network_t
 
 	//serverIP
 	ip_addr_t serverIP;
+	char serverIP_String[50];
 
 
 	//node_id

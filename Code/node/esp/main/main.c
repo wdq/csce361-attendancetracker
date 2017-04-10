@@ -50,12 +50,12 @@ void app_main() {
 
 
    network.Wifi_ssid = "PasswordisTaco";
-   network.Wifi_password = "Lemur3spelledout";
-   network.Host = "attend.ddns.net";
-   network.Port = 989;
+   network.Wifi_password = "";
+//   network.Host = "attend.ddns.net";
+//   network.Port = 989;
 
-//      network.Host = "echo.websocket.org";
-//      network.Port = 80;
+      network.Host = "echo.websocket.org";
+      network.Port = 80;
 
 
    setup_wifi(&network);
