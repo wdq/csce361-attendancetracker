@@ -100,14 +100,11 @@ bool _setup_ip_by_dns(network_t * net)
     	vTaskDelay(500*portTICK_PERIOD_MS);
     }
         
-
-    sprintf(net->serverIP_String, "%i.%i.%i.%i",
-			ip4_addr1(&(net->serverIP).u_addr.ip4),
-			ip4_addr2(&net->serverIP.u_addr.ip4),
-			ip4_addr3(&net->serverIP.u_addr.ip4),
-			ip4_addr4(&net->serverIP.u_addr.ip4));
-
-    printf("DNS found: %s\n", net->serverIP_String);
+    printf( "DNS found: %i.%i.%i.%i\n",
+        ip4_addr1(&(net->serverIP).u_addr.ip4),
+        ip4_addr2(&net->serverIP.u_addr.ip4),
+        ip4_addr3(&net->serverIP.u_addr.ip4),
+        ip4_addr4(&net->serverIP.u_addr.ip4) );
 
    return true;
 }
@@ -242,12 +239,18 @@ string _recv(network_t * net)
   return (string)pkt.payload;
 }
 
+
 bool verify_connection(network_t * net)
 {
 
 	 int sock;
 	    struct sockaddr_in server;
 	    char message[] = "{\"verify_connection\":\"AABBCCDD112233\"}" , server_reply[2000];
+
+
+
+	    char *server_ip = inet_ntoa(*(struct in_addr *) &net->serverIP);
+
 	    printf("Test message: %s\n", message);
 
 	    int rcv = 0;
@@ -258,60 +261,44 @@ bool verify_connection(network_t * net)
 	    {
 	        printf("Could not create socket");
 	    }
-//	    printf("Socket created");
-
-	    _setup_ip_by_dns(net);
-
-	    server.sin_addr.s_addr = inet_addr( net->serverIP_String);
+	    server.sin_addr.s_addr = inet_addr(server_ip);
 	    server.sin_family = AF_INET;
 	    server.sin_port = htons( net->Port );
-
-	    if (bind(sock , (struct sockaddr *)&server , sizeof(server)) < 0)
-	   	    {
-	   	        perror("bind failed. Error");
-	   	        return 1;
-	   	    }
-
 
 	    //Connect to remote server
 	    if (connect(sock , (struct sockaddr *)&server , sizeof(server)) < 0)
 	    {
 	        perror("connect failed. Error");
-	        return 1;
+	        close(sock);
+	        return 0;
 	    }
-
-
 
 	    printf("Connected\n");
 
-	    //keep communicating with server
-
 
 	        //Send some data
-	        if( send(sock , &message , sizeof(message), 0) < 0)
+	        if( send(sock , message , strlen(message) , 0) < 0)
 	        {
 	        	printf("fuck this shit");
-	            return 1;
+	            return 0;
 	        }
 
+//	        vTaskDelay();
+
 	        //Receive a reply from the server
-	        rcv = recv(sock , &server_reply , sizeof(server_reply), 0);
-	        if( (rcv)< 0)
+	        if( (rcv = recv(sock , server_reply , 2000 , 0) )< 0)
 	        {
 	        	printf("recv failed");
 	        	return 0;
 	        }
 
-
-
 	        server_reply[rcv] = '\0';
 
-	        printf("%d \t Server reply: %s \n", rcv, server_reply);
+	        printf("Server reply: %s \n", server_reply);
 
 	    close(sock);
 	    return 1;
 }
-
 
 
 

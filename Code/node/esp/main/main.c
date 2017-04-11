@@ -51,11 +51,10 @@ void app_main() {
 
    network.Wifi_ssid = "PasswordisTaco";
    network.Wifi_password = "";
-//   network.Host = "attend.ddns.net";
-//   network.Port = 989;
 
-      network.Host = "echo.websocket.org";
-      network.Port = 80;
+   network.Host = "attend.ddns.net";
+   network.Port = 989;
+
 
 
    setup_wifi(&network);
@@ -72,23 +71,26 @@ void app_main() {
      printf("\n");
 
 
-   while(1)
-        {
-     	   if(verify_connection(&network))
-     	   {
-     		   printf("Connection is successful! \n");
-     	   }
-     	   else
-     	   {
-     		   printf("Shit is fucked real bad! \n");
-     	   }
-     	         vTaskDelay(1000 * portTICK_PERIOD_MS);
-        }
+     setup_socket(&network);
+
+
+	while(1)
+	{
+	   if(verify_connection(&network))
+	   {
+		   printf("Connection is successful! \n");
+	   }
+	   else
+	   {
+		   printf("Shit is fucked real bad! \n");
+	   }
+			 vTaskDelay(1000 * portTICK_PERIOD_MS);
+	}
 
 
 
 
-   setup_socket(&network);
+
 
 
 
