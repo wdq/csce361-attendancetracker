@@ -25,15 +25,15 @@
                     <tbody>
                     <tr>
                         <td><b>Course Code:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.CourseCode" data-bind="value: CourseCode" /></td>
+                        <td><input autofocus="autofocus"  data-parsley-trigger="change" required="" data-parsley-length="[4, 4]" type="text" class="form-control" value="@Model.CourseCode" data-bind="value: CourseCode" /></td>
                     </tr>
                     <tr>
                         <td><b>Course Number:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.CourseNumber" data-bind="value: CourseNumber" /></td>
+                        <td><input data-parsley-trigger="change" required="" type="number"  data-parsley-length="[1, 6]" class="form-control" value="@Model.CourseNumber" data-bind="value: CourseNumber" /></td>
                     </tr>
                     <tr>
                         <td><b>Course Section:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.CourseSection" data-bind="value: CourseSection" /></td>
+                        <td><input data-parsley-trigger="change" required="" type="number" data-parsley-length="[1, 4]"  class="form-control" value="@Model.CourseSection" data-bind="value: CourseSection" /></td>
                     </tr>
                     <tr>
                         <td><b>Course Name:</b></td>
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <td><b>Class Number:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.ClassNumber" data-bind="value: ClassNumber" /></td>
+                        <td><input data-parsley-trigger="change" required="" type="number" class="form-control" value="@Model.ClassNumber" data-bind="value: ClassNumber" /></td>
                     </tr>
                     <tr>
                         <td><b>Active:</b></td>
@@ -77,23 +77,32 @@
                     </tr>
                     <tr>
                         <td><b>Start Time:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.StartTime" data-bind="value: StartTime" /></td>
+                        <td><input data-parsley-trigger="change" required="" type="number" class="form-control" min="0" max="2359" value="@Model.StartTime" data-bind="value: StartTime" /></td>
                     </tr>
                     <tr>
                         <td><b>Stop Time:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.StopTime" data-bind="value: StopTime" /></td>
+                        <td><input data-parsley-trigger="change" required="" type="number" class="form-control" min="0" max="2359"  value="@Model.StopTime" data-bind="value: StopTime" /></td>
                     </tr>
                     <tr>
                         <td><b>Semester:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.Semester" data-bind="value: Semester" /></td>
+                        <td>
+                            <select class="form-control" data-parsley-trigger="change" required="" class="form-control" value="@Model.Semester" data-bind="value: Semester">
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Summer</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td><b>Year:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.Year" data-bind="value: Year" /></td>
+                        <td><input data-parsley-trigger="change" required="" type="number" class="form-control" value="@Model.Year" data-bind="value: Year" /></td>
                     </tr>
                     <tr>
                         <td><b>Location:</b></td>
-                        <td><input required="" type="text" class="form-control typeahead location-typeahead" value="@Model.LocationRoomId" data="@Model.LocationRoomId" data-bind="data: LocationRoomId" /></td>
+                        @{
+                            var locationRoomIdTemp = Model.LocationRoomId != new Guid() ? Model.LocationRoomId.ToString() : null;
+                        }
+                        <td><input data-parsley-trigger="change" data-parsley-validlocation="text" required="" type="text" class="form-control typeahead location-typeahead" value="@locationRoomIdTemp" data="@locationRoomIdTemp" data-bind="data: LocationRoomId" /></td>
                     </tr>
                     <tr>
                         <td><b>Attendance Code:</b></td>

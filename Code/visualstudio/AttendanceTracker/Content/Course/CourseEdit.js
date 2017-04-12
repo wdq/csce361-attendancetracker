@@ -15,7 +15,7 @@
     };
 
     self.save = function () {
-        if ($('#Form').parsley().validate()) {
+        if ($('#Form').parsley().validate() && typeof ($('.location-typeahead').attr("value")) != 'undefined') {
             $.ajax({
                 url: "EditPost",
                 type: "POST",
@@ -42,6 +42,26 @@ $(function () {
     window.viewModel = new ViewModel(initialModel);
     ko.applyBindings(window.viewModel);
 })
+
+$(document).ready(function () {
+    window.Parsley
+      .addValidator('validlocation', {
+          requirementType: 'string',
+          validateString: function (value, requirement) {
+              if (typeof ($('.location-typeahead').attr("value")) === 'undefined') {
+                  console.log("bad location");
+                  return false;
+              } else {
+                  console.log("good location");
+                  return true;
+              }
+          },
+          messages: {
+              en: 'Please select a location from the list.'
+         } 
+      });
+    $('#Form').parsley();
+});
 
 $(document).ready(function () {
     var map = {};
