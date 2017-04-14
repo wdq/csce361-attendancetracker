@@ -25,7 +25,7 @@
                     <tbody>
                     <tr>
                         <td><b>First Name:</b></td>
-                        <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.FirstName" data-bind="value: FirstName"/></td>
+                        <td><input autofocus="autofocus"  data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.FirstName" data-bind="value: FirstName" /></td>
                     </tr>
                     <tr>
                         <td><b>Last Name:</b></td>
@@ -33,17 +33,23 @@
                     </tr>
                     <tr>
                         <td><b>Email:</b></td>
-                        <td><input type="email" data-parsley-trigger="change" class="form-control" value="@Model.EmailAddress" data-bind="value: EmailAddress"/></td>
+                        <td><input type="email" data-parsley-trigger="change" required=""  class="form-control" value="@Model.EmailAddress" data-bind="value: EmailAddress" /></td>
                     </tr>
                     <tr>
                         <td><b>NUID:</b></td>
-                        <td><input type="text" data-parsley-trigger="change" class="form-control" value="@Model.NUID" data-bind="value: NUID"/></td>
+                        <td><input type="number" data-parsley-trigger="change" required="" data-parsley-length="[8, 8]" class="form-control" value="@Model.NUID" data-bind="value: NUID" /></td>
                     </tr>
                     @if (Model.IsAdmin)
                     {
                         <tr>
                             <td><b>Role:</b></td>
-                            <td><input type="text" data-parsley-trigger="change" class="form-control" value="@Model.Role" data-bind="value: Role"/></td>
+                            <td>
+                                <select class="form-control" data-parsley-trigger="change" required="" class="form-control" value="@Model.Role" data-bind="value: Role">
+                                    <option value="0">Student (0)</option>
+                                    <option value="1">Teacher (1)</option>
+                                    <option value="2">Admin (2)</option>
+                                </select>
+                            </td>
                         </tr>
                     }
 
@@ -54,10 +60,6 @@
                     </tr>
                     </tbody>
                 </table>
-                @if (Model.IsAdmin)
-                {
-                    <p>Role: 0 student, 1 teacher, 2 admin</p>
-                }
             </form>
         </div>
     </div>
