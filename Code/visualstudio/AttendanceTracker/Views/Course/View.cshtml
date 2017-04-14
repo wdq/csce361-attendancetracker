@@ -133,7 +133,7 @@
                             @if (Model.IsAdmin || Model.IsTeacher)
                             {
                                 <td>@student.User.NUID</td>
-                                <td><a class="btn btn-danger" href="@Url.Action("RemoveStudentPost", "Course")?id=@student.Student.Id">Remove</a></td>
+                                <td><a class="btn btn-danger" onclick="removeStudent('@student.Student.Id')">Remove</a></td>
                             }
                         </tr>
                     }
@@ -145,6 +145,17 @@
 
 @if (Model.IsAdmin || Model.IsTeacher) { 
 <script>
+
+    var removeStudent = function (id) {
+        $.get("./RemoveStudentPost?id=" + id, function (data) {
+            if (data == "ok") {
+                window.location.reload();
+            } else {
+                alert("Error removing student.");
+            }
+        });
+    }
+
     $(document).ready(function () {
         $('#attendanceDateInput').datepicker({
             maxViewMode: 2,
