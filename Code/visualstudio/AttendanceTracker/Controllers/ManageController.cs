@@ -70,7 +70,8 @@ namespace AttendanceTracker.Controllers
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                IsStudent = UserRolesModel.IsStudent(User.Identity.GetUserId()) || (!UserRolesModel.IsTeacher(User.Identity.GetUserId()) && !UserRolesModel.IsAdmin(User.Identity.GetUserId()))
             };
             return View(model);
         }

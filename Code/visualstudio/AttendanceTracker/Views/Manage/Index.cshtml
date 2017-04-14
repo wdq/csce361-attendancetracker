@@ -10,10 +10,13 @@
     <h4>Change your account settings</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>Student Info:</dt>
-        <dd>
-            [ @Html.ActionLink("Edit student info", "StudentRegister", "User") ]
-        </dd>
+         @if (Model.IsStudent)
+             {
+                 <dt>Student Info:</dt>
+                 <dd>
+                     [ @Html.ActionLink("Edit student info", "StudentRegister", "User") ]
+                 </dd>
+             }
         <dt>Bluetooth Addresses:</dt>
         <dd>
             [ @Html.ActionLink("View user info, and add Bluetooth addresses", "View", "User") ]

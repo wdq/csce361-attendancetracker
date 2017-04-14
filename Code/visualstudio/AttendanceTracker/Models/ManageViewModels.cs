@@ -12,6 +12,7 @@ namespace AttendanceTracker.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
+        public bool IsStudent { get; set; }
     }
 
     public class ManageLoginsViewModel
