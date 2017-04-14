@@ -15,7 +15,7 @@
     };
 
     self.save = function () {
-        if ($('#Form').parsley().validate() && typeof ($('.location-typeahead').attr("value")) != 'undefined') {
+        if ($('#Form').parsley().validate() && typeof($('.location-typeahead').attr("value")) !== "undefined") {
             $.ajax({
                 url: "EditPost",
                 type: "POST",

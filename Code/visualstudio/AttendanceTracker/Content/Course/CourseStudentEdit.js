@@ -15,7 +15,8 @@
     };
 
     self.save = function () {
-        if ($('#Form').parsley().validate()) {
+
+        if ($('#Form').parsley().validate() && typeof($('.student-typeahead').attr("value")) !== "undefined") {
             $.ajax({
                 url: "AddStudentPost",
                 type: "POST",
@@ -42,6 +43,26 @@ $(function () {
     window.viewModel = new ViewModel(initialModel);
     ko.applyBindings(window.viewModel);
 })
+
+$(document).ready(function () {
+    window.Parsley
+      .addValidator('validstudent', {
+          requirementType: 'string',
+          validateString: function (value, requirement) {
+              if (typeof ($('.student-typeahead').attr("value")) === 'undefined') {
+                  console.log("bad student");
+                  return false;
+              } else {
+                  console.log("good student");
+                  return true;
+              }
+          },
+          messages: {
+              en: 'Please select a student from the list.'
+          }
+      });
+    $('#Form').parsley();
+});
 
 $(document).ready(function () {
     var map = {};

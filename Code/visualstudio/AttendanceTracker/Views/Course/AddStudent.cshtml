@@ -19,7 +19,10 @@
                     <tbody>
                         <tr>
                             <td><b>Student:</b></td>
-                            <td><input required="" type="text" class="form-control typeahead student-typeahead" value="@Model.StudentId" data="@Model.StudentId" data-bind="data: StudentId" /></td>
+                            @{
+                                var studentIdTemp = Model.StudentId != new Guid() ? Model.StudentId.ToString() : null;
+                            }
+                            <td><input data-parsley-trigger="change" data-parsley-validstudent="text" required="" type="text" class="form-control typeahead student-typeahead" value="@studentIdTemp" data="@studentIdTemp" data-bind="data: StudentId" /></td>
                         </tr>
                         <tr>
                             <td style="padding-top: 30px">
