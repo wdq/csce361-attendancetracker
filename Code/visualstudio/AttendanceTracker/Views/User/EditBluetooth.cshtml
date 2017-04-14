@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <td><b>Address:</b></td>
-                            <td><input data-parsley-trigger="change" required="" type="text" class="form-control" value="@Model.Address" data-bind="value: Address" /></td>
+                            <td><input data-parsley-trigger="change" data-parsley-pattern="^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$" required="" type="text" class="form-control" value="@Model.Address" data-bind="value: Address" /></td>
                         </tr>
                         <tr>
                             <td style="padding-top: 30px">
