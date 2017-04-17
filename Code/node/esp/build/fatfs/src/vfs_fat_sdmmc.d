@@ -23,7 +23,7 @@ src/vfs_fat_sdmmc.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h \
@@ -39,12 +39,12 @@ src/vfs_fat_sdmmc.o: \
  /Users/michaelfay95/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/gpio.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
@@ -74,6 +74,7 @@ src/vfs_fat_sdmmc.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/semphr.h \
@@ -127,7 +128,7 @@ src/vfs_fat_sdmmc.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/vfs/include/esp_vfs.h:
 
@@ -159,17 +160,17 @@ src/vfs_fat_sdmmc.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
@@ -228,6 +229,8 @@ src/vfs_fat_sdmmc.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

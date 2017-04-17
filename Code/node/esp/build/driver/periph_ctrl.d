@@ -8,7 +8,7 @@ periph_ctrl.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
@@ -45,12 +45,13 @@ periph_ctrl.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h \
@@ -75,7 +76,7 @@ periph_ctrl.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
@@ -149,6 +150,8 @@ periph_ctrl.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -157,9 +160,9 @@ periph_ctrl.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
 

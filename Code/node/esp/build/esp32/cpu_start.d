@@ -25,26 +25,27 @@ cpu_start.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/uart.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/uart_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/rtc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/cache.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/cpu.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/rtc_io.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/gpio.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -70,6 +71,7 @@ cpu_start.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -116,18 +118,19 @@ cpu_start.o: \
  /Users/michaelfay95/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_event.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_ipc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h \
  /Users/michaelfay95/esp/esp-idf/components/vfs/include/esp_vfs_dev.h \
  /Users/michaelfay95/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/dirent.h \
  /Users/michaelfay95/esp/esp-idf/components/vfs/include/sys/dirent.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/platform_include/esp_newlib.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_brownout.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/esp_brownout.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_int_wdt.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_task_wdt.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_phy_init.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_cache_err_int.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_coexist.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_panic.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_core_dump.h \
  /Users/michaelfay95/esp/esp-idf/components/xtensa-debug-module/include/trax.h \
  /Users/michaelfay95/esp/esp-idf/components/xtensa-debug-module/include/eri.h \
@@ -183,7 +186,7 @@ cpu_start.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/uart.h:
 
@@ -191,37 +194,39 @@ cpu_start.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/uart_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/rtc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/cache.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/cpu.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
+
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/rtc_io.h:
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/gpio.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
@@ -272,6 +277,8 @@ cpu_start.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -365,8 +372,6 @@ cpu_start.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_ipc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
-
 /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h:
 
 /Users/michaelfay95/esp/esp-idf/components/vfs/include/esp_vfs_dev.h:
@@ -379,7 +384,7 @@ cpu_start.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_brownout.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/esp_brownout.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_int_wdt.h:
 
@@ -387,7 +392,11 @@ cpu_start.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_phy_init.h:
 
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_cache_err_int.h:
+
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_coexist.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_panic.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_core_dump.h:
 

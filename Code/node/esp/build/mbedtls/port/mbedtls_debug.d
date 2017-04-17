@@ -20,7 +20,7 @@ port/mbedtls_debug.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /Users/michaelfay95/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
  /Users/michaelfay95/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
@@ -93,7 +93,7 @@ port/mbedtls_debug.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 

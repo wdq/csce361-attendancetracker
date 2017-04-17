@@ -19,6 +19,7 @@ bluedroid/stack/smp/aes.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_target.h \
+ /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -30,9 +31,8 @@ bluedroid/stack/smp/aes.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h \
- /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/smp/include/aes.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h:
@@ -73,6 +73,8 @@ bluedroid/stack/smp/aes.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_target.h:
 
+/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h:
+
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h:
@@ -95,10 +97,8 @@ bluedroid/stack/smp/aes.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h:
 
-/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h:
-
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/smp/include/aes.h:

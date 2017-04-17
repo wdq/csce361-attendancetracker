@@ -6,7 +6,7 @@ src/crypto/crypto_internal.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/features.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h \
  /Users/michaelfay95/esp/esp-idf/components/wpa_supplicant/port/include/os.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h \
@@ -67,6 +67,7 @@ src/crypto/crypto_internal.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -92,7 +93,7 @@ src/crypto/crypto_internal.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h:
 
@@ -213,6 +214,8 @@ src/crypto/crypto_internal.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

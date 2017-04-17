@@ -33,11 +33,11 @@ partition.o: \
  /Users/michaelfay95/esp/esp-idf/components/spi_flash/include/esp_partition.h \
  /Users/michaelfay95/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /Users/michaelfay95/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/efuse_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/queue.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdlib.h:
@@ -106,14 +106,14 @@ partition.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/efuse_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/queue.h:

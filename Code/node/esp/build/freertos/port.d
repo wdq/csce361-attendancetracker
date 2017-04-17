@@ -32,7 +32,7 @@ port.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./port.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -45,6 +45,7 @@ port.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./port.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -56,8 +57,7 @@ port.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./port.c \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -125,7 +125,7 @@ port.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./port.c \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h:
 
@@ -151,6 +151,8 @@ port.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./port.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -174,5 +176,3 @@ port.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./port.c \
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h:
-
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:

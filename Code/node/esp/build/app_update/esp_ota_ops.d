@@ -39,7 +39,7 @@ esp_ota_ops.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -48,6 +48,7 @@ esp_ota_ops.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -59,14 +60,14 @@ esp_ota_ops.o: \
  /Users/michaelfay95/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /Users/michaelfay95/esp/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /Users/michaelfay95/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/efuse_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h \
  /Users/michaelfay95/esp/esp-idf/components/app_update/include/esp_ota_ops.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/queue.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/crc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h:
@@ -147,7 +148,7 @@ esp_ota_ops.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -164,6 +165,8 @@ esp_ota_ops.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -187,9 +190,9 @@ esp_ota_ops.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/efuse_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
 
@@ -201,6 +204,6 @@ esp_ota_ops.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/crc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h:

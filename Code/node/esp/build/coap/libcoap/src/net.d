@@ -53,7 +53,7 @@ libcoap/src/net.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -62,6 +62,7 @@ libcoap/src/net.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -81,14 +82,10 @@ libcoap/src/net.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/ctype.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/port/arpa/inet.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/debug.h \
- /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/pdu.h \
- /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/uri.h \
- /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/hashkey.h \
+ /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/mem.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/str.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/string.h \
- /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/mem.h \
- /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/str.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/async.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/net.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h \
@@ -99,6 +96,10 @@ libcoap/src/net.o: \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/coap_time.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/option.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/bits.h \
+ /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/pdu.h \
+ /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/uri.h \
+ /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/hashkey.h \
+ /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/str.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/prng.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/resource.h \
  /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/utlist.h \
@@ -217,7 +218,7 @@ libcoap/src/net.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -234,6 +235,8 @@ libcoap/src/net.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -273,21 +276,13 @@ libcoap/src/net.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/debug.h:
 
-/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/pdu.h:
-
-/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/uri.h:
-
-/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/hashkey.h:
+/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/mem.h:
 
 /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/str.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/string.h:
-
-/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/mem.h:
-
-/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/str.h:
 
 /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/async.h:
 
@@ -308,6 +303,14 @@ libcoap/src/net.o: \
 /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/option.h:
 
 /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/bits.h:
+
+/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/pdu.h:
+
+/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/uri.h:
+
+/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/hashkey.h:
+
+/Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/str.h:
 
 /Users/michaelfay95/esp/esp-idf/components/coap/libcoap/include/coap/prng.h:
 

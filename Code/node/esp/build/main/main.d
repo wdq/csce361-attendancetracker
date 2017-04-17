@@ -38,7 +38,7 @@ main.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -47,6 +47,7 @@ main.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -61,12 +62,12 @@ main.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/gpio.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
@@ -110,7 +111,7 @@ main.o: \
  /Users/michaelfay95/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/ledc.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/api.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/netbuf.h \
@@ -132,7 +133,15 @@ main.o: \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp.h \
- /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp6.h
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp6.h \
+ /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/main/./bluetooth.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/include/bt.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_device.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_gap_bt_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_a2dp_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_avrc_api.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -210,7 +219,7 @@ main.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -227,6 +236,8 @@ main.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -256,17 +267,17 @@ main.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
@@ -354,7 +365,7 @@ main.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
@@ -399,3 +410,19 @@ main.o: \
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp.h:
 
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/icmp6.h:
+
+/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/main/./bluetooth.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/include/bt.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_device.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_gap_bt_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_a2dp_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_avrc_api.h:

@@ -22,37 +22,67 @@
 #include "lwip/api.h"
 
 #include "network.h"
+#include "bluetooth.h"
 
 network_t network; 
+
+SemaphoreHandle_t net_sem;
 
 void ping_task(void * pvParameters)
 {
   uint64_t ping_count = 0;
+  char message[256];
   while(1)
   {
-    printf("Ping task is called. %llu\n", ping_count);
-    vTaskDelay(500 / portTICK_PERIOD_MS);
-    ping_count ++;
+	snprintf(message, sizeof(message), "Ping:%llu\n",ping_count);
+    printf(message);
+    vTaskDelay(10 * portTICK_PERIOD_MS);
+    while(xSemaphoreTake(net_sem,0) != pdTRUE)
+    	  {
+    		  vTaskDelay(5 * portTICK_PERIOD_MS);
+    	  }
+    if(connect_to_server(&network) != -1)
+	{
+		send_string(&network, message);
+		ping_count ++;
+	}
+    disconnect_from_server(&network);
+    xSemaphoreGive(net_sem);
+
   }
 }
 
 void mark_attendance_task(void * pvParameters)
 {
-  while(1)
-  {
-    printf("mark_attendance_task task is called. \n");
-    vTaskDelay(2000 / portTICK_PERIOD_MS);
-  }
+	  char message[256];
+	  while(1)
+	  {
+		  snprintf(message, sizeof(message), "mark_attendance_task task is called. \n");
+		printf(message);
+		vTaskDelay(100 * portTICK_PERIOD_MS);
+		while(xSemaphoreTake(net_sem,0) != pdTRUE)
+			  {
+				  vTaskDelay(5 * portTICK_PERIOD_MS);
+			  }
+		if(connect_to_server(&network) != -1)
+		{
+			send_string(&network, message);
+		}
+		disconnect_from_server(&network);
+		xSemaphoreGive(net_sem);
+
+	  }
 }
 
 void app_main() {
    nvs_flash_init();
 
+   net_sem = xSemaphoreCreateMutex();
 
    network.Wifi_ssid = "PasswordisTaco";
    network.Wifi_password = "";
 
-   network.Host = "attend.ddns.net";
+   network.Host = "cse-iis.quade.co";
    network.Port = 989;
 
 
@@ -73,28 +103,11 @@ void app_main() {
 
      setup_socket(&network);
 
-
-	while(1)
-	{
-	   if(verify_connection(&network))
-	   {
-		   printf("Connection is successful! \n");
-	   }
-	   else
-	   {
-		   printf("Shit is fucked real bad! \n");
-	   }
-			 vTaskDelay(1000 * portTICK_PERIOD_MS);
-	}
+     //wait until the connection is verified. Once the connection is verified then continue
+     while(!verify_connection(&network));
 
 
-
-
-
-
-
-
-   xTaskCreate(&ping_task, "ping_task", 2048, NULL, 5, NULL);
+   xTaskCreate(&ping_task, "ping_task", 2048, NULL, 6, NULL);
    xTaskCreate(&mark_attendance_task, "mark_attendance_task", 2048, NULL, 5, NULL);
 
 }

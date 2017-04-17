@@ -35,7 +35,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -44,6 +44,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/timers.h \
@@ -73,10 +74,11 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hcidefs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h \
- /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/gki/include/gki.h \
@@ -93,6 +95,16 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/osi.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/hash_functions.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/hash_map.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_ar_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avdt_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avct_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avrc_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avct_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avrc_defs.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_av_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/a2d_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_sys.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/utl.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h:
@@ -165,7 +177,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -182,6 +194,8 @@ bluedroid/bta/sys/bta_sys_main.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -241,13 +255,15 @@ bluedroid/bta/sys/bta_sys_main.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h:
 
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h:
+
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h:
-
-/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h:
 
@@ -280,5 +296,25 @@ bluedroid/bta/sys/bta_sys_main.o: \
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/hash_functions.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/hash_map.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_ar_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avdt_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avct_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avrc_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avct_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/avrc_defs.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_av_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/a2d_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_sys.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/utl.h:

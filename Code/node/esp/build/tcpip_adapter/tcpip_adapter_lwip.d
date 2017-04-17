@@ -62,7 +62,7 @@ tcpip_adapter_lwip.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -71,6 +71,7 @@ tcpip_adapter_lwip.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -101,13 +102,15 @@ tcpip_adapter_lwip.o: \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/nd6.h \
+ /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/priv/tcpip_priv.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/port/netif/wlanif.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_event.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_wifi_internal.h \
  /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/port/netif/ethernetif.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_event.h
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_event.h \
+ /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -233,7 +236,7 @@ tcpip_adapter_lwip.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -250,6 +253,8 @@ tcpip_adapter_lwip.o: \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -311,6 +316,8 @@ tcpip_adapter_lwip.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/nd6.h:
 
+/Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/priv/tcpip_priv.h:
+
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h:
 
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/port/netif/wlanif.h:
@@ -324,3 +331,5 @@ tcpip_adapter_lwip.o: \
 /Users/michaelfay95/esp/esp-idf/components/lwip/include/lwip/port/netif/ethernetif.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_event.h:
+
+/Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h:

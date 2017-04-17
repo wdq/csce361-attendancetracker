@@ -31,7 +31,7 @@ bluedroid/stack/btm/btm_ble_gap.o: \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h \
  /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -53,6 +53,7 @@ bluedroid/stack/btm/btm_ble_gap.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -73,6 +74,8 @@ bluedroid/stack/btm/btm_ble_gap.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/rfcdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_ble_int.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
@@ -100,7 +103,6 @@ bluedroid/stack/btm/btm_ble_gap.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btcore/include/version.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hcimsgs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/gap_api.h \
- /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/profiles_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/l2c_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/l2cdefs.h \
@@ -178,7 +180,7 @@ bluedroid/stack/btm/btm_ble_gap.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
 
@@ -222,6 +224,8 @@ bluedroid/stack/btm/btm_ble_gap.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -261,6 +265,10 @@ bluedroid/stack/btm/btm_ble_gap.o: \
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/rfcdefs.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h:
 
@@ -315,8 +323,6 @@ bluedroid/stack/btm/btm_ble_gap.o: \
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hcimsgs.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/gap_api.h:
-
-/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/profiles_api.h:
 

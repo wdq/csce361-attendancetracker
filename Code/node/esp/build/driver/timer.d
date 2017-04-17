@@ -19,7 +19,7 @@ timer.o: /Users/michaelfay95/esp/esp-idf/components/driver/./timer.c \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/types.h \
@@ -53,15 +53,16 @@ timer.o: /Users/michaelfay95/esp/esp-idf/components/driver/./timer.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/timer.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/timer_group_struct.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h:
 
@@ -103,7 +104,7 @@ timer.o: /Users/michaelfay95/esp/esp-idf/components/driver/./timer.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h:
 
@@ -171,6 +172,8 @@ timer.o: /Users/michaelfay95/esp/esp-idf/components/driver/./timer.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -179,12 +182,12 @@ timer.o: /Users/michaelfay95/esp/esp-idf/components/driver/./timer.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/timer_group_struct.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h:
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:

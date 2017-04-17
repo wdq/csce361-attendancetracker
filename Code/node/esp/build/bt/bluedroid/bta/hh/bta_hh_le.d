@@ -2,6 +2,7 @@ bluedroid/bta/hh/bta_hh_le.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/hh/bta_hh_le.c \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_target.h \
+ /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -26,9 +27,8 @@ bluedroid/bta/hh/bta_hh_le.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h \
- /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdlib.h \
@@ -55,6 +55,7 @@ bluedroid/bta/hh/bta_hh_le.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -65,9 +66,10 @@ bluedroid/bta/hh/bta_hh_le.o: \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hcidefs.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
- /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/gki/include/gki.h \
@@ -88,7 +90,6 @@ bluedroid/bta/hh/bta_hh_le.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hidh_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hiddefs.h \
- /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_gatt_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/gatt_api.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h \
@@ -97,6 +98,8 @@ bluedroid/bta/hh/bta_hh_le.o: \
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_target.h:
+
+/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h:
 
@@ -146,11 +149,9 @@ bluedroid/bta/hh/bta_hh_le.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h:
 
-/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h:
-
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h:
 
@@ -204,6 +205,8 @@ bluedroid/bta/hh/bta_hh_le.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -224,11 +227,13 @@ bluedroid/bta/hh/bta_hh_le.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h:
 
-/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h:
-
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdpdefs.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/smp_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h:
 
@@ -269,8 +274,6 @@ bluedroid/bta/hh/bta_hh_le.o: \
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hidh_api.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/hiddefs.h:
-
-/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/sdp_api.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/bta/include/bta_gatt_api.h:
 

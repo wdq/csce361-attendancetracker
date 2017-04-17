@@ -29,11 +29,11 @@ ulp_macro.o: /Users/michaelfay95/esp/esp-idf/components/ulp/./ulp_macro.c \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h \
  /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/ulp/include/esp32/ulp.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/sens_reg.h
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -95,12 +95,12 @@ ulp_macro.o: /Users/michaelfay95/esp/esp-idf/components/ulp/./ulp_macro.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/ulp/include/esp32/ulp.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/sens_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h:

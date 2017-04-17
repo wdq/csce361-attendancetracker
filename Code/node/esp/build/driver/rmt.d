@@ -34,7 +34,7 @@ rmt.o: /Users/michaelfay95/esp/esp-idf/components/driver/./rmt.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -43,6 +43,7 @@ rmt.o: /Users/michaelfay95/esp/esp-idf/components/driver/./rmt.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/semphr.h \
@@ -59,18 +60,18 @@ rmt.o: /Users/michaelfay95/esp/esp-idf/components/driver/./rmt.c \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rmt_struct.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rmt_struct.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/rmt.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rmt_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rmt_reg.h \
  /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/gpio.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h
 
@@ -144,7 +145,7 @@ rmt.o: /Users/michaelfay95/esp/esp-idf/components/driver/./rmt.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -161,6 +162,8 @@ rmt.o: /Users/michaelfay95/esp/esp-idf/components/driver/./rmt.c \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -194,29 +197,29 @@ rmt.o: /Users/michaelfay95/esp/esp-idf/components/driver/./rmt.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rmt_struct.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rmt_struct.h:
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/rmt.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rmt_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rmt_reg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/driver/include/driver/gpio.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h:
 

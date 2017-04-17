@@ -1,43 +1,46 @@
 bluedroid/api/esp_bt_device.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/esp_bt_device.c \
- /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_device.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_default_types.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/features.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdlib.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/_ansi.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/newlib.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/config.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/features.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/reent.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/_ansi.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_types.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/lock.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/cdefs.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/string.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_device.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h \
+ /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/device/include/controller.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_target.h \
+ /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/gki_target.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h \
  /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h \
- /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdlib.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h \
- /Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -59,6 +62,7 @@ bluedroid/api/esp_bt_device.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -78,23 +82,19 @@ bluedroid/api/esp_bt_device.o: \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/hci/include/hci_packet_factory.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btcore/include/event_mask.h \
  /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/hci/include/hci_packet_parser.h \
- /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btcore/include/version.h
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btcore/include/version.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/thread.h \
+ /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_task.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btc/include/btc_dev.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
+ /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h
 
-/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_device.h:
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/stdlib.h:
 
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_default_types.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/features.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
-
-/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h:
-
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h:
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/ieeefp.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/_ansi.h:
 
@@ -102,11 +102,9 @@ bluedroid/api/esp_bt_device.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/config.h:
 
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/ieeefp.h:
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/features.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/reent.h:
 
@@ -116,7 +114,29 @@ bluedroid/api/esp_bt_device.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_types.h:
 
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_default_types.h:
+
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/lock.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/cdefs.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/string.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_device.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h:
+
+/Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/types.h:
 
@@ -126,9 +146,15 @@ bluedroid/api/esp_bt_device.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h:
 
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h:
+
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/device/include/controller.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_target.h:
+
+/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h:
 
@@ -140,21 +166,13 @@ bluedroid/api/esp_bt_device.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/log/include/esp_log.h:
 
-/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h:
-
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/stdlib.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
 
@@ -198,6 +216,8 @@ bluedroid/api/esp_bt_device.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -237,3 +257,19 @@ bluedroid/api/esp_bt_device.o: \
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/hci/include/hci_packet_parser.h:
 
 /Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btcore/include/version.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/osi/include/thread.h:
+
+/Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
+
+/Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_task.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btc/include/btc_dev.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
+
+/Users/michaelfay95/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h:
