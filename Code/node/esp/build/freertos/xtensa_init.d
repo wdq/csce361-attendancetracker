@@ -33,7 +33,7 @@ xtensa_init.o: \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h
 
@@ -103,7 +103,7 @@ xtensa_init.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h:
 

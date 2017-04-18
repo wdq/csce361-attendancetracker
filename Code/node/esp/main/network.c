@@ -4,6 +4,7 @@ esp_err_t _wifi_event_handler(void *ctx, system_event_t *event) {
   //cast ctx to net type
   network_t * net = (network_t *) ctx;
 
+
    switch (event->event_id) {
        case SYSTEM_EVENT_STA_START:
           esp_wifi_connect();
@@ -16,6 +17,7 @@ esp_err_t _wifi_event_handler(void *ctx, system_event_t *event) {
 
        case SYSTEM_EVENT_STA_DISCONNECTED:
            net->isConnected = false;
+           close(net->socket);
 
            break;
 
@@ -25,18 +27,16 @@ esp_err_t _wifi_event_handler(void *ctx, system_event_t *event) {
    return ESP_OK;
 }
 
-bool is_connected(network_t * net)
-{
+/********WIFI NETWORK CONFIGS AND FUNCTIONS**********/
 
-    return net->isConnected;
-}
-
+//public function to setup wifi
 void setup_wifi(network_t * network)
 {
-
+	wifi_sem = xSemaphoreCreateMutex();
     _initialise_wifi(network);
 }
 
+//private function that inits wifi
 void _initialise_wifi(network_t * net) {
     tcpip_adapter_init();
 
@@ -46,6 +46,8 @@ void _initialise_wifi(network_t * net) {
     #ifndef WIFI_DEBUG
       esp_log_level_set("wifi", ESP_LOG_ERROR);
     #endif
+
+    while(xSemaphoreTake(wifi_sem,0) != pdTRUE);
 
     ESP_ERROR_CHECK(esp_event_loop_init(_wifi_event_handler, (void *) net));
 
@@ -65,38 +67,45 @@ void _initialise_wifi(network_t * net) {
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
+
+    xSemaphoreGive(wifi_sem);
 }
 
+//public function that returns wifi connectivity status
+bool is_connected(network_t * net)
+{
+    return net->isConnected;
+}
+
+//public function that disconnects from wifi
 bool disconnect(network_t * net)
 {
+	while(xSemaphoreTake(wifi_sem,0) != pdTRUE);
     if(net->isConnected == true)
     {
         esp_wifi_disconnect();
         vTaskDelay(1000* portTICK_PERIOD_MS);
     }
 
+    xSemaphoreGive(wifi_sem);
+
     return net->isConnected;
 }
 
-void _found_dns_cb(const char *name, const ip_addr_t *ipaddr, void *callback_arg)
-{
-	network_t * net = (network_t *)callback_arg;
-    net->serverIP = *ipaddr;
-    net->dnsLock = true;
-}
-
+//private function that finds the dns of the host and sets net's serverIPString
 bool _setup_ip_by_dns(network_t * net)
 {
 
 	printf("Node IP Address %s\n",inet_ntoa(net->localIP) );
 
-   IP_ADDR4( &(net->serverIP), 0,0,0,0 );
+	while(xSemaphoreTake(wifi_sem,0) != pdTRUE);
+	IP_ADDR4( &(net->serverIP), 0,0,0,0 );
     printf("Get IP for URL: %s\n", net->Host );
     dns_gethostbyname(net->Host, &net->serverIP, _found_dns_cb, net );
 
     while(!net->dnsLock)
     {
-    	printf("Waiting for DNS lock! \n");
+//    	printf("Waiting for DNS lock! \n");
     	vTaskDelay(500*portTICK_PERIOD_MS);
     }
         
@@ -106,9 +115,25 @@ bool _setup_ip_by_dns(network_t * net)
         ip4_addr3(&net->serverIP.u_addr.ip4),
         ip4_addr4(&net->serverIP.u_addr.ip4) );
 
+   net->serverIPString = inet_ntoa(*(struct in_addr *) &net->serverIP);
+
+   xSemaphoreGive(wifi_sem);
+
    return true;
 }
 
+//private function used for the dns callback
+void _found_dns_cb(const char *name, const ip_addr_t *ipaddr, void *callback_arg)
+{
+	network_t * net = (network_t *)callback_arg;
+    net->serverIP = *ipaddr;
+    net->dnsLock = true;
+}
+
+
+/********SOCKET CONFIGS AND FUNCTIONS**********/
+
+//public function that configures the socket parameters
 bool setup_socket(network_t * net)
 {
   if(net->isConnected == false)
@@ -118,85 +143,175 @@ bool setup_socket(network_t * net)
 
   _setup_ip_by_dns(net);
 
-  //Create socket
+	net->server.sin_addr.s_addr = inet_addr(net->serverIPString);
+	net->server.sin_family = AF_INET;
+	net->server.sin_port = htons( net->Port );
+
+	net->socket_sem = xSemaphoreCreateMutex();
+
+
+  return true;
+}
+
+//public function that resets the socket parameters
+bool reset_socket_info(network_t * net)
+{
+
+	xSemaphoreTakeRecursive(net->socket_sem, portTICK_PERIOD_MS * 1000);
+	perror("Deleting socket");
+	//Destroy sender address
+	close(net->socket);
+	memset(&(net->server), 0, sizeof(net->server));
+
+	//reset socket params
+	setup_socket(net);
+
+	xSemaphoreGiveRecursive(net->socket_sem);
+
+  return true; 
+}
+
+//public function to disconnect from the current socket
+bool disconnect_socket(network_t * net)
+{
+	xSemaphoreTakeRecursive(net->socket_sem, portTICK_PERIOD_MS * 1000);
+	while(xSemaphoreTake(wifi_sem,0) != pdTRUE);
+	if(net->isConnected == true)
+		close(net->socket);
+	xSemaphoreGive(wifi_sem);
+	xSemaphoreGiveRecursive(net->socket_sem);
+
+	return true;
+}
+
+
+/********DATA TRANSPORT FUNCTIONS**********/
+
+//public function that connects to the scheduler service server
+int connect_to_server(network_t * net)
+{
+	if(net->socket != -1)
+		close(net->socket);
+
+	if(net->_socketConnected == true)
+	{
+		net->_socketConnected = false;
+		connect_to_server(net);
+	}
+
+	while(xSemaphoreTake(net->socket_sem,0) != pdTRUE);
+	//Create socket
 	net->socket = socket(AF_INET , SOCK_STREAM , 0);
 	if (net->socket == -1)
 	{
 		printf("Could not create socket");
 	}
 
-	net->server.sin_addr.s_addr = inet_addr("13.65.210.250");
-	net->server.sin_family = AF_INET;
-	net->server.sin_port = htons( 989 );
-
-
-  return true;
-}
-
-bool reset_socket_info(network_t * net)
-{
-  //todo have logic to see if the socket is closed, if so continue else exit
-
-  //Destroy sender address
-	close(net->socket);
-  memset(&(net->server), 0, sizeof(net->server));
-
-  return true; 
-}
-
-int connect_to_server(network_t * net)
-{
-
-	if(net->socket == -1)
+	//Connect to remote server
+	if (connect(net->socket , (struct sockaddr *)&net->server , sizeof(net->server)) < 0)
 	{
-		printf("re-setting up socket! \n");
-		setup_socket(net);
+		perror("connect failed. Error");
+		printf("trying to reconnect to the server!");
+		close(net->socket);
+		xSemaphoreGive(net->socket_sem);
+		return -1;
+
 	}
 
-	if (connect(net->socket , (struct sockaddr *)&net->server , sizeof(net->server)) < 0)
-		{
-			perror("connect failed. Error");
-			return 1;
-		}
+	net->_socketConnected = true;
 
-  return 0; 
+	xSemaphoreGive(net->socket_sem);
+
+	return 1;
 }
 
-bool disconnect_socket(network_t * net)
+//disconnects from the server
+int disconnect_from_server(network_t * net)
 {
-	if(net->isConnected == true)
-		close(net->socket);
-	return true;
+	while(xSemaphoreTake(net->socket_sem,0) != pdTRUE);
+	close(net->socket);
+	net->_socketConnected = false;
+	xSemaphoreGive(net->socket_sem);
+	return 1;
 }
 
+//public function that sends a given string. This does not use any packet structure yet.
+int send_string(network_t * net, string data)
+{
+	if(net->_socketConnected == false)
+	{
+		return -1;
+	}
+
+	_lock_network_conn(net);
+	//Send some data
+	if( send(net->socket , data , strlen(data) , 0) < 0)
+	{
+		_release_network_conn(net);
+		return 0;
+	}
+	_release_network_conn(net);
+
+	return 1;
+}
+
+//public function that recieves the raw data back. Returns the number of bytes recieved
+int recieve_string(network_t * net)
+{
+	int rcv;
+	//Receive a reply from the server
+	_lock_network_conn(net);
+	if( (rcv = recv(net->socket , net->rx_buffer , sizeof(net->rx_buffer) , 0) )< 0)
+	{
+		printf("recv failed");
+		return 0;
+	}
+	net->rx_buffer[rcv] = '\0';
+	_release_network_conn(net);
+
+	return rcv;
+}
+
+//private function that sends a packet
+//TODO refactor this to not be shitty
 bool _send_pkt(network_t * net, pkt_t * pkt)
 {
+
+	_lock_network_conn(net);
   if(write(net->socket, &(pkt->node_id), sizeof(pkt->node_id)) <= 0)
   {
+	  _release_network_conn(net);
     return false; 
   }
 
   if(write(net->socket, &(pkt->configurations), sizeof(pkt->configurations)) <= 0)
   {
+	  _release_network_conn(net);
     return false; 
   }
 
   if(write(net->socket, &(pkt->payload_size), sizeof(pkt->payload_size)) <= 0)
   {
+	  _release_network_conn(net);
     return false; 
   }
 
   if(write(net->socket, pkt->payload, pkt->payload_size) <= 0)
   {
+	  _release_network_conn(net);
     return false; 
   }
 
   if(write(net->socket, &(pkt->crc), sizeof(pkt->crc)) <= 0)
   {
+	  _release_network_conn(net);
     return false; 
   }  
+  _release_network_conn(net);
   return true;
 }
+
+//private function that constructs the packet from a string of data.
 bool _send(network_t * net, string data)
 {
   pkt_t pkt;
@@ -217,19 +332,22 @@ bool _send(network_t * net, string data)
   return _send_pkt(net, &pkt);
 }
 
+//private function that constructs the recieved packet
 pkt_t _recv_pkt(network_t * net)
 {
     pkt_t pkt;
-
+    _lock_network_conn(net);
     int recv_bytes = recv(net->socket, (void *)net->rx_buffer, sizeof(net->rx_buffer), 0);
 
     net->rx_buffer[recv_bytes] = '\0';
+    _release_network_conn(net);
 
     printf("Data recieved: %s \n", net->rx_buffer);
 
     return pkt;
 }
 
+//private function that returns the data portion of the packet.
 string _recv(network_t * net)
 {
   pkt_t pkt = _recv_pkt(net);
@@ -240,68 +358,43 @@ string _recv(network_t * net)
 }
 
 
+//function to validate configurations to the scheduling server
 bool verify_connection(network_t * net)
 {
+	char message[] = "{\"verify_connection\":\"AABBCCDD112233\"}";
+	int rcv_bytes = 0;
 
-	 int sock;
-	    struct sockaddr_in server;
-	    char message[] = "{\"verify_connection\":\"AABBCCDD112233\"}" , server_reply[2000];
+	bool return_val = false;;
 
+	printf("Testing connection to scheduling server!\n");
 
+	if(connect_to_server(net) == -1) return false;
+	send_string(net, message);
+	if((rcv_bytes = recieve_string(net)) > 0)
+	{
+		if(strcmp(message, net->rx_buffer) == 0)
+		{
+			return_val = true;
+		}
+	}
 
-	    char *server_ip = inet_ntoa(*(struct in_addr *) &net->serverIP);
-
-	    printf("Test message: %s\n", message);
-
-	    int rcv = 0;
-
-	    //Create socket
-	    sock = socket(AF_INET , SOCK_STREAM , 0);
-	    if (sock == -1)
-	    {
-	        printf("Could not create socket");
-	    }
-	    server.sin_addr.s_addr = inet_addr(server_ip);
-	    server.sin_family = AF_INET;
-	    server.sin_port = htons( net->Port );
-
-	    //Connect to remote server
-	    if (connect(sock , (struct sockaddr *)&server , sizeof(server)) < 0)
-	    {
-	        perror("connect failed. Error");
-	        close(sock);
-	        return 0;
-	    }
-
-	    printf("Connected\n");
+	disconnect_from_server(net);
 
 
-	        //Send some data
-	        if( send(sock , message , strlen(message) , 0) < 0)
-	        {
-	        	printf("fuck this shit");
-	            return 0;
-	        }
-
-//	        vTaskDelay();
-
-	        //Receive a reply from the server
-	        if( (rcv = recv(sock , server_reply , 2000 , 0) )< 0)
-	        {
-	        	printf("recv failed");
-	        	return 0;
-	        }
-
-	        server_reply[rcv] = '\0';
-
-	        printf("Server reply: %s \n", server_reply);
-
-	    close(sock);
-	    return 1;
+	return return_val;
 }
 
+void _lock_network_conn(network_t * net)
+{
+	while(xSemaphoreTake(wifi_sem,0) != pdTRUE);
+	while(xSemaphoreTake(net->socket_sem,0) != pdTRUE);
 
+}
 
-
+void _release_network_conn(network_t * net)
+{
+	xSemaphoreGive(wifi_sem);
+	xSemaphoreGive(net->socket_sem);
+}
 
 

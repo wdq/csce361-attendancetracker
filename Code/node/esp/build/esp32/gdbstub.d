@@ -4,10 +4,10 @@ gdbstub.o: /Users/michaelfay95/esp/esp-idf/components/esp32/./gdbstub.c \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/features.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/uart_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_gdbstub.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/hal.h \
@@ -38,10 +38,10 @@ gdbstub.o: /Users/michaelfay95/esp/esp-idf/components/esp32/./gdbstub.c \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr_alloc.h
@@ -56,13 +56,13 @@ gdbstub.o: /Users/michaelfay95/esp/esp-idf/components/esp32/./gdbstub.c \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/uart_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_gdbstub.h:
 
@@ -124,13 +124,13 @@ gdbstub.o: /Users/michaelfay95/esp/esp-idf/components/esp32/./gdbstub.c \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/gpio.h:
 

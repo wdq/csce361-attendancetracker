@@ -18,8 +18,8 @@ hw_random.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/string.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/wdev_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/wdev_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/include/sdkconfig.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -36,7 +36,7 @@ hw_random.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/alloca.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/core-macros.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h:
@@ -75,9 +75,9 @@ hw_random.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/wdev_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/wdev_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -111,6 +111,6 @@ hw_random.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/core-macros.h:

@@ -47,6 +47,8 @@
 
 static const int CONNECTED_BIT = BIT0;
 
+SemaphoreHandle_t wifi_sem;
+
 typedef struct network_t
 {
 	bool isConnected;
@@ -79,10 +81,16 @@ typedef struct network_t
 	ip_addr_t serverIP;
 
 
+	bool _socketConnected;
+
 	//node_id
 	int node_id;
 
 	bool dnsLock; 
+
+	char *serverIPString;
+
+	SemaphoreHandle_t socket_sem;
 
 
 }network_t;
@@ -113,7 +121,8 @@ bool setup_socket(network_t *);
  bool reset_socket_into(network_t *); //
  void setup_wifi(network_t * network); //
  bool disconnect_socket(network_t * );
-
+ int disconnect_from_server(network_t * net);
+ bool setup_socket(network_t * net);
 
 // private functions
 bool _convert_json_to_map(network_t *,json_t json); 
@@ -126,4 +135,7 @@ int _recieve_pkts(network_t *);
  pkt_t _recv_pkt(network_t * net);
  bool _setup_ip_by_dns(network_t * ); //
 
+ void _found_dns_cb(const char *name, const ip_addr_t *ipaddr, void *callback_arg);
+ void _lock_network_conn(network_t * net);
+void _release_network_conn(network_t * net);
 #endif

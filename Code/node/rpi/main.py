@@ -2,6 +2,8 @@ import bluetooth, time
 import network
 import json
 import requests
+import os
+
 from threading import Thread
 from time import sleep
 from uuid import getnode as get_mac
@@ -187,6 +189,15 @@ class serv():
         while True:
             self.__connect_to_server__()
             self.network.send_key_value("ping", str(self.stay_alive_count))
+            result = get_dictionary_return();
+            self.__disconnect_from_server()
+
+            if("ota_update" in result ):
+                self.network.send_key_value("log", "Performing OTA update")
+                self.__disconnect_from_server()
+                os.system('python ota.py &')
+                sys.exit()
+
             self.__disconnect_from_server()
             self.stay_alive_count += 1
             sleep(1)
@@ -195,7 +206,7 @@ class serv():
 if __name__ == "__main__":
     srv = serv(url = "none")
     srv.setup()
-    srv.run_system()
+    # srv.run_system()
 
     attend  = Thread(target = srv.run_system)
     ping    = Thread(target = srv.ping_home)
@@ -207,5 +218,13 @@ if __name__ == "__main__":
     while(raw_input("") != "q"):
         pass
 
+    safe_exit()
+
+def safe_exit():
     attend.kill()
-    ping.kill()
+    pint.kill()
+    sys.exit()
+
+
+
+

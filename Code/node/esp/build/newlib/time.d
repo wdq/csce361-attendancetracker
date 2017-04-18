@@ -28,16 +28,16 @@ time.o: /Users/michaelfay95/esp/esp-idf/components/newlib/./time.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/frc_timer_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/frc_timer_reg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -60,6 +60,7 @@ time.o: /Users/michaelfay95/esp/esp-idf/components/newlib/./time.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
@@ -125,7 +126,7 @@ time.o: /Users/michaelfay95/esp/esp-idf/components/newlib/./time.c \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_attr.h:
 
@@ -139,11 +140,11 @@ time.o: /Users/michaelfay95/esp/esp-idf/components/newlib/./time.c \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/assert.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/frc_timer_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/frc_timer_reg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -188,6 +189,8 @@ time.o: /Users/michaelfay95/esp/esp-idf/components/newlib/./time.c \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

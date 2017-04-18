@@ -2,8 +2,6 @@ Archive member included to satisfy reference by file (symbol)
 
 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
                               (call_start_cpu0)
-/Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
-                              /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o) (rtc_set_cpu_freq)
 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                               /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_mmap)
 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
@@ -15,7 +13,9 @@ Archive member included to satisfy reference by file (symbol)
 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
                               /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_log_timestamp)
 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                              /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o) (SPIUnlock)
+                              /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_rom_spiflash_unlock)
+/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                              /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o) (rtc_clk_slow_freq_get)
 
 Allocating common symbols
 Common symbol       size              file
@@ -25,43 +25,103 @@ esp_image_spi_freq_t
 
 Discarded input sections
 
+ .literal.print_flash_info
+                0x0000000000000000        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .xt.lit        0x0000000000000000       0x50 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .xt.prop       0x0000000000000000      0x63c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .text.print_flash_info
+                0x0000000000000000        0xd /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xt.lit        0x0000000000000000       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xt.prop       0x0000000000000000      0x3fc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
  COMMON         0x0000000000000000        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .literal       0x0000000000000000        0x0 /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
- .xt.lit        0x0000000000000000       0x70 /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
- .xt.prop       0x0000000000000000      0x4ec /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
  .literal.bootloader_flash_write
-                0x0000000000000000       0x40 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000       0x34 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_flash_erase_sector
                 0x0000000000000000        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .text.bootloader_flash_write
-                0x0000000000000000       0xb6 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000       0xa6 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .text.bootloader_flash_erase_sector
-                0x0000000000000000       0x16 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xt.lit        0x0000000000000000       0x40 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xt.prop       0x0000000000000000      0x348 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000       0x1b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xt.lit        0x0000000000000000       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xt.prop       0x0000000000000000      0x288 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_fill_random
                 0x0000000000000000        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .text.bootloader_fill_random
-                0x0000000000000000       0x59 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000000000000       0x49 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .xt.lit        0x0000000000000000       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .xt.prop       0x0000000000000000       0xd8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .xt.lit        0x0000000000000000       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xt.prop       0x0000000000000000      0x2d0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xt.prop       0x0000000000000000      0x294 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .xt.lit        0x0000000000000000        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xt.prop       0x0000000000000000       0xe4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xt.prop       0x0000000000000000       0xb4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
  .xt.lit        0x0000000000000000        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
  .xt.prop       0x0000000000000000       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .literal.esp_rom_spiflash_lock
+                0x0000000000000000       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .literal.esp_rom_spiflash_config_readmode
+                0x0000000000000000       0x50 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .literal.esp_rom_spiflash_erase_chip
+                0x0000000000000000       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .literal.esp_rom_spiflash_erase_block
+                0x0000000000000000       0x34 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .literal.esp_rom_spiflash_write_encrypted
+                0x0000000000000000       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .literal.esp_rom_spiflash_erase_area
+                0x0000000000000000       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xt.lit        0x0000000000000000       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xt.prop       0x0000000000000000       0xa8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text.esp_rom_spiflash_lock
+                0x0000000000000000       0x4c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text.esp_rom_spiflash_config_readmode
+                0x0000000000000000      0x287 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text.esp_rom_spiflash_erase_chip
+                0x0000000000000000       0x3a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text.esp_rom_spiflash_erase_block
+                0x0000000000000000       0x88 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text.esp_rom_spiflash_write_encrypted
+                0x0000000000000000       0x51 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text.esp_rom_spiflash_erase_area
+                0x0000000000000000       0x96 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .rodata.CSWTCH$38
+                0x0000000000000000       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xt.lit        0x0000000000000000       0x80 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xt.prop       0x0000000000000000      0x78c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .literal.rtc_clk_32k_enabled
+                0x0000000000000000        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_8m_enabled
+                0x0000000000000000        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_8md256_enabled
+                0x0000000000000000        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_apll_enable
+                0x0000000000000000       0x40 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_get
+                0x0000000000000000       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_value
+                0x0000000000000000       0x1c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text          0x0000000000000000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_32k_enabled
+                0x0000000000000000       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_8m_enabled
+                0x0000000000000000       0x15 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_8md256_enabled
+                0x0000000000000000       0x15 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_apll_enable
+                0x0000000000000000      0x131 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_get
+                0x0000000000000000       0x50 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_value
+                0x0000000000000000       0x3c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.rtc_clk_cpu_freq_value
+                0x0000000000000000       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_uart_div_modify
+                0x0000000000000000        0x5 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_uart_tx_wait_idle
+                0x0000000000000000        0x5 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.lit        0x0000000000000000       0x98 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.prop       0x0000000000000000      0x6cc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
 Memory Configuration
 
@@ -79,9 +139,8 @@ LOAD /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/b
 LOAD /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a
 LOAD /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a
 LOAD /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/micro-ecc/libmicro-ecc.a
+LOAD /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a
 LOAD /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a
-LOAD /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a
-LOAD /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc.a
 LOAD /Users/michaelfay95/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a
 LOAD /Users/michaelfay95/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/libstdc++.a
 END GROUP
@@ -119,13 +178,13 @@ END GROUP
  *(.dynbss)
  *(.bss)
  .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .bss           0x000000003fff0000        0x0 /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
  .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
  .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .bss           0x000000003fff0000        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.bss.*)
  .bss.mapped    0x000000003fff0000        0x1 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *(.gnu.linkonce.b.*)
@@ -138,13 +197,13 @@ END GROUP
                 0x000000003fff0008                _data_start = ABSOLUTE (.)
  *(.data)
  .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .data          0x000000003fff0008        0x0 /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
  .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
  .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .data          0x000000003fff0008        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.data.*)
  .data.current_read_mapping
                 0x000000003fff0008        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
@@ -161,272 +220,374 @@ END GROUP
  *(.jcr)
                 0x000000003fff0010                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x000000003fff0010      0x9b8
+.dram0.rodata   0x000000003fff0010      0xbbc
                 0x000000003fff0010                _rodata_start = ABSOLUTE (.)
  *(.rodata)
- .rodata        0x000000003fff0010       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .rodata        0x000000003fff0010       0x1c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
  *(.rodata.*)
- .rodata.str1.4
-                0x000000003fff0024      0x3db /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- *fill*         0x000000003fff03ff        0x1 
- .rodata.str1.4
-                0x000000003fff0400        0xa /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
- *fill*         0x000000003fff040a        0x2 
- .rodata.str1.4
-                0x000000003fff040c      0x28e /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x000000003fff069a        0x2 
- .rodata.str1.4
-                0x000000003fff069c        0x9 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- *fill*         0x000000003fff06a5        0x3 
- .rodata.str1.4
-                0x000000003fff06a8      0x222 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- *fill*         0x000000003fff08ca        0x2 
- .rodata.str1.4
-                0x000000003fff08cc       0xfc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                                         0xfb (size before relaxing)
+ .rodata.str1.1
+                0x000000003fff002c      0x3c0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .rodata.CSWTCH$28
+                0x000000003fff03ec        0x5 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .rodata.str1.1
+                0x000000003fff03f1      0x27d /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x000000003fff066e        0x2 
+ .rodata.CSWTCH$17
+                0x000000003fff0670        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .rodata.str1.1
+                0x000000003fff067c        0x9 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .rodata.str1.1
+                0x000000003fff0685      0x1d3 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .rodata.str1.1
+                0x000000003fff0858       0xf6 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .rodata.str1.1
+                0x000000003fff094e      0x1a0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000003fff0aee        0x2 
+ .rodata.rtc_clk_init
+                0x000000003fff0af0       0x64 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$36
+                0x000000003fff0b54       0x11 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$35
+                0x000000003fff0b65       0x11 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$34
+                0x000000003fff0b76       0x11 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$33
+                0x000000003fff0b87       0x11 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$32
+                0x000000003fff0b98       0x11 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$31
+                0x000000003fff0ba9       0x11 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$26
+                0x000000003fff0bba       0x11 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.irom1.text)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003fff09c8                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003fff0bcb                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x000000003fff09c8                . = ((. + 0x3) & 0xfffffffffffffffc)
-                0x000000003fff09c8                __init_array_start = ABSOLUTE (.)
+                0x000000003fff0bcc                . = ((. + 0x3) & 0xfffffffffffffffc)
+ *fill*         0x000000003fff0bcb        0x1 
+                0x000000003fff0bcc                __init_array_start = ABSOLUTE (.)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x000000003fff09c8                __init_array_end = ABSOLUTE (.)
+                0x000000003fff0bcc                __init_array_end = ABSOLUTE (.)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x000000003fff09c8                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003fff0bcc                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003fff09c8                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003fff0bcc                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003fff09c8                _rodata_end = ABSOLUTE (.)
-                0x000000003fff09c8                _lit4_start = ABSOLUTE (.)
+                0x000000003fff0bcc                _rodata_end = ABSOLUTE (.)
+                0x000000003fff0bcc                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003fff09c8                _lit4_end = ABSOLUTE (.)
-                0x000000003fff09c8                . = ALIGN (0x4)
-                0x000000003fff09c8                _heap_start = ABSOLUTE (.)
+                0x000000003fff0bcc                _lit4_end = ABSOLUTE (.)
+                0x000000003fff0bcc                . = ALIGN (0x4)
+                0x000000003fff0bcc                _heap_start = ABSOLUTE (.)
 
 .iram_pool_1.text
-                0x0000000040078000     0x1bd7
+                0x0000000040078000     0x1e60
                 0x0000000040078000                _stext = .
                 0x0000000040078000                _text_start = ABSOLUTE (.)
  *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
- .literal.uart_console_configure
-                0x0000000040078000       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .literal.update_flash_config
-                0x0000000040078014       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .literal.ota_select_crc
-                0x0000000040078034        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .literal.ota_select_valid
-                0x0000000040078038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                          0x4 (size before relaxing)
- .literal.set_cache_and_start_app
-                0x0000000040078038       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                         0x2c (size before relaxing)
- .literal.unpack_load_app
-                0x0000000040078048       0x4c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                         0x90 (size before relaxing)
+                0x0000000040078000        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .literal.load_partition_table
-                0x0000000040078094       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078004       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x30 (size before relaxing)
- .literal.print_flash_info
-                0x00000000400780a4        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .literal.bootloader_main
-                0x00000000400780a8       0x38 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                         0xf0 (size before relaxing)
- .literal.spi_to_esp_err
-                0x00000000400780e0        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .literal.bootloader_flash_read_allow_decrypt
-                0x00000000400780e8       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                         0x30 (size before relaxing)
- .literal.bootloader_flash_read_no_decrypt
-                0x00000000400780f8        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                         0x14 (size before relaxing)
+                0x000000004007801c       0xc4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0x1ac (size before relaxing)
  .literal.bootloader_mmap
-                0x00000000400780fc       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                         0x40 (size before relaxing)
+                0x00000000400780e0       0x1c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                         0x50 (size before relaxing)
  .literal.bootloader_munmap
-                0x0000000040078110        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400780fc        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_flash_read
-                0x0000000040078114        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                         0x30 (size before relaxing)
+                0x0000000040078104       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                         0x60 (size before relaxing)
  .literal.bootloader_random_enable
-                0x0000000040078120       0x70 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078118       0x70 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x78 (size before relaxing)
  .literal.bootloader_random_disable
-                0x0000000040078190       0x1c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078188       0x1c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x4c (size before relaxing)
  .literal.esp_image_load_header
-                0x00000000400781ac       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400781a4       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x34 (size before relaxing)
  .literal.esp_image_load_segment_header
-                0x00000000400781c0        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                         0x28 (size before relaxing)
+                0x00000000400781b8        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                         0x2c (size before relaxing)
  .literal.esp_image_basic_verify
-                0x00000000400781cc        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400781c4        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x40 (size before relaxing)
  .literal.esp_partition_table_basic_verify
-                0x00000000400781d8       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x00000000400781d0       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                          0x30 (size before relaxing)
  .literal.esp_log_early_timestamp
-                0x00000000400781ec        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
- .literal.Wait_SPI_Idle
-                0x00000000400781f4        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .literal.SPIUnlock
-                0x00000000400781fc       0x1c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400781e4        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .literal.esp_rom_spiflash_read_status
+                0x00000000400781ec       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x14 (size before relaxing)
+ .literal.esp_rom_spiflash_wait_idle
+                0x00000000400781fc        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                          0xc (size before relaxing)
+ .literal.esp_rom_spiflash_enable_write$constprop$6
+                0x0000000040078204        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x14 (size before relaxing)
+ .literal.esp_rom_spiflash_program_page_internal$constprop$4
+                0x000000004007820c        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
- .text.uart_console_configure
-                0x0000000040078218       0x2a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- *fill*         0x0000000040078242        0x2 
- .text.update_flash_config
-                0x0000000040078244       0x68 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .text.ota_select_crc
-                0x00000000400782ac       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .text.ota_select_valid
-                0x00000000400782c0       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .literal.esp_rom_spiflash_read_statushigh
+                0x0000000040078218        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                          0xc (size before relaxing)
+ .literal.esp_rom_spiflash_write_status
+                0x0000000040078218        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x14 (size before relaxing)
+ .literal.esp_rom_spiflash_unlock
+                0x0000000040078218        0x8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x28 (size before relaxing)
+ .literal.esp_rom_spiflash_erase_sector
+                0x0000000040078220       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x34 (size before relaxing)
+ .literal.esp_rom_spiflash_write
+                0x0000000040078234        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x24 (size before relaxing)
- .text.set_cache_and_start_app
-                0x00000000400782e0       0xb3 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- *fill*         0x0000000040078393        0x1 
- .text.unpack_load_app
-                0x0000000040078394      0x1c4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0x1d8 (size before relaxing)
+ .literal.esp_rom_spiflash_read
+                0x0000000040078234       0x34 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x70 (size before relaxing)
+ .literal.rtc_clk_32k_enable
+                0x0000000040078268       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x1c (size before relaxing)
+ .literal.rtc_clk_8m_enable
+                0x0000000040078280       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_slow_freq_set
+                0x0000000040078290        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0xc (size before relaxing)
+ .literal.rtc_clk_slow_freq_get
+                0x0000000040078290        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_fast_freq_set
+                0x0000000040078290        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x8 (size before relaxing)
+ .literal.rtc_clk_fast_freq_get
+                0x0000000040078290        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_bbpll_set
+                0x0000000040078290       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x58 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_get
+                0x00000000400782b8        0xc /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x14 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_update
+                0x00000000400782c4        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_apb_freq_update
+                0x00000000400782c4        0x4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_set
+                0x00000000400782c8       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x64 (size before relaxing)
+ .literal.rtc_clk_apb_freq_get
+                0x00000000400782f8        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_init
+                0x00000000400782f8       0x38 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x90 (size before relaxing)
+ .text.ota_select_valid
+                0x0000000040078330       0x22 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ *fill*         0x0000000040078352        0x2 
  .text.load_partition_table
-                0x0000000040078558       0xc9 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                         0xd5 (size before relaxing)
-                0x0000000040078558                load_partition_table
- *fill*         0x0000000040078621        0x3 
- .text.print_flash_info
-                0x0000000040078624        0xd /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                0x0000000040078624                print_flash_info
- *fill*         0x0000000040078631        0x3 
+                0x0000000040078354       0xd2 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                         0xda (size before relaxing)
+                0x0000000040078354                load_partition_table
+ *fill*         0x0000000040078426        0x2 
  .text.bootloader_main
-                0x0000000040078634      0x2e2 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0x326 (size before relaxing)
-                0x0000000040078634                bootloader_main
- *fill*         0x0000000040078916        0x2 
- .text          0x0000000040078918      0x96e /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
-                                        0xa42 (size before relaxing)
-                0x0000000040078934                rtc_xtal_32k_ena
-                0x00000000400789dc                rtc_8m_ena
-                0x0000000040078aa4                rtc_plla_ena
-                0x0000000040078c54                rtc_set_slow_freq
-                0x0000000040078c7c                rtc_set_fast_freq
-                0x0000000040078cb0                rtc_bbpll_md
-                0x0000000040078df4                rtc_init_xtal_freq
-                0x0000000040078e14                rtc_get_xtal
-                0x0000000040078e70                rtc_apb_freq_up
-                0x0000000040078e8c                rtc_uart_div_modify
-                0x0000000040078ebc                rtc_uart_tx_wait_idle
-                0x0000000040078f10                rtc_set_cpu_freq
-                0x0000000040079184                rtc_init_clk
-                0x0000000040079264                rtc_init_clk_lite
- *fill*         0x0000000040079286        0x2 
- .text.spi_to_esp_err
-                0x0000000040079288       0x22 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x00000000400792aa        0x2 
- .text.bootloader_flash_read_allow_decrypt
-                0x00000000400792ac       0x97 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                         0x9b (size before relaxing)
- *fill*         0x0000000040079343        0x1 
- .text.bootloader_flash_read_no_decrypt
-                0x0000000040079344       0x32 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                         0x36 (size before relaxing)
- *fill*         0x0000000040079376        0x2 
+                0x0000000040078428      0x564 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0x5c4 (size before relaxing)
+                0x0000000040078428                bootloader_main
  .text.bootloader_mmap
-                0x0000000040079378       0x8d /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                         0x91 (size before relaxing)
-                0x0000000040079378                bootloader_mmap
- *fill*         0x0000000040079405        0x3 
+                0x000000004007898c       0xac /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                         0xb0 (size before relaxing)
+                0x000000004007898c                bootloader_mmap
  .text.bootloader_munmap
-                0x0000000040079408       0x36 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040079408                bootloader_munmap
- *fill*         0x000000004007943e        0x2 
+                0x0000000040078a38       0x32 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078a38                bootloader_munmap
+ *fill*         0x0000000040078a6a        0x2 
  .text.bootloader_flash_read
-                0x0000000040079440       0x86 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040079440                bootloader_flash_read
- *fill*         0x00000000400794c6        0x2 
+                0x0000000040078a6c      0x116 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                        0x11a (size before relaxing)
+                0x0000000040078a6c                bootloader_flash_read
+ *fill*         0x0000000040078b82        0x2 
  .text.bootloader_random_enable
-                0x00000000400794c8      0x1d5 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x00000000400794c8                bootloader_random_enable
- *fill*         0x000000004007969d        0x3 
+                0x0000000040078b84      0x1d5 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078b84                bootloader_random_enable
+ *fill*         0x0000000040078d59        0x3 
  .text.bootloader_random_disable
-                0x00000000400796a0      0x11c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x00000000400796a0                bootloader_random_disable
+                0x0000000040078d5c      0x11c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078d5c                bootloader_random_disable
  .text.esp_image_load_header
-                0x00000000400797bc       0x96 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                         0x9e (size before relaxing)
-                0x00000000400797bc                esp_image_load_header
- *fill*         0x0000000040079852        0x2 
+                0x0000000040078e78       0x97 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                         0xa3 (size before relaxing)
+                0x0000000040078e78                esp_image_load_header
+ *fill*         0x0000000040078f0f        0x1 
  .text.esp_image_load_segment_header
-                0x0000000040079854       0xb9 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                         0xc1 (size before relaxing)
-                0x0000000040079854                esp_image_load_segment_header
- *fill*         0x000000004007990d        0x3 
+                0x0000000040078f10       0xb2 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078f10                esp_image_load_segment_header
+ *fill*         0x0000000040078fc2        0x2 
  .text.esp_image_basic_verify
-                0x0000000040079910      0x16d /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                        0x179 (size before relaxing)
-                0x0000000040079910                esp_image_basic_verify
- *fill*         0x0000000040079a7d        0x3 
+                0x0000000040078fc4      0x13e /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                        0x14e (size before relaxing)
+                0x0000000040078fc4                esp_image_basic_verify
+ *fill*         0x0000000040079102        0x2 
  .text.esp_partition_table_basic_verify
-                0x0000000040079a80       0xb1 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                                         0xb5 (size before relaxing)
-                0x0000000040079a80                esp_partition_table_basic_verify
- *fill*         0x0000000040079b31        0x3 
+                0x0000000040079104       0xaa /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000040079104                esp_partition_table_basic_verify
+ *fill*         0x00000000400791ae        0x2 
  .text.esp_log_early_timestamp
-                0x0000000040079b34       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
-                0x0000000040079b34                esp_log_timestamp
-                0x0000000040079b34                esp_log_early_timestamp
- .text.Wait_SPI_Idle
-                0x0000000040079b48       0x21 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- *fill*         0x0000000040079b69        0x3 
- .text.SPIUnlock
-                0x0000000040079b6c       0x64 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                                         0x6c (size before relaxing)
-                0x0000000040079b6c                SPIUnlock
- *fill*         0x0000000040079bd0        0x0 
- *fill*         0x0000000040079bd0        0x0 
- *fill*         0x0000000040079bd0        0x0 
- *fill*         0x0000000040079bd0        0x0 
- *fill*         0x0000000040079bd0        0x0 
- .text.rtc_printf
-                0x0000000040079bd0        0x7 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                0x0000000040079bd0                rtc_printf
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
- *fill*         0x0000000040079bd7        0x0 
+                0x00000000400791b0       0x14 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+                0x00000000400791b0                esp_log_timestamp
+                0x00000000400791b0                esp_log_early_timestamp
+ .text.esp_rom_spiflash_read_status
+                0x00000000400791c4       0x5b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400791c4                esp_rom_spiflash_read_status
+ *fill*         0x000000004007921f        0x1 
+ .text.esp_rom_spiflash_wait_idle
+                0x0000000040079220       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079220                esp_rom_spiflash_wait_idle
+ .text.esp_rom_spiflash_enable_write$constprop$6
+                0x0000000040079250       0x3d /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x41 (size before relaxing)
+ *fill*         0x000000004007928d        0x3 
+ .text.esp_rom_spiflash_program_page_internal$constprop$4
+                0x0000000040079290       0xce /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ *fill*         0x000000004007935e        0x2 
+ .text.esp_rom_spiflash_read_statushigh
+                0x0000000040079360       0x21 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079360                esp_rom_spiflash_read_statushigh
+ *fill*         0x0000000040079381        0x3 
+ .text.esp_rom_spiflash_write_status
+                0x0000000040079384       0x2f /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x33 (size before relaxing)
+                0x0000000040079384                esp_rom_spiflash_write_status
+ *fill*         0x00000000400793b3        0x1 
+ .text.esp_rom_spiflash_unlock
+                0x00000000400793b4       0x66 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x72 (size before relaxing)
+                0x00000000400793b4                esp_rom_spiflash_unlock
+ *fill*         0x000000004007941a        0x2 
+ .text.esp_rom_spiflash_erase_sector
+                0x000000004007941c       0x89 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x8d (size before relaxing)
+                0x000000004007941c                esp_rom_spiflash_erase_sector
+ *fill*         0x00000000400794a5        0x3 
+ .text.esp_rom_spiflash_write
+                0x00000000400794a8       0x9e /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0xa2 (size before relaxing)
+                0x00000000400794a8                esp_rom_spiflash_write
+ *fill*         0x0000000040079546        0x2 
+ .text.esp_rom_spiflash_read
+                0x0000000040079548      0x2e5 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                        0x2e9 (size before relaxing)
+                0x0000000040079548                esp_rom_spiflash_read
+ *fill*         0x000000004007982d        0x3 
+ .text.rtc_clk_32k_enable
+                0x0000000040079830       0x7b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079830                rtc_clk_32k_enable
+ *fill*         0x00000000400798ab        0x1 
+ .text.rtc_clk_8m_enable
+                0x00000000400798ac       0x7e /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400798ac                rtc_clk_8m_enable
+ *fill*         0x000000004007992a        0x2 
+ .text.rtc_clk_slow_freq_set
+                0x000000004007992c       0x27 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007992c                rtc_clk_slow_freq_set
+ *fill*         0x0000000040079953        0x1 
+ .text.rtc_clk_slow_freq_get
+                0x0000000040079954       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079954                rtc_clk_slow_freq_get
+ .text.rtc_clk_fast_freq_set
+                0x0000000040079964       0x1a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079964                rtc_clk_fast_freq_set
+ *fill*         0x000000004007997e        0x2 
+ .text.rtc_clk_fast_freq_get
+                0x0000000040079980       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079980                rtc_clk_fast_freq_get
+ .text.rtc_clk_bbpll_set
+                0x0000000040079990      0x132 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079990                rtc_clk_bbpll_set
+ *fill*         0x0000000040079ac2        0x2 
+ .text.rtc_clk_xtal_freq_get
+                0x0000000040079ac4       0x36 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079ac4                rtc_get_xtal
+                0x0000000040079ac4                rtc_clk_xtal_freq_get
+ *fill*         0x0000000040079afa        0x2 
+ .text.rtc_clk_xtal_freq_update
+                0x0000000040079afc       0x16 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079afc                rtc_clk_xtal_freq_update
+ *fill*         0x0000000040079b12        0x2 
+ .text.rtc_clk_apb_freq_update
+                0x0000000040079b14       0x19 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079b14                rtc_clk_apb_freq_update
+ *fill*         0x0000000040079b2d        0x3 
+ .text.rtc_clk_cpu_freq_set
+                0x0000000040079b30      0x19a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x1a2 (size before relaxing)
+                0x0000000040079b30                rtc_clk_cpu_freq_set
+ *fill*         0x0000000040079cca        0x2 
+ .text.rtc_clk_apb_freq_get
+                0x0000000040079ccc       0x13 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079ccc                rtc_clk_apb_freq_get
+ *fill*         0x0000000040079cdf        0x1 
+ .text.rtc_clk_init
+                0x0000000040079ce0      0x180 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x19f (size before relaxing)
+                0x0000000040079ce0                rtc_clk_init
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
+ *fill*         0x0000000040079e60        0x0 
  *(.irom0.text)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x0000000040079bd7                _text_end = ABSOLUTE (.)
-                0x0000000040079bd7                _etext = .
+                0x0000000040079e60                _text_end = ABSOLUTE (.)
+                0x0000000040079e60                _etext = .
                 [!provide]                        PROVIDE (abort, 0x4000bba4)
                 [!provide]                        PROVIDE (abs, 0x40056340)
                 [!provide]                        PROVIDE (__absvdi2, 0x4006387c)
@@ -548,7 +709,7 @@ END GROUP
                 [!provide]                        PROVIDE (__divsc3, 0x40064200)
                 [!provide]                        PROVIDE (__divsf3, 0x4000234c)
                 [!provide]                        PROVIDE (__divsi3, 0x4000c7b8)
-                [!provide]                        PROVIDE (dummy_len_plus, 0x3ffae290)
+                0x000000003ffae290                PROVIDE (g_rom_spiflash_dummy_len_plus, 0x3ffae290)
                 [!provide]                        PROVIDE (__dummy_lock, 0x4000c728)
                 [!provide]                        PROVIDE (__dummy_lock_try, 0x4000c730)
                 [!provide]                        PROVIDE (ecc_env, 0x3ffb8d60)
@@ -1772,13 +1933,10 @@ END GROUP
                 [!provide]                        PROVIDE (_sbrk_r, 0x4000bce4)
                 [!provide]                        PROVIDE (__sccl, 0x4000c498)
                 [!provide]                        PROVIDE (__sclose, 0x400011b8)
-                [!provide]                        PROVIDE (SelectSpiFunction, 0x40061f84)
-                [!provide]                        PROVIDE (SelectSpiQIO, 0x40061ddc)
                 [!provide]                        PROVIDE (__seofread, 0x40001148)
                 [!provide]                        PROVIDE (setjmp, 0x40056268)
                 [!provide]                        PROVIDE (setlocale, 0x40059568)
                 [!provide]                        PROVIDE (_setlocale_r, 0x4005950c)
-                [!provide]                        PROVIDE (SetSpiDrvs, 0x40061e78)
                 [!provide]                        PROVIDE (__sf_fake_stderr, 0x3ff96458)
                 [!provide]                        PROVIDE (__sf_fake_stdin, 0x3ff96498)
                 [!provide]                        PROVIDE (__sf_fake_stdout, 0x3ff96478)
@@ -1827,33 +1985,6 @@ END GROUP
                 [!provide]                        PROVIDE (slc_to_host_chain_recycle, 0x4000b758)
                 [!provide]                        PROVIDE (__smakebuf_r, 0x40059108)
                 [!provide]                        PROVIDE (specialModP256, 0x4001600c)
-                [!provide]                        PROVIDE (spi_cache_sram_init, 0x400626e4)
-                [!provide]                        PROVIDE (SPIClkConfig, 0x40062bc8)
-                [!provide]                        PROVIDE (SPI_Common_Command, 0x4006246c)
-                [!provide]                        PROVIDE (spi_dummy_len_fix, 0x40061d90)
-                0x0000000040062e78                PROVIDE (SPI_Encrypt_Write, 0x40062e78)
-                [!provide]                        PROVIDE (SPIEraseArea, 0x400631ac)
-                [!provide]                        PROVIDE (SPIEraseBlock, 0x40062c4c)
-                [!provide]                        PROVIDE (SPIEraseChip, 0x40062c14)
-                0x0000000040062ccc                PROVIDE (SPIEraseSector, 0x40062ccc)
-                [!provide]                        PROVIDE (spi_flash_attach, 0x40062a6c)
-                [!provide]                        PROVIDE (SPILock, 0x400628f0)
-                [!provide]                        PROVIDE (SPIMasterReadModeCnfig, 0x40062b64)
-                [!provide]                        PROVIDE (spi_modes, 0x3ff99270)
-                0x0000000040063238                PROVIDE (SPIParamCfg, 0x40063238)
-                [!provide]                        PROVIDE (SPI_Prepare_Encrypt_Data, 0x40062e1c)
-                0x0000000040062ed8                PROVIDE (SPIRead, 0x40062ed8)
-                [!provide]                        PROVIDE (SPIReadModeCnfig, 0x40062944)
-                [!provide]                        PROVIDE (SPI_read_status, 0x4006226c)
-                0x0000000040062448                PROVIDE (SPI_read_status_high, 0x40062448)
-                [!provide]                        PROVIDE (SPI_user_command_read, 0x400621b0)
-                0x000000003ffae270                PROVIDE (SPI_flashchip_data, 0x3ffae270)
-                0x0000000040062d50                PROVIDE (SPIWrite, 0x40062d50)
-                [!provide]                        PROVIDE (SPI_write_enable, 0x40062320)
-                [!provide]                        PROVIDE (SPI_Write_Encrypt_Disable, 0x40062e60)
-                [!provide]                        PROVIDE (SPI_Write_Encrypt_Enable, 0x40062df4)
-                0x00000000400622f0                PROVIDE (SPI_write_status, 0x400622f0)
-                [!provide]                        PROVIDE (SPI_Wait_Idle, 0x400622c0)
                 [!provide]                        PROVIDE (srand, 0x40001004)
                 [!provide]                        PROVIDE (__sread, 0x40001118)
                 [!provide]                        PROVIDE (__srefill_r, 0x400593d4)
@@ -1985,6 +2116,13 @@ END GROUP
                 [!provide]                        PROVIDE (_xtos_set_intlevel, 0x4000bfdc)
                 [!provide]                        PROVIDE (g_ticks_per_us_pro, 0x3ffe01e0)
                 [!provide]                        PROVIDE (g_ticks_per_us_app, 0x3ffe40f0)
+                0x0000000040063238                PROVIDE (esp_rom_spiflash_config_param, 0x40063238)
+                0x00000000400621b0                PROVIDE (esp_rom_spiflash_read_user_cmd, 0x400621b0)
+                0x0000000040062e60                PROVIDE (esp_rom_spiflash_write_encrypted_disable, 0x40062e60)
+                0x0000000040062df4                PROVIDE (esp_rom_spiflash_write_encrypted_enable, 0x40062df4)
+                0x0000000040062e1c                PROVIDE (esp_rom_spiflash_prepare_encrypted_data, 0x40062e1c)
+                [!provide]                        PROVIDE (esp_rom_spiflash_select_qio_pins, 0x40061ddc)
+                0x000000003ffae270                PROVIDE (g_rom_spiflash_chip, 0x3ffae270)
                 [!provide]                        PROVIDE (FilePacketSendDeflatedReqMsgProc, 0x40008b24)
                 [!provide]                        PROVIDE (FilePacketSendReqMsgProc, 0x40008860)
                 [!provide]                        PROVIDE (FlashDwnLdDeflatedStartMsgProc, 0x40008ad8)
@@ -2024,7 +2162,7 @@ END GROUP
                 [!provide]                        PROVIDE (uart_tx_one_char, 0x40009200)
                 [!provide]                        PROVIDE (uart_tx_one_char2, 0x4000922c)
                 [!provide]                        PROVIDE (uart_tx_switch, 0x40009028)
-                0x0000000040009278                PROVIDE (uart_tx_wait_idle, 0x40009278)
+                [!provide]                        PROVIDE (uart_tx_wait_idle, 0x40009278)
                 [!provide]                        PROVIDE (gpio_output_set, 0x40009b24)
                 [!provide]                        PROVIDE (gpio_output_set_high, 0x40009b5c)
                 [!provide]                        PROVIDE (gpio_input_get, 0x40009b88)
@@ -2155,108 +2293,118 @@ END GROUP
                 0x0000000040008550                PROVIDE (ets_update_cpu_frequency, 0x40008550)
 OUTPUT(/Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader.elf elf32-xtensa-le)
 
-.debug_frame    0x0000000000000000      0x328
- .debug_frame   0x0000000000000000      0x118 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_frame   0x0000000000000118       0xd0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_frame   0x00000000000001e8       0x58 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_frame   0x0000000000000240       0x58 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_frame   0x0000000000000298       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_frame   0x00000000000002c0       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
- .debug_frame   0x00000000000002e8       0x40 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+.debug_frame    0x0000000000000000      0x5a8
+ .debug_frame   0x0000000000000000       0x88 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_frame   0x0000000000000088       0x88 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_frame   0x0000000000000110       0x58 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_frame   0x0000000000000168       0x58 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_frame   0x00000000000001c0       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_frame   0x00000000000001e8       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .debug_frame   0x0000000000000210      0x190 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_frame   0x00000000000003a0      0x208 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
-.debug_info     0x0000000000000000     0x2d48
- .debug_info    0x0000000000000000     0x164d /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_info    0x000000000000164d      0x894 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x0000000000001ee1      0x161 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_info    0x0000000000002042      0x72a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_info    0x000000000000276c      0x381 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_info    0x0000000000002aed       0xc0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
- .debug_info    0x0000000000002bad      0x19b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+.debug_info     0x0000000000000000     0x44be
+ .debug_info    0x0000000000000000     0x16e4 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_info    0x00000000000016e4      0x7f0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x0000000000001ed4      0x161 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_info    0x0000000000002035      0x748 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x000000000000277d      0x383 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_info    0x0000000000002b00       0xc0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .debug_info    0x0000000000002bc0      0xbbe /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_info    0x000000000000377e      0xd40 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
-.debug_abbrev   0x0000000000000000      0xaca
- .debug_abbrev  0x0000000000000000      0x3eb /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_abbrev  0x00000000000003eb      0x18d /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_abbrev  0x0000000000000578       0xd6 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_abbrev  0x000000000000064e      0x18a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_abbrev  0x00000000000007d8      0x16c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_abbrev  0x0000000000000944       0x6f /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
- .debug_abbrev  0x00000000000009b3      0x117 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+.debug_abbrev   0x0000000000000000      0xfd7
+ .debug_abbrev  0x0000000000000000      0x3e8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_abbrev  0x00000000000003e8      0x1db /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_abbrev  0x00000000000005c3       0xd6 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_abbrev  0x0000000000000699      0x18a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_abbrev  0x0000000000000823      0x16c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_abbrev  0x000000000000098f       0x6f /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .debug_abbrev  0x00000000000009fe      0x2e1 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_abbrev  0x0000000000000cdf      0x2f8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
-.debug_loc      0x0000000000000000     0x1120
- .debug_loc     0x0000000000000000      0x738 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_loc     0x0000000000000738      0x447 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x0000000000000b7f       0x45 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_loc     0x0000000000000bc4      0x446 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x000000000000100a      0x116 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+.debug_loc      0x0000000000000000     0x1a8a
+ .debug_loc     0x0000000000000000      0x5ee /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_loc     0x00000000000005ee      0x366 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x0000000000000954       0x45 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_loc     0x0000000000000999      0x36a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x0000000000000d03      0x11c /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x0000000000000e1f      0x785 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_loc     0x00000000000015a4      0x4e6 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
-.debug_aranges  0x0000000000000000      0x190
+.debug_aranges  0x0000000000000000      0x270
  .debug_aranges
-                0x0000000000000000       0x70 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000000000000       0x40 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_aranges
-                0x0000000000000070       0x58 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000040       0x40 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .debug_aranges
-                0x00000000000000c8       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000000000080       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .debug_aranges
-                0x00000000000000f8       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000000000b0       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .debug_aranges
-                0x0000000000000128       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x00000000000000e0       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .debug_aranges
-                0x0000000000000148       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000100       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
  .debug_aranges
-                0x0000000000000168       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000120       0x98 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_aranges
+                0x00000000000001b8       0xb8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
-.debug_ranges   0x0000000000000000      0x1b0
- .debug_ranges  0x0000000000000000       0x90 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_ranges  0x0000000000000090       0x48 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_ranges  0x00000000000000d8       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_ranges  0x00000000000000f8       0x68 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_ranges  0x0000000000000160       0x28 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_ranges  0x0000000000000188       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
- .debug_ranges  0x0000000000000198       0x18 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+.debug_ranges   0x0000000000000000      0x3d8
+ .debug_ranges  0x0000000000000000      0x118 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_ranges  0x0000000000000118       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_ranges  0x0000000000000148       0x20 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_ranges  0x0000000000000168       0x50 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_ranges  0x00000000000001b8       0x30 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_ranges  0x00000000000001e8       0x10 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .debug_ranges  0x00000000000001f8       0xd8 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_ranges  0x00000000000002d0      0x108 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
-.debug_line     0x0000000000000000     0x1e4a
- .debug_line    0x0000000000000000      0xa2e /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_line    0x0000000000000a2e      0x54d /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x0000000000000f7b      0x31f /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x000000000000129a      0x56a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x0000000000001804      0x2f2 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x0000000000001af6      0x169 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
- .debug_line    0x0000000000001c5f      0x1eb /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+.debug_line     0x0000000000000000     0x2d3f
+ .debug_line    0x0000000000000000      0x903 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_line    0x0000000000000903      0x4b0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x0000000000000db3      0x367 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x000000000000111a      0x56b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000001685      0x2e2 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x0000000000001967      0x169 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .debug_line    0x0000000000001ad0      0xa38 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x0000000000002508      0x837 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
-.debug_str      0x0000000000000000     0x1109
- .debug_str     0x0000000000000000      0xb78 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0xc3b (size before relaxing)
- .debug_str     0x0000000000000b78      0x20a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                        0x4fd (size before relaxing)
- .debug_str     0x0000000000000d82       0x81 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                                        0x25b (size before relaxing)
- .debug_str     0x0000000000000e03      0x140 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                        0x5d1 (size before relaxing)
- .debug_str     0x0000000000000f43       0x64 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                                        0x3c6 (size before relaxing)
- .debug_str     0x0000000000000fa7       0xbf /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
-                                        0x1ef (size before relaxing)
- .debug_str     0x0000000000001066       0xa3 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                                        0x25b (size before relaxing)
+.debug_str      0x0000000000000000     0x1aae
+ .debug_str     0x0000000000000000      0xd7b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0xe50 (size before relaxing)
+ .debug_str     0x0000000000000d7b      0x212 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                        0x560 (size before relaxing)
+ .debug_str     0x0000000000000f8d       0x81 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                                        0x258 (size before relaxing)
+ .debug_str     0x000000000000100e      0x137 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                        0x5ce (size before relaxing)
+ .debug_str     0x0000000000001145       0x64 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                                        0x3cf (size before relaxing)
+ .debug_str     0x00000000000011a9       0xbf /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+                                        0x1ec (size before relaxing)
+ .debug_str     0x0000000000001268      0x4b3 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                        0x76e (size before relaxing)
+ .debug_str     0x000000000000171b      0x393 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x734 (size before relaxing)
 
-.comment        0x0000000000000000       0x74
+.comment        0x0000000000000000       0x3a
  .comment       0x0000000000000000       0x3a /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x3b (size before relaxing)
- .comment       0x000000000000003a       0x3a /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
-                                         0x3b (size before relaxing)
- .comment       0x0000000000000074       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .comment       0x0000000000000074       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .comment       0x0000000000000074       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .comment       0x0000000000000074       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .comment       0x0000000000000074       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
- .comment       0x0000000000000074       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .comment       0x000000000000003a       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .comment       0x000000000000003a       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .comment       0x000000000000003a       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .comment       0x000000000000003a       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .comment       0x000000000000003a       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
+ .comment       0x000000000000003a       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .comment       0x000000000000003a       0x3b /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
 
 .xtensa.info    0x0000000000000000       0x38
  .xtensa.info   0x0000000000000000       0x38 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/esp/esp-idf/components/esp32/lib//librtc_clk.a(rtc_clk.o)
  .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/log/liblog.a(log.o)
  .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xtensa.info   0x0000000000000038        0x0 /Users/michaelfay95/workspace/UNL/csce361-attendancetracker/Code/node/esp/build/bootloader/soc/libsoc.a(rtc_clk.o)

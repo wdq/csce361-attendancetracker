@@ -20,7 +20,7 @@ tasks.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./tasks.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/platform_include/esp_newlib.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_panic.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_err.h \
@@ -50,6 +50,7 @@ tasks.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./tasks.c \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -104,7 +105,7 @@ tasks.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./tasks.c \
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
@@ -163,6 +164,8 @@ tasks.o: /Users/michaelfay95/esp/esp-idf/components/freertos/./tasks.c \
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/Users/michaelfay95/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /Users/michaelfay95/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

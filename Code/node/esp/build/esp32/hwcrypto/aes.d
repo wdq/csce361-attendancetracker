@@ -20,8 +20,8 @@ hwcrypto/aes.o: \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/stdint.h \
  /Users/michaelfay95/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/aes.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
- /Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 
 /Users/michaelfay95/esp/esp-idf/components/newlib/include/string.h:
 
@@ -63,6 +63,6 @@ hwcrypto/aes.o: \
 
 /Users/michaelfay95/esp/esp-idf/components/esp32/include/rom/aes.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
-/Users/michaelfay95/esp/esp-idf/components/esp32/include/soc/soc.h:
+/Users/michaelfay95/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
