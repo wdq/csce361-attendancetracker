@@ -120,7 +120,7 @@ class serv():
         if self.ip_addr is None and self.url is None:
             return "Error: No server address specified."
         
-        while( self.network.connect() != -1)
+        while( self.network.connect() != -1):
             print "Trying to reopen socket connection."
 
         
