@@ -212,12 +212,11 @@ if __name__ == "__main__":
     attend  = Thread(target = srv.run_system)
     ping    = Thread(target = srv.ping_home)
 
+    srv.run_system()
+
     attend.start()
     ping.start()
     Thread.join()
-
-    while(raw_input("") != "q"):
-        pass
 
     safe_exit()
 
