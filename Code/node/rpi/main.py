@@ -120,7 +120,8 @@ class serv():
         if self.ip_addr is None and self.url is None:
             return "Error: No server address specified."
         
-        self.network.connect()
+        while( self.network.connect() != -1):
+            print "Trying to reopen socket connection."
 
         
     def __disconnect_from_server(self):
@@ -211,12 +212,11 @@ if __name__ == "__main__":
     attend  = Thread(target = srv.run_system)
     ping    = Thread(target = srv.ping_home)
 
+    srv.run_system()
+
     attend.start()
     ping.start()
     Thread.join()
-
-    while(raw_input("") != "q"):
-        pass
 
     safe_exit()
 

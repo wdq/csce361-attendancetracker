@@ -21,10 +21,10 @@ class network:
             try:
                 self.sock = websocket.create_connection(self.host, timeout = 2)
             except:
-                print "Couldn't open socket. Trying to re-open socket"
+                print "Couldn't open socket. Exiting"
                 time.sleep(.1)
-                self.connect()
-        pass
+                return -1
+        return 1
 
     def __send__(self, data):
         print ""

@@ -9,5 +9,6 @@ def main():
     os.system('python ota.py &')
 
 if __name__ == '__main__':
+    # print("Starting Application")
     main()
     sys.exit()
