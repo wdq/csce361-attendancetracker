@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace AttendanceTracker.Models.Course
 {
@@ -104,9 +105,11 @@ namespace AttendanceTracker.Models.Course
         public static CourseIndexTableModel FromCourse(AttendanceTracker.Course course, AttendanceTrackerDatabaseConnection database)
         {
             var model = new CourseIndexTableModel();
+            var requestContext = HttpContext.Current.Request.RequestContext;
+            var Url = new UrlHelper(requestContext);
 
-            var commandButtonLeftHtml = "<a href='Course/View?id=" + course.Id.ToString() + "' class='btn btn-default hl-view' style='margin-right: 3px;'><i class='fa fa-search'></i></span></a>";
-            commandButtonLeftHtml += "<a href='Course/Edit?id=" + course.Id.ToString() + "' class='btn btn-default hl-view' style='margin-right: 3px;'><i class='fa fa-pencil'></i></span></a>";
+            var commandButtonLeftHtml = "<a href='" + Url.Action("View", "Course") + "?id=" + course.Id.ToString() + "' class='btn btn-default hl-view' style='margin-right: 3px;'><i class='fa fa-search'></i></span></a>";
+            commandButtonLeftHtml += "<a href='" + Url.Action("Edit", "Course") + "?id=" + course.Id.ToString() + "' class='btn btn-default hl-view' style='margin-right: 3px;'><i class='fa fa-pencil'></i></span></a>";
             model.Id = commandButtonLeftHtml;
 
             model.CourseName = course.CourseCode + " " + course.CourseNumber + "-" + course.CourseSection;

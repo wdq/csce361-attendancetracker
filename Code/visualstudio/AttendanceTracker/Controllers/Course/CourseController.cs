@@ -16,7 +16,7 @@ namespace AttendanceTracker.Controllers.Course
         public ActionResult Index()
         {
             var userId = User.Identity.GetUserId();
-            if (UserRolesModel.IsStudent(userId) || UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
+            if ( userId != null && UserRolesModel.IsStudent(userId) || UserRolesModel.IsTeacher(userId) || UserRolesModel.IsAdmin(userId))
             {
                 return View();
             }

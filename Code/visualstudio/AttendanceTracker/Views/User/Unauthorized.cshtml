@@ -1,9 +1,39 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Unauthorized - Attendance Tracker";
 }
 
-<h2>Unauthorized</h2>
-<p>
-    Error! You don't have permission to access this page.
-</p>
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-10 col-md-offset-1">
+                <h2>Unauthorized</h2>
+                <p>
+                    Error! You don't have permission to access this page.
+                </p>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <meta http-equiv="refresh" content="0; url=@Url.Action("Login", "Account")" />
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-10 col-md-offset-1">
+                <h2>Unauthorized</h2>
+                <p>
+                    Error! You don't have permission to access this page.
+                </p>
+                <p>
+                    @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" }), 
+                    @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                </p>
+            </div>
+        </div>
+    </div>
+
+}
+
+
