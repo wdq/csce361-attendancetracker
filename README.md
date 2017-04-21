@@ -27,7 +27,11 @@ If you set everything up correctly you can build the project, and then open the 
 
 ### Bluetooth hardware
 
-This section will be filled out soon.
+The Bluetooth hardware is a lot easier to setup. It requires a Debian based computer with support for Bluetooth. We used a Raspberry Pi with a USB Bluetooth dongle. 
+
+To install the software dependencies run install.sh which is located in code/node/rpi. 
+
+To run the program run main.py in code/node/rpi with Python 2.7. 
 
 ## Azure instance
 
@@ -61,4 +65,12 @@ The Program.cs file is setup as a Windows Service that just continually loops th
 
 ### Bluetooth hardware
 
-This section will be filled out soon.
+The main.py file initializes the application and its two threads.
+
+The first thread is for taking attendance. It contiually waits for students to appear in the student dictionary. If there are students in the dictionary it will attempt to ping the Bluetooth MAC address, keeping track of who is present and who is not. Once all of the students have been tested the thread reports the results back to the SchedulerService server.
+
+The second thread is for keeping up to date. It will pull new changes from this git repository, as well as pull down updated student lists from the SchedulerService server. It continually runs.
+
+The network.py file is used to define objects and methods reladed to the networking functions used in the main.py file. The ota.py file is used to pull changes from the git repository, keeping the node up to date. 
+
+There is also a folder at code/node/esp containing code for the ESP32 that performs the same functions as the Raspberry Pi code. It isn't fully completed, but has a similar structure to the Python code.
