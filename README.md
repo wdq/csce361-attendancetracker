@@ -11,7 +11,7 @@ The database is running on Microsoft SQL Server Express 2014, you can use any ve
 
 Depending on how you installed SQL Server you may need to change the connection string within the project from LOCALHOST/SQLEXPRESS to something like LOCALHOST or LOCALHOST/NAME. You can easily do this with a whole project find/replace in Visual Studio.
 
-A database dump will be linked here soon.
+A database dump can be found at code/visualstudio/sql/AttendanceTracker.bak.
 
 You will need to restore the database dump. The easiest way to do this is place the .bak file in the Backups folder within your SQL Server installation folder. You can then use the restore database functionality built into SQL Server Management Studio. There are many other ways to do this.
 
