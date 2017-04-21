@@ -3,7 +3,6 @@
 *.vspscc
 *.vssscc
 *.suo
-*.bak
 *.resharper
 [Bb]uild/
 [Bb]in
