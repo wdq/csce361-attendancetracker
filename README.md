@@ -9,7 +9,7 @@ The Visual Studio project for the web application is in the Code/visualstudio fo
 
 The database is running on Microsoft SQL Server Express 2014, you can use any version, as long as it's 2014 or newer. You can get [SQL Server 2016 Express](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express), [SQL Server 2016 Developer](https://www.microsoft.com/en-us/sql-server/sql-server-editions-developers), or SQL Server 2016 Enterprise from Dreamspark. You'll probably want [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) too. Make sure you give your user account permission to access SQL Server when installing.
 
-Depending on how you installed SQL Server you may need to change the connection string within the project from LOCALHOST/SQLEXPRESS to something like LOCALHOST or LOCALHOST/NAME. You can easily do this with a whole project find/replace in Visual Studio.
+Depending on how you installed SQL Server you may need to change the connection string within the project from LOCALHOST\SQLEXPRESS to something like LOCALHOST or LOCALHOST\NAME. You can easily do this with a whole project find/replace in Visual Studio.
 
 A database dump can be found at code/visualstudio/sql/AttendanceTracker.bak.
 
