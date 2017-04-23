@@ -3,6 +3,19 @@
     padding-bottom: 20px;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+.navbar-inverse {
+   
+    background-image: linear-gradient(to bottom, #D00000 0%, #D00000 100%);
+    background-repeat: repeat-x;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
